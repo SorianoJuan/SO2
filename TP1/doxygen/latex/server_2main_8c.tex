@@ -1,0 +1,93 @@
+\section{/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/server/main.c File Reference}
+\label{server_2main_8c}\index{/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/server/main.\+c@{/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/server/main.\+c}}
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Login}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}~6020
+\item 
+\#define {\bf S\+N\+A\+ME}~20
+\item 
+\#define {\bf U\+S\+E\+R\+\_\+\+NR}~2
+\item 
+\#define {\bf B\+U\+F\+F\+\_\+\+S\+I\+ZE}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf verificar} (char $\ast$user, char $\ast$password)
+\item 
+void {\bf U\+D\+Pcom} (uint16\+\_\+t U\+D\+Pport)
+\item 
+int {\bf main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{server/main.\+c@{server/main.\+c}!B\+U\+F\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+\_\+\+S\+I\+ZE}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{B\+U\+F\+F\+\_\+\+S\+I\+ZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+F\+F\+\_\+\+S\+I\+ZE~1024}\label{server_2main_8c_a6c7cd32e1bac137f05e4a752b4ad10af}
+\index{server/main.\+c@{server/main.\+c}!L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT@{L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}}
+\index{L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT@{L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT~6020}\label{server_2main_8c_a4fba0963c20988d1f1a45afb1c636e44}
+\index{server/main.\+c@{server/main.\+c}!S\+N\+A\+ME@{S\+N\+A\+ME}}
+\index{S\+N\+A\+ME@{S\+N\+A\+ME}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{S\+N\+A\+ME}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N\+A\+ME~20}\label{server_2main_8c_adbe6c60fb689b6eb1c165dda1b4ccda1}
+\index{server/main.\+c@{server/main.\+c}!U\+S\+E\+R\+\_\+\+NR@{U\+S\+E\+R\+\_\+\+NR}}
+\index{U\+S\+E\+R\+\_\+\+NR@{U\+S\+E\+R\+\_\+\+NR}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{U\+S\+E\+R\+\_\+\+NR}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+E\+R\+\_\+\+NR~2}\label{server_2main_8c_ad5b70b0fae15f71d75dfd3110e8ff522}
+
+
+\subsection{Function Documentation}
+\index{server/main.\+c@{server/main.\+c}!main@{main}}
+\index{main@{main}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{main(void)}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{server_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+\index{server/main.\+c@{server/main.\+c}!U\+D\+Pcom@{U\+D\+Pcom}}
+\index{U\+D\+Pcom@{U\+D\+Pcom}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{U\+D\+Pcom(uint16\+\_\+t U\+D\+Pport)}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+Pcom (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{U\+D\+Pport}
+\end{DoxyParamCaption}
+)}\label{server_2main_8c_aabaed7653cd03a951d9e3830a2fc2b2b}
+Realiza una conexion U\+DP para enviar un archivo de forma no segura al cliente 
+\begin{DoxyParams}{Parameters}
+{\em U\+D\+Pport} & es el puerto U\+DP de conexion con el cliente\\
+\hline
+\end{DoxyParams}
+\index{server/main.\+c@{server/main.\+c}!verificar@{verificar}}
+\index{verificar@{verificar}!server/main.\+c@{server/main.\+c}}
+\subsubsection[{verificar(char $\ast$user, char $\ast$password)}]{\setlength{\rightskip}{0pt plus 5cm}int verificar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{user, }
+\item[{char $\ast$}]{password}
+\end{DoxyParamCaption}
+)}\label{server_2main_8c_a8ebfa03aaa653d8fc17a3d498a22cb40}
+Verifica del lado del server que los datos ingresados por el cliente correspondan a un usuario registrado 
+\begin{DoxyParams}{Parameters}
+{\em user} & el nombre de usuario ingresado \\
+\hline
+{\em password} & el password ingresado\\
+\hline
+\end{DoxyParams}

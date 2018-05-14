@@ -1,0 +1,164 @@
+\begin{theindex}
+
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/baash/archfunc.\+c}, 
+		7
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/baash/archfunc.\+h}, 
+		8
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/baash/evalfunc.\+c}, 
+		9
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/baash/evalfunc.\+h}, 
+		10
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/baash/main.\+c}, 
+		11
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/client/main.\+c}, 
+		12
+  \item {/home/torce/\+Desktop/\+Juan\+Soriano/\+T\+P1/src/server/main.\+c}, 
+		14
+
+  \indexspace
+
+  \item {a\+Archivo}
+    \subitem {archfunc.\+c}, 8
+    \subitem {archfunc.\+h}, 9
+  \item {archfunc.\+c}
+    \subitem {a\+Archivo}, 8
+    \subitem {buscar\+Archivo}, 8
+    \subitem {de\+Archivo}, 8
+  \item {archfunc.\+h}
+    \subitem {a\+Archivo}, 9
+    \subitem {buscar\+Archivo}, 9
+    \subitem {de\+Archivo}, 9
+
+  \indexspace
+
+  \item {B\+U\+F\+F\+\_\+\+S\+I\+ZE}
+    \subitem {client/main.\+c}, 13
+    \subitem {server/main.\+c}, 15
+  \item {baash/main.\+c}
+    \subitem {ejec\+Pipeline}, 11
+    \subitem {leer\+Teclado}, 11
+    \subitem {main}, 11
+    \subitem {parsear\+Path}, 11
+  \item {buffer}
+    \subitem {sockbuff}, 5
+  \item {buffer\+\_\+size}
+    \subitem {sockbuff}, 5
+  \item {buscar\+Archivo}
+    \subitem {archfunc.\+c}, 8
+    \subitem {archfunc.\+h}, 9
+
+  \indexspace
+
+  \item {client/main.\+c}
+    \subitem {B\+U\+F\+F\+\_\+\+S\+I\+ZE}, 13
+    \subitem {ipaddr}, 14
+    \subitem {ipaddrbuff}, 14
+    \subitem {main}, 13
+    \subitem {portnr}, 14
+    \subitem {U\+D\+Pcom}, 13
+    \subitem {writeto\+\_\+socket}, 14
+
+  \indexspace
+
+  \item {de\+Archivo}
+    \subitem {archfunc.\+c}, 8
+    \subitem {archfunc.\+h}, 9
+
+  \indexspace
+
+  \item {ejec\+Pipeline}
+    \subitem {baash/main.\+c}, 11
+  \item {evalfunc.\+c}
+    \subitem {evaluar\+Background}, 9
+    \subitem {evaluar\+Pipe}, 9
+    \subitem {evaluar\+Redir}, 9
+  \item {evalfunc.\+h}
+    \subitem {evaluar\+Background}, 11
+    \subitem {evaluar\+Pipe}, 11
+    \subitem {evaluar\+Redir}, 11
+  \item {evaluar\+Background}
+    \subitem {evalfunc.\+c}, 9
+    \subitem {evalfunc.\+h}, 11
+  \item {evaluar\+Pipe}
+    \subitem {evalfunc.\+c}, 9
+    \subitem {evalfunc.\+h}, 11
+  \item {evaluar\+Redir}
+    \subitem {evalfunc.\+c}, 9
+    \subitem {evalfunc.\+h}, 11
+
+  \indexspace
+
+  \item {ipaddr}
+    \subitem {client/main.\+c}, 14
+  \item {ipaddrbuff}
+    \subitem {client/main.\+c}, 14
+
+  \indexspace
+
+  \item {L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}
+    \subitem {server/main.\+c}, 15
+  \item {leer\+Teclado}
+    \subitem {baash/main.\+c}, 11
+  \item {Login}, 5
+    \subitem {name}, 5
+    \subitem {password}, 5
+
+  \indexspace
+
+  \item {main}
+    \subitem {baash/main.\+c}, 11
+    \subitem {client/main.\+c}, 13
+    \subitem {server/main.\+c}, 15
+
+  \indexspace
+
+  \item {name}
+    \subitem {Login}, 5
+
+  \indexspace
+
+  \item {parsear\+Path}
+    \subitem {baash/main.\+c}, 11
+  \item {password}
+    \subitem {Login}, 5
+  \item {portnr}
+    \subitem {client/main.\+c}, 14
+
+  \indexspace
+
+  \item {S\+N\+A\+ME}
+    \subitem {server/main.\+c}, 15
+  \item {server/main.\+c}
+    \subitem {B\+U\+F\+F\+\_\+\+S\+I\+ZE}, 15
+    \subitem {L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}, 15
+    \subitem {main}, 15
+    \subitem {S\+N\+A\+ME}, 15
+    \subitem {U\+D\+Pcom}, 15
+    \subitem {U\+S\+E\+R\+\_\+\+NR}, 15
+    \subitem {verificar}, 15
+  \item {sockbuff}, 5
+    \subitem {buffer}, 5
+    \subitem {buffer\+\_\+size}, 5
+    \subitem {sockfd}, 5
+  \item {sockfd}
+    \subitem {sockbuff}, 5
+
+  \indexspace
+
+  \item {U\+D\+Pcom}
+    \subitem {client/main.\+c}, 13
+    \subitem {server/main.\+c}, 15
+  \item {U\+S\+E\+R\+\_\+\+NR}
+    \subitem {server/main.\+c}, 15
+
+  \indexspace
+
+  \item {verificar}
+    \subitem {server/main.\+c}, 15
+
+  \indexspace
+
+  \item {writeto\+\_\+socket}
+    \subitem {client/main.\+c}, 14
+
+\end{theindex}
