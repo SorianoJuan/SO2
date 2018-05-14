@@ -1,0 +1,102 @@
+\section{procedural/main.c File Reference}
+\label{procedural_2main_8c}\index{procedural/main.\+c@{procedural/main.\+c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$omp.\+h$>$}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{procedural_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf pulso}
+\item 
+struct {\bf tabla\+\_\+pulsos}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}~800
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf parsearpulsos} (int fd, {\bf tabla\+\_\+pulsos} $\ast$tablas[$\,$])
+\item 
+void {\bf calcularmedia} ({\bf tabla\+\_\+pulsos} $\ast$tablas[$\,$], float {\bf gates}[2][{\bf C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}][500][2])
+\item 
+void {\bf autocorrelacionar} (float {\bf gates}[2][{\bf C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}][500][2], float {\bf Rt}[2][500])
+\item 
+int {\bf main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{procedural/main.\+c@{procedural/main.\+c}!C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS@{C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}}
+\index{C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS@{C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}!procedural/main.\+c@{procedural/main.\+c}}
+\subsubsection[{C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS~800}\label{procedural_2main_8c_adc8c780ab502933d827455d44da29d21}
+
+
+\subsection{Function Documentation}
+\index{procedural/main.\+c@{procedural/main.\+c}!autocorrelacionar@{autocorrelacionar}}
+\index{autocorrelacionar@{autocorrelacionar}!procedural/main.\+c@{procedural/main.\+c}}
+\subsubsection[{autocorrelacionar(float gates[2][C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS][500][2], float Rt[2][500])}]{\setlength{\rightskip}{0pt plus 5cm}void autocorrelacionar (
+\begin{DoxyParamCaption}
+\item[{float}]{gates[2][\+C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+O\+S][500][2], }
+\item[{float}]{Rt[2][500]}
+\end{DoxyParamCaption}
+)}\label{procedural_2main_8c_a4b73fa1c29ba335698242ce10abe5cf6}
+Calcula la autocorrelacion de cada pulso 
+\begin{DoxyParams}{Parameters}
+{\em gates} & arreglo de gates calculado a partir de la media \\
+\hline
+{\em Rt} & arreglo de valores de todos los gates autocorrelacionados por pulso\\
+\hline
+\end{DoxyParams}
+\index{procedural/main.\+c@{procedural/main.\+c}!calcularmedia@{calcularmedia}}
+\index{calcularmedia@{calcularmedia}!procedural/main.\+c@{procedural/main.\+c}}
+\subsubsection[{calcularmedia(tabla\+\_\+pulsos $\ast$tablas[], float gates[2][C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+OS][500][2])}]{\setlength{\rightskip}{0pt plus 5cm}void calcularmedia (
+\begin{DoxyParamCaption}
+\item[{{\bf tabla\+\_\+pulsos} $\ast$}]{tablas[$\,$], }
+\item[{float}]{gates[2][\+C\+A\+N\+T\+\_\+\+P\+U\+L\+S\+O\+S][500][2]}
+\end{DoxyParamCaption}
+)}\label{procedural_2main_8c_a7f3d752870120b97691f1fbbab0485c9}
+Calcula la media de los gates en la tabla de pulsos tablas y los almacena segun corresponda en el arreglo gates 
+\begin{DoxyParams}{Parameters}
+{\em tablas} & arreglo de punteros a structs donde se almacenan los valores parseados del archivo pulsos.\+iq \\
+\hline
+{\em gates} & arreglo de gates calculado a partir de la media\\
+\hline
+\end{DoxyParams}
+\index{procedural/main.\+c@{procedural/main.\+c}!main@{main}}
+\index{main@{main}!procedural/main.\+c@{procedural/main.\+c}}
+\subsubsection[{main(void)}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{procedural_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+\index{procedural/main.\+c@{procedural/main.\+c}!parsearpulsos@{parsearpulsos}}
+\index{parsearpulsos@{parsearpulsos}!procedural/main.\+c@{procedural/main.\+c}}
+\subsubsection[{parsearpulsos(int fd, tabla\+\_\+pulsos $\ast$tablas[])}]{\setlength{\rightskip}{0pt plus 5cm}void parsearpulsos (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{{\bf tabla\+\_\+pulsos} $\ast$}]{tablas[$\,$]}
+\end{DoxyParamCaption}
+)}\label{procedural_2main_8c_ad011f3aec555b84f682f21f9c9dbc4db}
+Levanta el archivo pulsos.\+iq a memoria asignandolo a la tabla de pulsos ordenadamente segun corresponda 
+\begin{DoxyParams}{Parameters}
+{\em fd} & file descriptor del archivo pulsos.\+iq \\
+\hline
+{\em tablas} & arreglo de punteros a structs donde se almacenan los valores parseados del archivo pulsos.\+iq\\
+\hline
+\end{DoxyParams}

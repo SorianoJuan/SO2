@@ -1,0 +1,8 @@
+#CMake
+cmake-build-debug/*
+#idea
+.idea/*
+#build
+build/*
+!build/script_openmp.sh
+!build/script_procedural.sh

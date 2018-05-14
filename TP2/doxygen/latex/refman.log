@@ -1,0 +1,4144 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.22)  14 MAY 2018 18:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**refman
+(./refman.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2015/06/22 v2.0b fixes to LaTeX (obsolete)
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks14
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks19
+\minrowclearance=\skip48
+)
+\rownum=\count93
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count94
+\LTcapwidth=\dimen107
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count95
+\LT@rows=\count96
+\c@LT@tables=\count97
+\c@LT@chunks=\count98
+\LT@p@ftn=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box32
+\sift@deathcycles=\count99
+\@vwid@loff=\dimen108
+\@vwid@roff=\dimen109
+)
+\c@taburow=\count100
+\tabu@nbcols=\count101
+\tabu@cnt=\count102
+\tabu@Xcol=\count103
+\tabu@alloc=\count104
+\tabu@nested=\count105
+\tabu@target=\dimen110
+\tabu@spreadtarget=\dimen111
+\tabu@naturalX=\dimen112
+\tabucolX=\dimen113
+\tabu@Xsum=\dimen114
+\extrarowdepth=\dimen115
+\abovetabulinesep=\dimen116
+\belowtabulinesep=\dimen117
+\tabustrutrule=\dimen118
+\tabu@thebody=\toks21
+\tabu@footnotes=\toks22
+\tabu@box=\box33
+\tabu@arstrutbox=\box34
+\tabu@hleads=\box35
+\tabu@vleads=\box36
+\tabu@cellskip=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+\TX@col@width=\dimen119
+\TX@old@table=\dimen120
+\TX@old@col=\dimen121
+\TX@target=\dimen122
+\TX@delta=\dimen123
+\TX@cols=\count106
+\TX@ftn=\toks23
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen124
+)
+\xrefbox=\box37
+\xreflength=\skip54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count107
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box38
+)
+\tc@llx=\dimen127
+\tc@lly=\dimen128
+\tc@urx=\dimen129
+\tc@ury=\dimen130
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen131
+\adjbox@Height=\dimen132
+\adjbox@Depth=\dimen133
+\adjbox@Totalheight=\dimen134
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count108
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box39
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip55
+\multicolbaselineskip=\skip56
+\partial@page=\box40
+\last@line=\box41
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\mc@col@check@num=\count117
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip57
+\f@ncyO@elh=\skip58
+\f@ncyO@erh=\skip59
+\f@ncyO@olh=\skip60
+\f@ncyO@orh=\skip61
+\f@ncyO@elf=\skip62
+\f@ncyO@erf=\skip63
+\f@ncyO@olf=\skip64
+\f@ncyO@orf=\skip65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip66
+\bibsep=\skip67
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count121
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip68
+\cftbeforetoctitleskip=\skip69
+\cftaftertoctitleskip=\skip70
+\cftbeforepartskip=\skip71
+\cftpartnumwidth=\skip72
+\cftpartindent=\skip73
+\cftbeforechapskip=\skip74
+\cftchapindent=\skip75
+\cftchapnumwidth=\skip76
+\cftbeforesecskip=\skip77
+\cftsecindent=\skip78
+\cftsecnumwidth=\skip79
+\cftbeforesubsecskip=\skip80
+\cftsubsecindent=\skip81
+\cftsubsecnumwidth=\skip82
+\cftbeforesubsubsecskip=\skip83
+\cftsubsubsecindent=\skip84
+\cftsubsubsecnumwidth=\skip85
+\cftbeforeparaskip=\skip86
+\cftparaindent=\skip87
+\cftparanumwidth=\skip88
+\cftbeforesubparaskip=\skip89
+\cftsubparaindent=\skip90
+\cftsubparanumwidth=\skip91
+\cftbeforeloftitleskip=\skip92
+\cftafterloftitleskip=\skip93
+\cftbeforefigskip=\skip94
+\cftfigindent=\skip95
+\cftfignumwidth=\skip96
+\c@lofdepth=\count122
+\c@lotdepth=\count123
+\cftbeforelottitleskip=\skip97
+\cftafterlottitleskip=\skip98
+\cftbeforetabskip=\skip99
+\cfttabindent=\skip100
+\cfttabnumwidth=\skip101
+)
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen152
+\captionmargin@=\dimen153
+\captionwidth=\dimen154
+\caption@tempdima=\dimen155
+\caption@indent=\dimen156
+\caption@parindent=\dimen157
+\caption@hangindent=\dimen158
+)
+\c@ContinuedFloat=\count124
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)) (./refman.aux)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 103.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 103.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 103.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count125
+\scratchdimen=\dimen159
+\scratchbox=\box65
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen160
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 110.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 110.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 110.
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 110.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 110.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 112.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 22.39185pt on input line 116.
+ (./refman.toc
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] []\T1/phv/m/n/10 b(function(){if("!b.[]support.[]reliable[]Margin[]Right)
+{b.[]css[]Hooks.[]margin[]Right={get[] 
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 25--25
+ [][] []\T1/phv/m/n/10 each([""height"",""width""], func-tion(bv, e){b.[]css[]H
+ooks[e]={get[]:function(by, bx, 
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 25--25
+ \T1/phv/m/n/10 bw){var bz;if(bx){if(by.[]offset[]Width"!==0){return p(by, e, b
+w)}else{b.[]swap(by, 
+ []
+
+
+Underfull \hbox (badness 5217) in paragraph at lines 25--25
+ \T1/phv/m/n/10 a7, func-tion(){bz=p(by, e, bw)})}return bz}}, set[]:function(b
+w, bx){if(bc.[] 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 26.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (53.84717pt too wide) in paragraph at lines 26--26
+ [][] []\T1/phv/m/n/10 extend({css[]Hooks[]:{opacity[]:{get[]:function(bw, bv){
+if(bv){var e=[]Z(bw,""opacity"",""opacity"");return 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 e===""""?""1""[]:e}else{return bw.[]style.[]opacity}}}}, css[]N
+umber[]:{fill[]Opacity[]:true, 
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 26--26
+ \T1/phv/m/n/10 :true, zoom[]:true}, css[]Props[]:{""float""[]:b.[]support.[]cs
+s[]Float?""css[]Float""[]:""style[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 node[]Type===8\T1/pcr/m/n/10 "|"|\T1/phv/m/n/10 "!bx.[]style){r
+eturn}var b[]B, b[]C, bz=b.[]camel[]Case(bw), 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 bv=bx.[]style, b[]E=b.[]css[]Hooks[bz];bw=b.[]css[]Props[bz]\T1
+/pcr/m/n/10 "|"|\T1/phv/m/n/10 bz;if(bD"!==[]L){b[] 
+ []
+
+
+Overfull \hbox (15.06989pt too wide) in paragraph at lines 26--26
+ \T1/phv/m/n/10 C=typeof b[]D;if(b[]C===""string""&&(b[]B=[]I.[]exec(b[]D))){b[
+]D=(+(bB[1]+1)$\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 +bB[2])+parse[] 
+ []
+
+
+Overfull \hbox (40.22578pt too wide) in paragraph at lines 26--26
+ \T1/phv/m/n/10 N(b[]D)){return}if(b[]C===""number""&&"!b.[]css[]Number[bz]){b[
+]D+=""px""}if("!bE\T1/pcr/m/n/10 "|"|\T1/phv/m/n/10 "!(""set""in 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 b[]E)\T1/pcr/m/n/10 "|"|\T1/phv/m/n/10 (b[]D=b[]E.[]set(bx, b[]
+D))"!==[]L){try{bv[bw]=bD}catch(b[]A){}}}else{if(b[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 css[]Props[bx]\T1/pcr/m/n/10 "|"|\T1/phv/m/n/10 bx;if(bx===""cs
+s[]Float""){bx=""float""}if(e &&""get""in e 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \T1/phv/m/n/10 &&(bw=e.[]get(by, true, bv))"!==[]L){return bw}else{if([]Z){ret
+urn Z(by, bx)}}}, 
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 26--26
+ \T1/phv/m/n/10 swap[]:function(bx, bw, by){var e={};for(var bv in bw){e[bv]=bx
+.[]style[bv];bx.[] 
+ []
+
+[3
+
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 52.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 52.
+ [4] [5] [6] [7])
+\tf@toc=\write4
+\openout4 = `refman.toc'.
+
+ [8]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 121.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 121.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 121.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 18.66588pt on input line 121.
+(./annotated.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+) [1
+
+
+] [2
+
+]
+Chapter 2.
+(./files.tex) [3] [4
+
+]
+Chapter 3.
+(./structpulso.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 3.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 10.79993pt on input line 3.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 6.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+)
+(./structtabla__pulsos.tex
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 1.
+
+<structtabla__pulsos__coll__graph.pdf, id=48, 161.60374pt x 167.62625pt>
+File: structtabla__pulsos__coll__graph.pdf Graphic file (type pdf)
+
+<use structtabla__pulsos__coll__graph.pdf>
+Package pdftex.def Info: structtabla__pulsos__coll__graph.pdf used on input lin
+e 10.
+(pdftex.def)             Requested size: 161.0pt x 167.0094pt.
+ [5 <./structtabla__pulsos__coll__graph.pdf>]) [6]
+Chapter 4.
+(./dynsections_8js.tex
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 25.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 8.99994pt on input line 25.
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <7> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 46.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 6.29996pt on input line 46.
+) (./jquery_8js.tex
+Underfull \hbox (badness 3039) in paragraph at lines 6--8
+\T1/phv/m/n/10 :true, orphans[]:true, widows[]:true, z[]Index[]:true, zoom[]:tr
+ue}, css[]Props[]:{"float"[]:b.[]support.[]css[]Float?"css[]
+ []
+
+
+Underfull \hbox (badness 7796) in paragraph at lines 6--8
+\T1/phv/m/n/10 Float"[]:"style[]Float"}, style[]:function(bx, bw, bD, by){\T1/p
+hv/b/n/10 if\T1/phv/m/n/10 (!bx$\OMS/cmsy/m/n/10 j$$j$\T1/phv/m/n/10 bx.[]node[
+]Type===3$\OMS/cmsy/m/n/10 j$$j$\T1/phv/m/n/10 bx.[]node[]Type===8$\OMS/cmsy/m/
+n/10 j$$j$\T1/phv/m/n/10 !bx.[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+\T1/phv/m/n/10 D!==\T1/phv/b/n/10 L\T1/phv/m/n/10 ){bC=typeof bD;\T1/phv/b/n/10
+ if\T1/phv/m/n/10 (bC==="string"&&(bB=I.[]exec(bD))){bD=(+(bB[1]+1)$\OMS/cmsy/m
+/n/10 ^^C$\T1/phv/m/n/10 +bB[2])+parse[]Float(\T1/phv/b/n/10 b.[]
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 6--8
+\T1/phv/b/n/10 css\T1/phv/m/n/10 (bx, bw));bC="number"}if(bD==null$\OMS/cmsy/m/
+n/10 j$$j$\T1/phv/m/n/10 bC==="number"&&is[]NaN(bD)){return}\T1/phv/b/n/10 if\T
+1/phv/m/n/10 (bC==="number"&&!b.[]css[]
+ []
+
+[7
+
+]
+Underfull \hbox (badness 6825) in paragraph at lines 12--14
+[]\T1/phv/b/n/10 b \T1/phv/m/n/10 (function(){\T1/phv/b/n/10 if\T1/phv/m/n/10 (
+!b.[]support.[]reliable[]Margin[]Right){b.[]css[]Hooks.[]margin[]Right={get[]:f
+unction(bw, bv){var e;b.[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+\T1/phv/m/n/10 swap(bw,{display[]:"inline-block"}, function(){\T1/phv/b/n/10 if
+\T1/phv/m/n/10 (bv){e=\T1/phv/b/n/10 Z\T1/phv/m/n/10 (bw,"margin-right","margin
+[]Right")}else{e=bw.[]style.[]
+ []
+
+
+Overfull \hbox (71.56853pt too wide) in paragraph at lines 33--35
+[]\T1/phv/b/n/10 b \T1/phv/m/n/10 fn \T1/phv/b/n/10 css \T1/phv/m/n/10 =functio
+n(e,bv){\T1/phv/b/n/10 if\T1/phv/m/n/10 (arguments.[]length===2&&bv===\T1/phv/b
+/n/10 L\T1/phv/m/n/10 ){return this}return b.[]access(this,e,bv,true,function(b
+x,bw,by){return
+ []
+
+
+Overfull \hbox (66.03357pt too wide) in paragraph at lines 49--51
+[]\T1/phv/m/n/10 var \T1/phv/b/n/10 aZ \T1/phv/m/n/10 =/$[]$(?[]:color$\OMS/cms
+y/m/n/10 j$\T1/phv/m/n/10 date$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 datetime$\OMS/
+cmsy/m/n/10 j$\T1/phv/m/n/10 datetime-local$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 e
+mail$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 hidden$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10
+ month$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 number$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/
+10 password$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 range$\OMS/cmsy/m/n/10 j$\T1/phv/
+m/n/10 search$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 tel$\OMS/cmsy/m/n/10 j$\T1/phv/
+m/n/10 text$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 time$\OMS/cmsy/m/n/10 j$\T1/phv/m
+/n/10 url$\OMS/cmsy/m/n/10 j$\T1/phv/m/n/10 week)$/i 
+ []
+
+[8]
+Overfull \hbox (18.12233pt too wide) in paragraph at lines 145--145
+[]      \T1/pcr/m/n/7 bb.$,bD,bY=/^(?:[^#<]*(<[$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7
+ w$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 W]+>)[^>]*$|#([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/
+n/7 w$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]*)$)/,bM=/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/
+n/7 S/,bI=/^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s+/,bE=/$\OMS/cmsy/m/n/7 n$\T1/pcr
+/m/n/7 s+$/,bA=/^<($\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w+)$\OMS/cmsy/m/n/7 n$\T1/p
+cr/m/n/7 s*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 /?>(?:<$\OMS/cmsy/m/n/7 n$\T1/pcr/m
+/n/7 /$\OMS/cmsy/m/n/7 n$[] 
+ []
+
+
+Overfull \hbox (22.32233pt too wide) in paragraph at lines 146--146
+[]      \T1/pcr/m/n/7 1>)?$/,bN=/^[$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ],:{}$\OMS/
+cmsy/m/n/7 n$\T1/pcr/m/n/7 s]*$/,bW=/$\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 (?:[[]
+"$\OMS/cmsy/m/n/7 n$$n$$n$\T1/pcr/m/n/7 /bfnrt]|u[0-9a-fA-F]{4})/g,bP=/"[][^[]"
+$\OMS/cmsy/m/n/7 n$$n$$n$\T1/pcr/m/n/7 n$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 r]*"[]
+|[]true[]|[]false[]|null|-?$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 d+(?[] 
+ []
+
+
+Overfull \hbox (22.7334pt too wide) in paragraph at lines 147--147
+[]      \T1/pcr/m/n/7 :$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 .$\OMS/cmsy/m/n/7 n$\T1
+/pcr/m/n/7 d*)?(?:[eE][+$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]?$\OMS/cmsy/m/n/7 n$
+\T1/pcr/m/n/7 d+)?/g,bJ=/(?:^|:|,)(?:$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*$\OMS/c
+msy/m/n/7 n$\T1/pcr/m/n/7 [)+/g,by=/(webkit)[ $\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 
+/]([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w.]+)/,bR=/(opera)(?:.*version)?[[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 149--149
+[]      \T1/pcr/m/n/7 function[](b0,b1){[]return[](b1+[]""[]).toUpperCase()},bX
+=bu.userAgent,bV,bC,e,bL=Object.prototype.toString,bG=Object.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 150--150
+[]      \T1/pcr/m/n/7 prototype.hasOwnProperty,bz=Array.prototype.push,bK=Array
+.prototype.slice,bO=String.prototype.trim,bv=Array.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 151--152
+[]      \T1/pcr/m/n/7 prototype.indexOf,bx={};bF.fn=bF.prototype={constructor:b
+F,init:[]function[](b0,b4,b3){var b2,b5,b1,b6;[]if[](!b0){[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 152--152
+[]      \T1/pcr/m/n/7 return[] []this[]}[]if[](b0.nodeType){this.context=[]this
+[][0]=b0;this.length=1;[]return[] []this[]}[]if[](b0===[]"body"[]&&!b4&&av.body
+){[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 153--153
+[]      \T1/pcr/m/n/7 this.context=av;[]this[][0]=av.body;this.selector=b0;this
+.length=1;[]return[] []this[]}[]if[](typeof b0===[]"string"[]){[]if[](b0.[] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 154--154
+[]      \T1/pcr/m/n/7 charAt(0)===[]"<"[]&&b0.charAt(b0.length-1)===[]">"[]&&b0
+.length>=3){b2=[null,b0,null]}[]else[]{b2=bY.exec(b0)}[]if[](b2&&(b2[1][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 155--155
+[]      \T1/pcr/m/n/7 ||!b4)){[]if[](b2[1]){b4=b4 instanceof bF?b4[0]:b4;b6=(b4
+?b4.ownerDocument||b4:av);b1=bA.exec(b0);[]if[](b1){[]if[](bF.[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 156--156
+[]      \T1/pcr/m/n/7 isPlainObject(b4)){b0=[av.createElement(b1[1])];bF.fn.att
+r.call(b0,b4,[]true[])}[]else[]{b0=[b6.createElement(b1[1])]}[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 158--158
+[]      \T1/pcr/m/n/7 return[] bF.merge([]this[],b0)}[]else[]{b5=av.getElementB
+yId(b2[2]);[]if[](b5&&b5.parentNode){[]if[](b5.id!==b2[2]){[]return[] b3.find([
+] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 159--159
+[]      \T1/pcr/m/n/7 b0)}this.length=1;[]this[][0]=b5}this.context=av;this.sel
+ector=b0;[]return[] []this[]}}[]else[]{[]if[](!b4||b4.jquery){[]return[](b4[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 160--161
+[]      \T1/pcr/m/n/7 ||b3).find(b0)}[]else[]{[]return[] this.constructor(b4).f
+ind(b0)}}}[]else[]{[]if[](bF.isFunction(b0)){[]return[] b3.ready(b0)}}[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 161--162
+[]      \T1/pcr/m/n/7 if[](b0.selector!==L){this.selector=b0.selector;this.cont
+ext=b0.context}[]return[] bF.makeArray(b0,[]this[])},selector:[][] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 162--163
+[]      \T1/pcr/m/n/7 ""[],jquery:[]"1.7.1"[],length:0,size:[]function[](){[]re
+turn[] this.length},toArray:[]function[](){[]return[] bK.call([]this[],0)},[][]
+ 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 163--163
+[]      \T1/pcr/m/n/7 get[]:[]function[](b0){[]return[] b0==null?this.toArray()
+:(b0<0?this[this.length+b0]:this[b0])},pushStack:function(b1,b3[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 164--164
+[]      \T1/pcr/m/n/7 ,b0){var b2=this.constructor();[]if[](bF.isArray(b1)){bz.
+apply(b2,b1)}[]else[]{bF.merge(b2,b1)}b2.prevObject=[]this[];b2[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 166--167
+[]      \T1/pcr/m/n/7 selector=this.selector+[]"."[]+b3+[]"("[]+b0+[]")"[]}}[]r
+eturn[] b2},each:[]function[](b1,b0){[]return[] bF.each([]this[],b1,b0)},ready:
+[][] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 167--167
+[]      \T1/pcr/m/n/7 function[](b0){bF.bindReady();bC.add(b0);[]return[] []thi
+s[]},eq:[]function[](b0){b0=+b0;[]return[] b0===-1?this.slice(b0):this.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 169--169
+[]      \T1/pcr/m/n/7 return[] this.pushStack(bK.apply([]this[],arguments),[]"s
+lice"[],bK.call(arguments).join([]","[]))},map:[]function[](b0){[]return[][] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 170--170
+[]      \T1/pcr/m/n/7 this.pushStack(bF.map([]this[],[]function[](b2,b1){return
+ b0.call(b2,b1,b2)}))},end:[]function[](){[]return[] this.prevObject|[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 171--171
+[]      \T1/pcr/m/n/7 |this.constructor(null)},push:bz,sort:[].sort,splice:[].s
+plice};bF.fn.init.prototype=bF.fn;bF.extend=bF.fn.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 172--173
+[]      \T1/pcr/m/n/7 extend=[]function[](){var b9,b2,b0,b1,b6,b7,b5=arguments[
+0]||{},b4=1,b3=arguments.length,b8=[]false[];[]if[](typeof b5===[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 173--174
+[]      \T1/pcr/m/n/7 "boolean"[]){b8=b5;b5=arguments[1]||{};b4=2}[]if[](typeof
+ b5!==[]"object"[]&&!bF.isFunction(b5)){b5={}}[]if[](b3===b4){b5=[][] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 175--175
+[]      \T1/pcr/m/n/7 continue[]}[]if[](b8&&b1&&(bF.isPlainObject(b1)||(b6=bF.i
+sArray(b1)))){[]if[](b6){b6=[]false[];b7=b0&&bF.isArray(b0)?b0:[]}[]else[]{[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 177--178
+[]      \T1/pcr/m/n/7 extend({noConflict:[]function[](b0){[]if[](bb.$===bF){bb.
+$=bH}[]if[](b0&&bb.jQuery===bF){bb.jQuery=bU}[]return[] bF},isReady:[][] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 178--178
+[]      \T1/pcr/m/n/7 false[],readyWait:1,holdReady:[]function[](b0){[]if[](b0)
+{bF.readyWait++}[]else[]{bF.ready([]true[])}},ready:[]function[](b0){[]if[]((b0
+[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 179--180
+[]      \T1/pcr/m/n/7 ===[]true[]&&!--bF.readyWait)||(b0!==[]true[]&&!bF.isRead
+y)){[]if[](!av.body){[]return[] setTimeout(bF.ready,1)}bF.isReady=[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 180--180
+[]      \T1/pcr/m/n/7 true[];[]if[](b0!==[]true[]&&--bF.readyWait>0){[]return[]
+}bC.fireWith(av,[bF]);[]if[](bF.fn.trigger){bF(av).trigger([]"ready"[]).[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 181--182
+[]      \T1/pcr/m/n/7 off([]"ready"[])}}},bindReady:[]function[](){[]if[](bC){[
+]return[]}bC=bF.Callbacks([]"once memory"[]);[]if[](av.readyState===[]"complete
+[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 183--183
+[]      \T1/pcr/m/n/7 bb.addEventListener([]"load"[],bF.ready,[]false[])}[]else
+[]{[]if[](av.attachEvent){av.attachEvent([]"onreadystatechange"[],e);[] 
+ []
+
+
+Overfull \hbox (69.75551pt too wide) in paragraph at lines 185--186
+[]      \T1/pcr/m/n/7 documentElement.doScroll&&b0){bw()}}}},isFunction:[]funct
+ion[](b0){[]return[] bF.type(b0)===[]"function"[]},isArray:Array.isArray||[][] 
+
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 186--186
+[]      \T1/pcr/m/n/7 function[](b0){[]return[] bF.type(b0)===[]"array"[]},isWi
+ndow:[]function[](b0){[]return[] b0&&typeof b0===[]"object"[]&&[]"setInterval"[
+][] 
+ []
+
+[9]
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 189--189
+[]      \T1/pcr/m/n/7 nodeType||bF.isWindow(b2)){[]return[] []false[]}[]try[]{[
+]if[](b2.constructor&&!bG.call(b2,[]"constructor"[])&&!bG.call(b2.constructor[]
+ 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 191--191
+[]      \T1/pcr/m/n/7 L||bG.call(b2,b0)},isEmptyObject:[]function[](b1){[]for[]
+(var b0 in b1){[]return[] []false[]}[]return[] []true[]},error:[]function[](b0[
+] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 192--192
+[]      \T1/pcr/m/n/7 ){[]throw[] []new[] Error(b0)},parseJSON:[]function[](b0)
+{[]if[](typeof b0!==[]"string"[]||!b0){[]return[] null}b0=bF.trim(b0);[]if[]([]
+ 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 193--194
+[]      \T1/pcr/m/n/7 bb.JSON&&bb.JSON.parse){[]return[] bb.JSON.parse(b0)}[]if
+[](bN.test(b0.replace(bW,[]"@"[]).replace(bP,[]"]"[]).replace(bJ,[]"[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 194--194
+[]      \T1/pcr/m/n/7 "[]))){[]return[]([]new[] Function([]"return "[]+b0))()}b
+F.error([]"Invalid JSON: "[]+b0)},parseXML:[]function[](b2){var b0,b1;[]try[][]
+ 
+ []
+
+
+Overfull \hbox (90.7555pt too wide) in paragraph at lines 197--197
+[]      \T1/pcr/m/n/7 getElementsByTagName([]"parsererror"[]).length){bF.error(
+[]"Invalid XML: "[]+b2)}[]return[] b0},noop:[]function[](){},globalEval:[]funct
+ion[](b0[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 201--202
+[]      \T1/pcr/m/n/7 L||bF.isFunction(b3);[]if[](b2){[]if[](b0){[]for[](b1 in 
+b3){[]if[](b6.apply(b3[b1],b2)===[]false[]){[]break[]}}}[]else[]{[]for[](;b4<b5
+;){[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 202--203
+[]      \T1/pcr/m/n/7 if[](b6.apply(b3[b4++],b2)===[]false[]){[]break[]}}}}[]el
+se[]{[]if[](b0){[]for[](b1 in b3){[]if[](b6.call(b3[b1],b1,b3[b1])===[]false[])
+{[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 203--204
+[]      \T1/pcr/m/n/7 break[]}}}[]else[]{[]for[](;b4<b5;){[]if[](b6.call(b3[b4]
+,b4,b3[b4++])===[]false[]){[]break[]}}}}[]return[] b3},trim:bO?[]function[](b0)
+{[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 204--204
+[]      \T1/pcr/m/n/7 return[] b0==null?[]""[]:bO.call(b0)}:[]function[](b0){[]
+return[] b0==null?[]""[]:b0.toString().replace(bI,[]""[]).replace(bE,[]""[])},[
+] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 205--205
+[]      \T1/pcr/m/n/7 makeArray:[]function[](b3,b1){var b0=b1||[];[]if[](b3!=nu
+ll){var b2=bF.type(b3);[]if[](b3.length==null||b2===[]"string"[]||b2[] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 207--208
+[]      \T1/pcr/m/n/7 function[](b2,b3,b1){var b0;[]if[](b3){[]if[](bv){[]retur
+n[] bv.call(b3,b2,b1)}b0=b3.length;b1=b1?b1<0?Math.max(0,b0+b1):b1:0;[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 208--208
+[]      \T1/pcr/m/n/7 for[](;b1<b0;b1++){[]if[](b1 in b3&&b3[b1]===b2){[]return
+[] b1}}}[]return[] -1},merge:[]function[](b4,b2){var b3=b4.length,b1=0[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 210--210
+[]      \T1/pcr/m/n/7 L){b4[b3++]=b2[b1++]}}b4.length=b3;[]return[] b4},grep:[]
+function[](b1,b6,b0){var b2=[],b5;b0=!!b0;[]for[](var b3=0,b4=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 211--211
+[]      \T1/pcr/m/n/7 b1.length;b3<b4;b3++){b5=!!b6(b1[b3],b3);[]if[](b0!==b5){
+b2.push(b1[b3])}}[]return[] b2},map:[]function[](b0,b7,b8){var[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 212--212
+[]      \T1/pcr/m/n/7 b5,b6,b4=[],b2=0,b1=b0.length,b3=b0 instanceof bF||b1!==L
+&&typeof b1===[]"number"[]&&((b1>0&&b0[0]&&b0[b1-1])||[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 213--213
+[]      \T1/pcr/m/n/7 b1===0||bF.isArray(b0));[]if[](b3){[]for[](;b2<b1;b2++){b
+5=b7(b0[b2],b2,b8);[]if[](b5!=null){b4[b4.length]=b5}}}[]else[]{[]for[]([] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 214--215
+[]      \T1/pcr/m/n/7 b6 in b0){b5=b7(b0[b6],b6,b8);[]if[](b5!=null){b4[b4.leng
+th]=b5}}}[]return[] b4.concat.apply([],b4)},guid:1,proxy:[][] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 216--216
+[]      \T1/pcr/m/n/7 L}var b0=bK.call(arguments,2),b1=[]function[](){[]return[
+] b4.apply(b3,b0.concat(bK.call(arguments)))};b1.guid=b4.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 217--217
+[]      \T1/pcr/m/n/7 guid=b4.guid||b1.guid||bF.guid++;[]return[] b1},access:[]
+function[](b0,b8,b6,b2,b5,b7){var b1=b0.length;[]if[](typeof b8[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 219--219
+[]      \T1/pcr/m/n/7 L){b2=!b7&&b2&&bF.isFunction(b6);[]for[](var b4=0;b4<b1;b
+4++){b5(b0[b4],b8,b2?b6.call(b0[b4],b4,b5(b0[b4],b8)):[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 220--220
+[]      \T1/pcr/m/n/7 b6,b7)}[]return[] b0}[]return[] b1?b5(b0[0],b8):L},now:fu
+nction(){[]return[]([]new[] Date()).getTime()},uaMatch:[]function[](b1)[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 221--221
+[]      \T1/pcr/m/n/7 {b1=b1.toLowerCase();var b0=by.exec(b1)||bR.exec(b1)||bQ.
+exec(b1)||b1.indexOf([]"compatible"[])<0&&bS.exec(b1)||[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 222--222
+[]      \T1/pcr/m/n/7 [];[]return[]{browser:b0[1]||[]""[],version:b0[2]||[]"0"[
+]}},sub:[]function[](){[]function[] b0(b3,b4){[]return[] []new[] b0.fn.init(b3,
+[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 223--223
+[]      \T1/pcr/m/n/7 b4)}bF.extend([]true[],b0,[]this[]);b0.superclass=[]this[
+];b0.fn=b0.prototype=[]this[]();b0.fn.constructor=b0;b0.sub=this.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 224--224
+[]      \T1/pcr/m/n/7 sub;b0.fn.init=[]function[] b2(b3,b4){[]if[](b4&&b4 insta
+nceof bF&&!(b4 instanceof b0)){b4=b0(b4)}[]return[] bF.fn.init.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 225--226
+[]      \T1/pcr/m/n/7 call([]this[],b3,b4,b1)};b0.fn.init.prototype=b0.fn;var b
+1=b0(av);[]return[] b0},browser:{}});bF.each([]"Boolean Number[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 226--226
+[]       \T1/pcr/m/n/7 String Function Array Date RegExp Object"[].split([]" "[
+]),[]function[](b1,b0){bx[[]"[object "[]+b0+[]"]"[]]=b0.toLowerCase()}[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 227--227
+[]      \T1/pcr/m/n/7 );bV=bF.uaMatch(bX);[]if[](bV.browser){bF.browser[bV.brow
+ser]=[]true[];bF.browser.version=bV.version}[]if[](bF.browser.[] 
+ []
+
+
+Overfull \hbox (65.55551pt too wide) in paragraph at lines 229--229
+[]      \T1/pcr/m/n/7 addEventListener){e=[]function[](){av.removeEventListener
+([]"DOMContentLoaded"[],e,[]false[]);bF.ready()}}[]else[]{[]if[](av.attachEvent
+){[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 230--230
+[]      \T1/pcr/m/n/7 e=[]function[](){[]if[](av.readyState===[]"complete"[]){a
+v.detachEvent([]"onreadystatechange"[],e);bF.ready()}}}}[]function[] bw[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 231--231
+[]      \T1/pcr/m/n/7 (){[]if[](bF.isReady){[]return[]}[]try[]{av.documentEleme
+nt.doScroll([]"left"[])}[]catch[](b0){setTimeout(bw,1);[]return[]}bF.ready([] 
+ []
+
+
+Overfull \hbox (23.45277pt too wide) in paragraph at lines 232--232
+[]      \T1/pcr/m/n/7 )}[]return[] bF})();var a2={};[]function[] X(e){var bv=a2
+[e]={},bw,bx;e=e.split(/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s+/);[]for[](bw=0,bx=e
+.length;bw<bx;bw[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 233--233
+[]      \T1/pcr/m/n/7 ++){bv[e[bw]]=[]true[]}[]return[] bv}b.Callbacks=[]functi
+on[](bw){bw=bw?(a2[bw]||X(bw)):{};var bB=[],bC=[],bx,by,bv,bz,[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 235--236
+[]      \T1/pcr/m/n/7 b.type(bI);[]if[](bH===[]"array"[]){bE(bI)}[]else[]{[]if[
+](bH===[]"function"[]){[]if[](!bw.unique||!bD.has(bI)){bB.push(bI)}}}}},e=[][] 
+
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 236--236
+[]      \T1/pcr/m/n/7 function[](bG,bF){bF=bF||[];bx=!bw.memory||[bG,bF];by=[]t
+rue[];bA=bv||0;bv=0;bz=bB.length;[]for[](;bB&&bA<bz;bA++){[]if[]([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 237--237
+[]      \T1/pcr/m/n/7 bB[bA].apply(bG,bF)===[]false[]&&bw.stopOnFalse){bx=[]tru
+e[];[]break[]}}by=[]false[];[]if[](bB){[]if[](!bw.once){[]if[](bC&&bC.length){[
+] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 238--238
+[]      \T1/pcr/m/n/7 bx=bC.shift();bD.fireWith(bx[0],bx[1])}}[]else[]{[]if[](b
+x===[]true[]){bD.disable()}[]else[]{bB=[]}}}},bD={add:[]function[](){[]if[]([] 
+
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 239--240
+[]      \T1/pcr/m/n/7 bB){var bF=bB.length;bE(arguments);[]if[](by){bz=bB.lengt
+h}[]else[]{[]if[](bx&&bx!==[]true[]){bv=bF;e(bx[0],bx[1])}}}[]return[] [][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 240--240
+[]      \T1/pcr/m/n/7 this[]},[]remove[]:[]function[](){[]if[](bB){var bF=argum
+ents,bH=0,bI=bF.length;[]for[](;bH<bI;bH++){[]for[](var bG=0;bG<bB.length[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 241--241
+[]      \T1/pcr/m/n/7 ;bG++){[]if[](bF[bH]===bB[bG]){[]if[](by){[]if[](bG<=bz){
+bz--;[]if[](bG<=bA){bA--}}}bB.splice(bG--,1);[]if[](bw.unique){[]break[]}}}[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 242--243
+[]      \T1/pcr/m/n/7 }}[]return[] []this[]},has:[]function[](bG){[]if[](bB){va
+r bF=0,bH=bB.length;[]for[](;bF<bH;bF++){[]if[](bG===bB[bF]){[]return[] []true[
+]}}}[][] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 244--244
+[]      \T1/pcr/m/n/7 function[](){[]return[] !bB},lock:[]function[](){bC=L;[]i
+f[](!bx||bx===[]true[]){bD.disable()}[]return[] []this[]},locked:[]function[]()
+{[]return[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 245--245
+[]      \T1/pcr/m/n/7 !bC},fireWith:[]function[](bG,bF){[]if[](bC){[]if[](by){[
+]if[](!bw.once){bC.push([bG,bF])}}[]else[]{[]if[](!(bw.once&&bx)){e(bG,bF)}[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 249--249
+[]      \T1/pcr/m/n/7 done:bx.add,fail:bw.add,progress:bv.add,state:[]function[
+](){[]return[] e},isResolved:bx.fired,isRejected:bw.fired,then[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 252--252
+[]      \T1/pcr/m/n/7 b.each({done:[bF,[]"resolve"[]],fail:[bE,[]"reject"[]],pr
+ogress:[bD,[]"notify"[]]},[]function[](bI,bL){var bH=bL[0],bK=bL[1[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 253--253
+[]      \T1/pcr/m/n/7 ],bJ;[]if[](b.isFunction(bH)){bB[bI]([]function[](){bJ=bH
+.apply([]this[],arguments);[]if[](bJ&&b.isFunction(bJ.promise)){bJ.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 254--254
+[]      \T1/pcr/m/n/7 promise().then(bG.resolve,bG.reject,bG.notify)}[]else[]{b
+G[bK+[]"With"[]]([]this[]===bB?bG:[]this[],[bJ])}})}[]else[]{bB[bI](bG[[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 255--255
+[]      \T1/pcr/m/n/7 bK])}})}).promise()},promise:[]function[](bE){[]if[](bE==
+null){bE=bC}[]else[]{[]for[](var bD in bC){bE[bD]=bC[bD]}}[]return[] bE[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 256--257
+[]      \T1/pcr/m/n/7 }},bB=bC.promise({}),bz;[]for[](bz in bA){bB[bz]=bA[bz].f
+ire;bB[bz+[]"With"[]]=bA[bz].fireWith}bB.done([]function[](){e=[][] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 258--258
+[]      \T1/pcr/m/n/7 return[] bB},when:[]function[](bA){var bx=aJ.call(argumen
+ts,0),bv=0,e=bx.length,bB=[]new[] Array(e),bw=e,by=e,bC=e<=1&&bA&[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 260--260
+[]      \T1/pcr/m/n/7 arguments.length>1?aJ.call(arguments,0):bG;[]if[](!(--bw)
+){bC.resolveWith(bC,bx)}}}[]function[] bz(bF){[]return[] []function[](bG){[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 261--261
+[]      \T1/pcr/m/n/7 bB[bF]=arguments.length>1?aJ.call(arguments,0):bG;bC.noti
+fyWith(bE,bB)}}[]if[](e>1){[]for[](;bv<e;bv++){[]if[](bx[bv]&&[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 262--262
+[]      \T1/pcr/m/n/7 bx[bv].promise&&b.isFunction(bx[bv].promise)){bx[bv].prom
+ise().then(bD(bv),bC.reject,bz(bv))}[]else[]{--bw}}[]if[](![] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 266--266
+[]       \T1/pcr/m/n/7 style='top:1px;float:left;opacity:.55;'>a</a><input type
+='checkbox'/>"[];bI=bv.getElementsByTagName([]"*"[]);bF=bv.[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 267--267
+[]      \T1/pcr/m/n/7 getElementsByTagName([]"a"[])[0];[]if[](!bI||!bI.length||
+!bF){[]return[]{}}bG=av.createElement([]"select"[]);bx=bG.appendChild(av.[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 268--268
+[]      \T1/pcr/m/n/7 createElement([]"option"[]));bE=bv.getElementsByTagName([
+]"input"[])[0];bJ={leadingWhitespace:(bv.firstChild.nodeType===3),[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 269--269
+[]      \T1/pcr/m/n/7 tbody:!bv.getElementsByTagName([]"tbody"[]).length,htmlSe
+rialize:!!bv.getElementsByTagName([]"link"[]).length,style:/[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 270--270
+[]      \T1/pcr/m/n/7 top/.test(bF.getAttribute([]"style"[])),hrefNormalized:(b
+F.getAttribute([]"href"[])===[]"/a"[]),opacity:/^0.55/.test(bF.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 271--271
+[]      \T1/pcr/m/n/7 style.opacity),cssFloat:!!bF.style.cssFloat,checkOn:(bE.v
+alue===[]"on"[]),optSelected:bx.selected,getSetAttribute[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 272--273
+[]      \T1/pcr/m/n/7 :bv.className!==[]"t"[],enctype:!!av.createElement([]"for
+m"[]).enctype,html5Clone:av.createElement([]"nav"[]).cloneNode([][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 273--274
+[]      \T1/pcr/m/n/7 true[]).outerHTML!==[]"<:nav></:nav>"[],submitBubbles:[]t
+rue[],changeBubbles:[]true[],focusinBubbles:[]false[],deleteExpando:[][] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 275--275
+[]      \T1/pcr/m/n/7 checked=[]true[];bJ.noCloneChecked=bE.cloneNode([]true[])
+.checked;bG.disabled=[]true[];bJ.optDisabled=!bx.disabled;[]try[]{[]delete[][] 
+
+ []
+
+
+Overfull \hbox (57.15552pt too wide) in paragraph at lines 277--277
+[]      \T1/pcr/m/n/7 attachEvent([]"onclick"[],[]function[](){bJ.noCloneEvent=
+[]false[]});bv.cloneNode([]true[]).fireEvent([]"onclick"[])}bE=av.createElement
+[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 278--279
+[]      \T1/pcr/m/n/7 ([]"input"[]);bE.value=[]"t"[];bE.setAttribute([]"type"[]
+,[]"radio"[]);bJ.radioValue=bE.value===[]"t"[];bE.setAttribute([]"checked[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 279--279
+[]      \T1/pcr/m/n/7 "[],[]"checked"[]);bv.appendChild(bE);bD=av.createDocumen
+tFragment();bD.appendChild(bv.lastChild);bJ.checkClone=bD[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 281--281
+[]      \T1/pcr/m/n/7 appendChild(bv);bv.innerHTML=[]""[];[]if[](bb.getComputed
+Style){bA=av.createElement([]"div"[]);bA.style.width=[]"0"[];bA.style.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 283--283
+[]      \T1/pcr/m/n/7 bb.getComputedStyle(bA,null)||{marginRight:0}).marginRigh
+t,10)||0)===0}[]if[](bv.attachEvent){[]for[](by in {submit[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 284--285
+[]      \T1/pcr/m/n/7 :1,change:1,focusin:1}){bB=[]"on"[]+by;bw=(bB in bv);[]if
+[](!bw){bv.setAttribute(bB,[]"return;"[]);bw=(typeof bv[bB]===[]"[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 285--285
+[]      \T1/pcr/m/n/7 function"[])}bJ[by+[]"Bubbles"[]]=bw}}bD.removeChild(bv);
+bD=bG=bx=bA=bv=bE=null;b([]function[](){var bM,bU,bV,bT,bN,bO[] 
+ []
+
+
+Overfull \hbox (107.55548pt too wide) in paragraph at lines 287--288
+[]      \T1/pcr/m/n/7 position:absolute;top:0;left:0;width:1px;height:1px;margi
+n:0;"[];bR=[]"visibility:hidden;border:0;"[];e=[]"style='"[]+bS+[]"border:5px s
+olid[] 
+ []
+
+
+Overfull \hbox (191.55542pt too wide) in paragraph at lines 289--290
+[]       \T1/pcr/m/n/7 cellspacing='0'><tr><td></td></tr></table>"[];bM=av.crea
+teElement([]"div"[]);bM.style.cssText=bR+[]"width:0;height:0;position:static;to
+p:0;margin-top:"[]+bL+[][] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 291--291
+[]      \T1/pcr/m/n/7 <table><tr><td style='padding:0;border:0;display:none'></
+td><td>t</td></tr></table>"[];bz=bv.getElementsByTagName([]"td"[])[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 292--292
+[]      \T1/pcr/m/n/7 ;bw=(bz[0].offsetHeight===0);bz[0].style.display=[]""[];b
+z[1].style.display=[]"none"[];bJ.reliableHiddenOffsets=bw&&[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 294--294
+[]      \T1/pcr/m/n/7 b.boxModel=bJ.boxModel=bv.offsetWidth===2;[]if[](typeof b
+v.style.zoom!==[]"undefined"[]){bv.style.display=[]"inline"[];[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 296--296
+[]       \T1/pcr/m/n/7 style='width:4px;'></div>"[];bJ.shrinkWrapBlocks=(bv.off
+setWidth!==2)}bv.style.cssText=bS+bR;bv.innerHTML=bP;bU=bv.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 297--297
+[]      \T1/pcr/m/n/7 firstChild;bV=bU.firstChild;bN=bU.nextSibling.firstChild.
+firstChild;bO={doesNotAddBorder:(bV.offsetTop!==5),[] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 299--299
+[]      \T1/pcr/m/n/7 fixedPosition=(bV.offsetTop===20||bV.offsetTop===15);bV.s
+tyle.position=bV.style.top=[]""[];bU.style.overflow=[]"hidden"[];bU.[] 
+ []
+
+
+Overfull \hbox (107.45271pt too wide) in paragraph at lines 301--301
+[]      \T1/pcr/m/n/7 doesNotIncludeMarginInBodyOffset=(bQ.offsetTop!==bL);bQ.r
+emoveChild(bM);bv=bM=null;b.extend(bJ,bO)});[]return[] bJ})();var aS=/^(?:$\OMS
+/cmsy/m/n/7 n$[] 
+ []
+
+
+Overfull \hbox (23.24724pt too wide) in paragraph at lines 302--302
+[]      \T1/pcr/m/n/7 {.*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 }|$\OMS/cmsy/m/n/7 n$
+\T1/pcr/m/n/7 [.*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ])$/,aA=/([A-Z])/g;b.extend({
+cache:{},uuid:0,expando:[]"jQuery"[]+(b.fn.jquery+Math.random()).replace[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 304--304
+[]      \T1/pcr/m/n/7 function[](e){e=e.nodeType?b.cache[e[b.expando]]:e[b.expa
+ndo];[]return[] !!e&&!S(e)},data:[]function[](bx,bv,bz,by){[]if[](![] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 311--311
+[]      \T1/pcr/m/n/7 b.camelCase(bv)]}}[]else[]{bD=bA}[]return[] bD},removeDat
+a:[]function[](bx,bv,by){[]if[](!b.acceptData(bx)){[]return[]}var bB,[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 312--312
+[]      \T1/pcr/m/n/7 bA,bz,bC=b.expando,bD=bx.nodeType,e=bD?b.cache:bx,bw=bD?b
+x[bC]:bC;[]if[](!e[bw]){[]return[]}[]if[](bv){bB=by?e[bw]:e[bw].[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 313--313
+[]      \T1/pcr/m/n/7 data;[]if[](bB){[]if[](!b.isArray(bv)){[]if[](bv in bB){b
+v=[bv]}[]else[]{bv=b.camelCase(bv);[]if[](bv in bB){bv=[bv]}[]else[]{bv=bv.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 314--314
+[]      \T1/pcr/m/n/7 split([]" "[])}}}[]for[](bA=0,bz=bv.length;bA<bz;bA++){[]
+delete[] bB[bv[bA]]}[]if[](!(by?S:b.isEmptyObject)(bB)){[]return[]}}}[]if[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 315--315
+[]      \T1/pcr/m/n/7 (!by){[]delete[] e[bw].data;[]if[](!S(e[bw])){[]return[]}
+}[]if[](b.support.deleteExpando||!e.setInterval){[]delete[] e[bw]}[]else[]{[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 316--316
+[]      \T1/pcr/m/n/7 e[bw]=null}[]if[](bD){[]if[](b.support.deleteExpando){[]d
+elete[] bx[bC]}[]else[]{[]if[](bx.removeAttribute){bx.removeAttribute([] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 317--317
+[]      \T1/pcr/m/n/7 bC)}[]else[]{bx[bC]=null}}}},_data:[]function[](bv,e,bw){
+[]return[] b.data(bv,e,bw,[]true[])},acceptData:[]function[](bv){[]if[](bv.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 318--318
+[]      \T1/pcr/m/n/7 nodeName){var e=b.noData[bv.nodeName.toLowerCase()];[]if[
+](e){[]return[] !(e===[]true[]||bv.getAttribute([]"classid"[])!==e)}[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 319--319
+[]      \T1/pcr/m/n/7 }[]return[] []true[]}});b.fn.extend({data:[]function[](by
+,bA){var bB,e,bw,bz=null;[]if[](typeof by===[]"undefined"[]){[]if[](this.[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 320--320
+[]      \T1/pcr/m/n/7 length){bz=b.data([]this[][0]);[]if[]([]this[][0].nodeTyp
+e===1&&!b._data([]this[][0],[]"parsedAttrs"[])){e=[]this[][0].attributes;[]for[
+]([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 321--321
+[]      \T1/pcr/m/n/7 var bx=0,bv=e.length;bx<bv;bx++){bw=e[bx].name;[]if[](bw.
+indexOf([]"data-"[])===0){bw=b.camelCase(bw.substring(5));[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 322--322
+[]      \T1/pcr/m/n/7 a5([]this[][0],bw,bz[bw])}}b._data([]this[][0],[]"parsedA
+ttrs"[],[]true[])}}[]return[] bz}[]else[]{[]if[](typeof by===[]"object"[]){[]re
+turn[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 328--328
+[]      \T1/pcr/m/n/7 each([]function[](){b.removeData([]this[],e)})}});[]funct
+ion[] a5(bx,bw,by){[]if[](by===L&&bx.nodeType===1){var bv=[]"data-"[]+[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 329--329
+[]      \T1/pcr/m/n/7 bw.replace(aA,[]"-$1"[]).toLowerCase();by=bx.getAttribute
+(bv);[]if[](typeof by===[]"string"[]){[]try[]{by=by===[]"true"[]?[]true[]:[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 330--330
+[]      \T1/pcr/m/n/7 by===[]"false"[]?[]false[]:by===[]"null"[]?null:b.isNumer
+ic(by)?parseFloat(by):aS.test(by)?b.parseJSON(by):by}catch(bz){}[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 332--332
+[]      \T1/pcr/m/n/7 b.isEmptyObject(bv[e])){[]continue[]}[]if[](e!==[]"toJSON
+"[]){[]return[] []false[]}}[]return[] []true[]}[]function[] bi(by,bx,bA){var bw
+=bx[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 333--333
+[]      \T1/pcr/m/n/7 +[]"defer"[],bv=bx+[]"queue"[],e=bx+[]"mark"[],bz=b._data
+(by,bw);[]if[](bz&&(bA===[]"queue"[]||!b._data(by,bv))&&(bA===[]"mark"[]||![] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 334--334
+[]      \T1/pcr/m/n/7 b._data(by,e))){setTimeout([]function[](){[]if[](!b._data
+(by,bv)&&!b._data(by,e)){b.removeData(by,bw,[]true[]);bz.fire([] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 336--336
+[]      \T1/pcr/m/n/7 _unmark:[]function[](by,bx,bv){if(by!==true){bv=bx;bx=by;
+by=false}[]if[](bx){bv=bv||[]"fx"[];var e=bv+[]"mark"[],bw=by?0:((b._data[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 337--337
+[]      \T1/pcr/m/n/7 (bx,e)||1)-1);if(bw){b._data(bx,e,bw)}[]else[]{b.removeDa
+ta(bx,e,true);bi(bx,bv,[]"mark"[])}}},queue:[]function[](bv,e,[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 339--339
+[]      \T1/pcr/m/n/7 b._data(bv,e,b.makeArray(bx))}[]else[]{bw.push(bx)}}[]ret
+urn[] bw||[]}},dequeue:[]function[](by,bx){bx=bx||[]"fx"[];var bv=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 344--345
+[]      \T1/pcr/m/n/7 each([]function[](){var bw=b.queue([]this[],e,bv);[]if[](
+e===[]"fx"[]&&bw[0]!==[]"inprogress"[]){b.dequeue([]this[],e)}})},dequeue:[][] 
+
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 346--347
+[]      \T1/pcr/m/n/7 b.fx?b.fx.speeds[bv]||bv:bv;e=e||[]"fx"[];[]return[] this
+.queue(e,[]function[](bx,bw){var by=setTimeout(bx,bv);bw.stop=[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 347--347
+[]      \T1/pcr/m/n/7 function[](){clearTimeout(by)}})},clearQueue:[]function[]
+(e){[]return[] this.queue(e||[]"fx"[],[])},promise:[]function[](bD,bw[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 348--348
+[]      \T1/pcr/m/n/7 ){[]if[](typeof bD!==[]"string"[]){bw=bD;bD=L}bD=bD||[]"f
+x"[];var e=b.Deferred(),bv=[]this[],by=bv.length,bB=1,bz=bD+[]"defer"[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (31.4417pt too wide) in paragraph at lines 352--352
+[]      $\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 n$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 t$\O
+MS/cmsy/m/n/7 n$\T1/pcr/m/n/7 r]/g,af=/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s+/,aU=
+/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 r/g,g=/^(?:button|input)$/i,D=/^(?:button|inp
+ut|[]object[]|select|textarea)$/i,l=/^a(?:rea[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 353--353
+[]      \T1/pcr/m/n/7 )?$/i,ao=/^(?:autofocus|autoplay|async|checked|controls|d
+efer|disabled|hidden|loop|multiple|open|readonly|[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 354--354
+[]      \T1/pcr/m/n/7 required|scoped|selected)$/i,F=b.support.getSetAttribute,
+be,aY,aF;b.fn.extend({attr:function(e,bv){return b.ac[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 355--355
+[]      \T1/pcr/m/n/7 cess(this,e,bv,true,b.attr)},removeAttr:[]function[](e){r
+eturn this.each(function(){b.removeAttr(this,e)})},prop[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 357--357
+[]      \T1/pcr/m/n/7 b.propFix[e]||e;[]return[] this.each([]function[](){[]try
+[]{[]this[][e]=L;[]delete[] []this[][e]}[]catch[](bv){}})},addClass:[]function[
+]([] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 358--358
+[]      \T1/pcr/m/n/7 by){var bA,bw,bv,bx,bz,bB,e;[]if[](b.isFunction(by)){[]re
+turn[] this.each([]function[](bC){b([]this[]).addClass(by.call([]this[],[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 359--360
+[]      \T1/pcr/m/n/7 bC,[]this[].className))})}[]if[](by&&typeof by===[]"strin
+g"[]){bA=by.split(af);[]for[](bw=0,bv=this.length;bw<bv;bw++){bx=[][] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 360--360
+[]      \T1/pcr/m/n/7 this[][bw];[]if[](bx.nodeType===1){[]if[](!bx.className&&
+bA.length===1){bx.className=by}[]else[]{bz=[]" "[]+bx.className+[]" "[];[]for[]
+[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 363--363
+[]      \T1/pcr/m/n/7 this.each([]function[](bC){b([]this[]).removeClass(bz.cal
+l([]this[],bC,[]this[].className))})}[]if[]((bz&&typeof bz===[]"string"[])||bz[
+] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 364--364
+[]      \T1/pcr/m/n/7 ===L){bA=(bz||[]""[]).split(af);[]for[](bw=0,bv=this.leng
+th;bw<bv;bw++){by=[]this[][bw];[]if[](by.nodeType===1&&by.className[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 365--366
+[]      \T1/pcr/m/n/7 ){[]if[](bz){bx=([]" "[]+by.className+[]" "[]).replace(aP
+,[]" "[]);[]for[](bB=0,e=bA.length;bB<e;bB++){bx=bx.replace([]" "[]+bA[bB]+[][]
+ 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 368--368
+[]      \T1/pcr/m/n/7 b([]this[]).toggleClass(bx.call([]this[],by,[]this[].clas
+sName,bv),bv)})}[]return[] this.each([]function[](){[]if[](bw===[]"string"[]){[
+] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 369--370
+[]      \T1/pcr/m/n/7 var bA,bz=0,by=b([]this[]),bB=bv,bC=bx.split(af);[]while[
+]((bA=bC[bz++])){bB=e?bB:!by.hasClass(bA);by[bB?[]"addClass"[]:[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 372--372
+[]      \T1/pcr/m/n/7 b._data([]this[],[]"__className__"[])||[]""[]}}})},hasCla
+ss:[]function[](e){var bx=[]" "[]+e+[]" "[],bw=0,bv=this.length;[]for[](;bw<bv[
+] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 373--374
+[]      \T1/pcr/m/n/7 ;bw++){[]if[]([]this[][bw].nodeType===1&&([]" "[]+[]this[
+][bw].className+[]" "[]).replace(aP,[]" "[]).indexOf(bx)>-1){[]return[] []true[
+]}}[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 377--377
+[]      \T1/pcr/m/n/7 b.isFunction(bx);[]return[] this.each([]function[](bA){va
+r bz=b([]this[]),bB;[]if[](this.nodeType!==1){[]return[]}[]if[](by){bB=bx.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 379--379
+[]      \T1/pcr/m/n/7 b.isArray(bB)){bB=b.map(bB,[]function[](bC){[]return[] bC
+==null?[]""[]:bC+[]""[]})}}}e=b.valHooks[[]this[].nodeName.toLowerCase[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 382--383
+[]      \T1/pcr/m/n/7 text}},select:{[]get[]:[]function[](e){var bA,bv,bz,bx,by
+=e.selectedIndex,bB=[],bC=e.options,bw=e.type===[]"select-one"[];[][] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 385--385
+[]      \T1/pcr/m/n/7 b.nodeName(bx.parentNode,[]"optgroup"[]))){bA=b(bx).val()
+;[]if[](bw){[]return[] bA}bB.push(bA)}}[]if[](bw&&!bB.length&&bC.[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 388--389
+[]      \T1/pcr/m/n/7 selectedIndex=-1}[]return[] e}}},attrFn:{val:[]true[],css
+:[]true[],html:[]true[],text:[]true[],data:[]true[],width:[]true[],height:[]tru
+e[],offset:[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 389--389
+[]      \T1/pcr/m/n/7 true[]},attr:[]function[](bA,bx,bB,bz){var bw,e,by,bv=bA.
+nodeType;[]if[](!bA||bv===3||bv===8||bv===2){[]return[]}[]if[](bz&&bx[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 391--391
+[]      \T1/pcr/m/n/7 b.prop(bA,bx,bB)}by=bv!==1||!b.isXMLDoc(bA);[]if[](by){bx
+=bx.toLowerCase();e=b.attrHooks[bx]||(ao.test(bx)?aY:[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 392--392
+[]      \T1/pcr/m/n/7 be)}[]if[](bB!==L){[]if[](bB===null){b.removeAttr(bA,bx);
+[]return[]}[]else[]{[]if[](e&&[]"set"[] in e&&by&&(bw=e.set(bA,bB,bx))!==[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 393--393
+[]      \T1/pcr/m/n/7 L){[]return[] bw}[]else[]{bA.setAttribute(bx,[]""[]+bB);[
+]return[] bB}}}[]else[]{[]if[](e&&[]"get"[] in e&&by&&(bw=e.get(bA,bx))!==null[
+] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 394--394
+[]      \T1/pcr/m/n/7 ){[]return[] bw}[]else[]{bw=bA.getAttribute(bx);[]return[
+] bw===null?L:bw}}},removeAttr:[]function[](bx,bz){var by,bA,bv,e,[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 395--395
+[]      \T1/pcr/m/n/7 bw=0;[]if[](bz&&bx.nodeType===1){bA=bz.toLowerCase().spli
+t(af);e=bA.length;[]for[](;bw<e;bw++){bv=bA[bw];[]if[](bv){by=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 396--396
+[]      \T1/pcr/m/n/7 b.propFix[bv]||bv;b.attr(bx,bv,[]""[]);bx.removeAttribute
+(F?bv:by);[]if[](ao.test(bv)&&by in bx){bx[by]=[]false[]}}}}},[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 398--399
+[]       \T1/pcr/m/n/7 changed"[])}[]else[]{[]if[](!b.support.radioValue&&bv===
+[]"radio"[]&&b.nodeName(e,[]"input"[])){var bw=e.value;e.setAttribute([]"[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 399--399
+[]      \T1/pcr/m/n/7 type"[],bv);[]if[](bw){e.value=bw}[]return[] bv}}}},value
+:{[]get[]:[]function[](bv,e){[]if[](be&&b.nodeName(bv,[]"button"[])){[]return[]
+ be.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 400--400
+[]      \T1/pcr/m/n/7 get(bv,e)}[]return[] e in bv?bv.value:null},[]set[]:[]fun
+ction[](bv,bw,e){[]if[](be&&b.nodeName(bv,[]"button"[])){[]return[] be.set([] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 401--401
+[]      \T1/pcr/m/n/7 bv,bw,e)}bv.value=bw}}},propFix:{tabindex:[]"tabIndex"[],
+readonly:[]"readOnly"[],[]"for"[]:[]"htmlFor"[],[]"class"[]:[]"className"[][] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 403--403
+[]      \T1/pcr/m/n/7 colSpan"[],usemap:[]"useMap"[],frameborder:[]"frameBorder
+"[],contenteditable:[]"contentEditable"[]},prop:[]function[](bz,bx,bA){var[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 406--406
+[]      \T1/pcr/m/n/7 L){[]return[] bw}[]else[]{[]return[](bz[bx]=bA)}}[]else[]
+{[]if[](e&&[]"get"[] in e&&(bw=e.get(bz,bx))!==null){[]return[] bw}[]else[]{[]r
+eturn[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 407--407
+[]       \T1/pcr/m/n/7 bz[bx]}}},propHooks:{tabIndex:{[]get[]:[]function[](bv){
+var e=bv.getAttributeNode([]"tabindex"[]);[]return[] e&&e.specified[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 409--409
+[]      \T1/pcr/m/n/7 b.attrHooks.tabindex=b.propHooks.tabIndex;aY={[]get[]:[]f
+unction[](bv,e){var bx,bw=b.prop(bv,e);[]return[] bw===[]true[]||[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 411--411
+[]      \T1/pcr/m/n/7 L},[]set[]:[]function[](bv,bx,e){var bw;[]if[](bx===[]fal
+se[]){b.removeAttr(bv,e)}[]else[]{bw=b.propFix[e]||e;[]if[](bw in bv){bv[[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 413--413
+[]      \T1/pcr/m/n/7 b.valHooks.button={[]get[]:[]function[](bw,bv){var e;e=bw
+.getAttributeNode(bv);[]return[] e&&(aF[bv]?e.nodeValue!==[]""[]:e[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 414--414
+[]      \T1/pcr/m/n/7 .specified)?e.nodeValue:L},[]set[]:[]function[](bw,bx,bv)
+{var e=bw.getAttributeNode(bv);[]if[](!e){e=av.createAttribute([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 416--416
+[]      \T1/pcr/m/n/7 b.each([[]"width"[],[]"height"[]],[]function[](bv,e){b.at
+trHooks[e]=b.extend(b.attrHooks[e],{set:function(bw,bx){if(bx=[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 417--417
+[]      \T1/pcr/m/n/7 ==[]""[]){bw.setAttribute(e,[]"auto"[]);return bx}}})});b
+.attrHooks.contenteditable={[]get[]:be.get,[]set[]:[]function[](bv,bw,e[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 419--419
+[]      \T1/pcr/m/n/7 height"[]],[]function[](bv,e){b.attrHooks[e]=b.extend(b.a
+ttrHooks[e],{get:function(bx){var bw=bx.getAttribute(e,2);retu[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 422--422
+[]      \T1/pcr/m/n/7 b.propHooks.selected=b.extend(b.propHooks.selected,{get:f
+unction(bv){var e=bv.parentNode;if(e){e.selectedIn[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 426--426
+[]      \T1/pcr/m/n/7 b.each([[]"radio"[],[]"checkbox"[]],[]function[](){b.valH
+ooks[this]=b.extend(b.valHooks[this],{set:function(e,bv){if(b.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 427--427
+[]      \T1/pcr/m/n/7 isArray(bv)){return(e.checked=b.inArray(b(e).val(),bv)>=0
+)}}})});var bd=/^(?:textarea|input|select)$/i,n=/^([] 
+ []
+
+
+Overfull \hbox (22.93893pt too wide) in paragraph at lines 429--429
+[]      \T1/pcr/m/n/7 focusoutblur)$/,U=/^($\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w*)
+(?:#([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]+))?
+(?:$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 .([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/
+cmsy/m/n/7 n$\T1/pcr/m/n/7 -]+))?$/,Y=[]function[](e){var bv=U.exec(e);[]if[](b
+v){bv[1]=(bv[1[] 
+ []
+
+
+Overfull \hbox (18.94447pt too wide) in paragraph at lines 430--430
+[]      \T1/pcr/m/n/7 ]||[]""[]).toLowerCase();bv[3]=bv[3]&&[]new[] RegExp([]"(
+?:^|$\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 s)"[]+bv[3]+[]"(?:$\OMS/cmsy/m/n/7 n$$n
+$\T1/pcr/m/n/7 s|$)"[])}[]return[] bv},j=[]function[](bw,e){var[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 431--431
+[]      \T1/pcr/m/n/7 bv=bw.attributes||{};[]return[]((!e[1]||bw.nodeName.toLow
+erCase()===e[1])&&(!e[2]||(bv.id||{}).value===e[2])&&(![] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 433--433
+[]      \T1/pcr/m/n/7 mouseenter$1 mouseleave$1"[])};b.event={add:[]function[](
+bx,bC,bJ,bA,by){var bD,bB,bK,bI,bH,bF,e,bG,bv,bz,bw,bE;[]if[](bx.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 434--434
+[]      \T1/pcr/m/n/7 nodeType===3||bx.nodeType===8||!bC||!bJ||!(bD=b._data(bx)
+)){[]return[]}[]if[](bJ.handler){bv=bJ;bJ=bv.handler}[]if[](!bJ.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 435--436
+[]      \T1/pcr/m/n/7 guid){bJ.guid=b.guid++}bK=bD.events;[]if[](!bK){bD.events
+=bK={}}bB=bD.handle;[]if[](!bB){bD.handle=bB=[]function[](bL){[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 436--436
+[]      \T1/pcr/m/n/7 return[] typeof b!==[]"undefined"[]&&(!bL||b.event.trigge
+red!==bL.type)?b.event.dispatch.apply(bB.elem,arguments):[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 437--437
+[]      \T1/pcr/m/n/7 L};bB.elem=bx}bC=b.trim(bt(bC)).split([]" "[]);[]for[](bI
+=0;bI<bC.length;bI++){bH=n.exec(bC[bI])||[];bF=bH[1];e=(bH[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 440--440
+[]      \T1/pcr/m/n/7 quick:Y(by),[]namespace[]:e.join([]"."[])},bv);bw=bK[bF];
+[]if[](!bw){bw=bK[bF]=[];bw.delegateCount=0;[]if[](!bE.setup||bE.setup[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 441--441
+[]      \T1/pcr/m/n/7 .call(bx,bA,e,bB)===[]false[]){[]if[](bx.addEventListener
+){bx.addEventListener(bF,bB,[]false[])}[]else[]{[]if[](bx.attachEvent){[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 442--442
+[]      \T1/pcr/m/n/7 bx.attachEvent([]"on"[]+bF,bB)}}}}[]if[](bE.add){bE.add.c
+all(bx,bG);[]if[](!bG.handler.guid){bG.handler.guid=bJ.guid}}[]if[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 443--444
+[]      \T1/pcr/m/n/7 (by){bw.splice(bw.delegateCount++,0,bG)}[]else[]{bw.push(
+bG)}b.event.global[bF]=[]true[]}bx=null},global:{},[]remove[]:[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 444--444
+[]      \T1/pcr/m/n/7 function[](bJ,bE,bv,bH,bB){var bI=b.hasData(bJ)&&b._data(
+bJ),bF,bx,bz,bL,bC,bA,bG,bw,by,bK,bD,e;[]if[](!bI||!(bw=bI[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 445--445
+[]      \T1/pcr/m/n/7 .events)){[]return[]}bE=b.trim(bt(bE||[]""[])).split([]" 
+"[]);[]for[](bF=0;bF<bE.length;bF++){bx=n.exec(bE[bF])||[];bz=bL=bx[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 447--447
+[]      \T1/pcr/m/n/7 b.event.special[bz]||{};bz=(bH?by.delegateType:by.bindTyp
+e)||bz;bD=bw[bz]||[];bA=bD.length;bC=bC?[]new[] RegExp[] 
+ []
+
+
+Overfull \hbox (18.5334pt too wide) in paragraph at lines 448--449
+[]      \T1/pcr/m/n/7 ([]"(^|$\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .)"[]+bC.split
+([]"."[]).sort().join([]"$\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .(?:.*$\OMS/cmsy/m
+/n/7 n$$n$\T1/pcr/m/n/7 .)?"[])+[]"($\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .|$)"[]
+):null;[]for[](bG=0;bG<bD.length;bG++){e=bD[bG];[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 449--450
+[]      \T1/pcr/m/n/7 if[]((bB||bL===e.origType)&&(!bv||bv.guid===e.guid)&&(!bC
+||bC.test(e.namespace))&&(!bH||bH===e.selector||bH===[]"[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 450--451
+[]      \T1/pcr/m/n/7 **"[]&&e.selector)){bD.splice(bG--,1);[]if[](e.selector){
+bD.delegateCount--}[]if[](by.remove){by.remove.call(bJ,e)}}}[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 453--453
+[]      \T1/pcr/m/n/7 b.removeData(bJ,[[]"events"[],[]"handle"[]],[]true[])}},c
+ustomEvent:{getData:[]true[],setData:[]true[],changeData:[]true[]},trigger[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 454--454
+[]      \T1/pcr/m/n/7 :[]function[](bv,bD,bA,bJ){[]if[](bA&&(bA.nodeType===3||b
+A.nodeType===8)){[]return[]}var bG=bv.type||bv,bx=[],e,bw,bC,bH[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 455--456
+[]      \T1/pcr/m/n/7 ,bz,by,bF,bE,bB,bI;[]if[](T.test(bG+b.event.triggered)){[
+]return[]}[]if[](bG.indexOf([]"!"[])>=0){bG=bG.slice(0,-1);bw=[]true[]}[][] 
+ []
+
+
+Overfull \hbox (43.73338pt too wide) in paragraph at lines 459--459
+[]      \T1/pcr/m/n/7 namespace?[]new[] RegExp([]"(^|$\OMS/cmsy/m/n/7 n$$n$\T1/
+pcr/m/n/7 .)"[]+bx.join([]"$\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .(?:.*$\OMS/cmsy
+/m/n/7 n$$n$\T1/pcr/m/n/7 .)?"[])+[]"($\OMS/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .|$)"
+[]):null;by=bG.indexOf([]":"[])<0?[]"on"[]+bG:[]""[];[]if[](!bA){e[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 462--462
+[]      \T1/pcr/m/n/7 b.event.special[bG]||{};[]if[](bF.trigger&&bF.trigger.app
+ly(bA,bD)===[]false[]){[]return[]}bB=[[bA,bF.bindType||bG]];[]if[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 463--463
+[]      \T1/pcr/m/n/7 (!bJ&&!bF.noBubble&&!b.isWindow(bA)){bI=bF.delegateType||
+bG;bH=T.test(bI+bG)?bA:bA.parentNode;bz=null;[]for[](;[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 465--465
+[]      \T1/pcr/m/n/7 parentWindow||bb,bI])}}[]for[](bC=0;bC<bB.length&&!bv.isP
+ropagationStopped();bC++){bH=bB[bC][0];bv.type=bB[bC][1];bE=([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 467--467
+[]      \T1/pcr/m/n/7 b.acceptData(bH)&&bE.apply(bH,bD)===[]false[]){bv.prevent
+Default()}}bv.type=bG;[]if[](!bJ&&!bv.isDefaultPrevented()[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 469--469
+[]      \T1/pcr/m/n/7 b.nodeName(bA,[]"a"[]))&&b.acceptData(bA)){[]if[](by&&bA[
+bG]&&((bG!==[]"focus"[]&&bG!==[]"blur"[])||bv.target.offsetWidth!=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 472--472
+[]      \T1/pcr/m/n/7 b.event.fix(e||bb.event);var bz=((b._data([]this[],[]"eve
+nts"[])||{})[e.type]||[]),bA=bz.delegateCount,bG=[].slice.[] 
+ []
+
+
+Overfull \hbox (69.75551pt too wide) in paragraph at lines 474--474
+[]      \T1/pcr/m/n/7 delegateTarget=[]this[];[]if[](bA&&!e.target.disabled&&!(
+e.button&&e.type===[]"click"[])){bx=b([]this[]);bx.context=this.ownerDocument|[
+] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 475--475
+[]      \T1/pcr/m/n/7 |[]this[];[]for[](bK=e.target;bK!=[]this[];bK=bK.parentNo
+de||[]this[]){bE={};bD=[];bx[0]=bK;[]for[](bC=0;bC<bA;bC++){bI=bz[bC];[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 476--476
+[]      \T1/pcr/m/n/7 bw=bI.selector;[]if[](bE[bw]===L){bE[bw]=(bI.quick?j(bK,b
+I.quick):bx.is(bw))}if(bE[bw]){bD.push(bI)}}[]if[](bD.length[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 477--477
+[]      \T1/pcr/m/n/7 ){bH.push({elem:bK,matches:bD})}}}[]if[](bz.length>bA){bH
+.push({elem:[]this[],matches:bz.slice(bA)})}[]for[](bC=0;bC<bH.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 478--478
+[]      \T1/pcr/m/n/7 length&&!e.isPropagationStopped();bC++){bv=bH[bC];e.curre
+ntTarget=bv.elem;[]for[](bB=0;bB<bv.matches.length&&!e.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 479--479
+[]      \T1/pcr/m/n/7 isImmediatePropagationStopped();bB++){bI=bv.matches[bB];[
+]if[](by||(!e.namespace&&!bI.namespace)||e.namespace_re[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 480--480
+[]      \T1/pcr/m/n/7 &&e.namespace_re.test(bI.namespace)){e.data=bI.data;e.han
+dleObj=bI;bF=((b.event.special[bI.origType]||{}).[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 482--483
+[]      \T1/pcr/m/n/7 stopPropagation()}}}}}[]return[] e.result},props:[]"attrC
+hange attrName relatedNode srcElement altKey bubbles cancelable[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 483--483
+[]       \T1/pcr/m/n/7 ctrlKey currentTarget eventPhase metaKey relatedTarget s
+hiftKey target timeStamp view which"[].split([]" "[]),fixHooks:{[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 484--484
+[]      \T1/pcr/m/n/7 },keyHooks:{props:[]"char charCode key keyCode"[].split([
+]" "[]),filter:[]function[](bv,e){[]if[](bv.which==null){bv.which=e[] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 486--486
+[]       \T1/pcr/m/n/7 fromElement offsetX offsetY pageX pageY screenX screenY 
+toElement"[].split([]" "[]),filter:[]function[](bx,bw){var by,bz,e,bv=[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 488--488
+[]      \T1/pcr/m/n/7 documentElement;e=by.body;bx.pageX=bw.clientX+(bz&&bz.scr
+ollLeft||e&&e.scrollLeft||0)-(bz&&bz.clientLeft||e&&e.[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 489--490
+[]      \T1/pcr/m/n/7 clientLeft||0);bx.pageY=bw.clientY+(bz&&bz.scrollTop||e&&
+e.scrollTop||0)-(bz&&bz.clientTop||e&&e.clientTop||0)}[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 491--491
+[]      \T1/pcr/m/n/7 L){bx.which=(bv&1?1:(bv&2?3:(bv&4?2:0)))}[]return[] bx}},
+fix:[]function[](bw){[]if[](bw[b.expando]){[]return[] bw}var bv,bz[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 493--493
+[]      \T1/pcr/m/n/7 b.Event(e);[]for[](bv=by.length;bv;){bz=by[--bv];bw[bz]=e
+[bz]}[]if[](!bw.target){bw.target=e.srcElement||av}[]if[](bw.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 494--494
+[]      \T1/pcr/m/n/7 target.nodeType===3){bw.target=bw.target.parentNode}[]if[
+](bw.metaKey===L){bw.metaKey=bw.ctrlKey}[]return[] bx.filter[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 495--495
+[]      \T1/pcr/m/n/7 ?bx.filter(bw,e):bw},special:{ready:{setup:b.bindReady},l
+oad:{noBubble:[]true[]},focus:{delegateType:[]"focusin"[]},[] 
+ []
+
+
+Overfull \hbox (78.1555pt too wide) in paragraph at lines 497--497
+[]      \T1/pcr/m/n/7 onbeforeunload=e}},teardown:[]function[](bv,e){[]if[](thi
+s.onbeforeunload===e){this.onbeforeunload=null}}}},simulate:[]function[](bw,[] 
+
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 499--499
+[]      \T1/pcr/m/n/7 b.event.trigger(bz,null,by)}[]else[]{b.event.dispatch.cal
+l(by,bz)}[]if[](bz.isDefaultPrevented()){bx.preventDefault[] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 501--501
+[]      \T1/pcr/m/n/7 removeEventListener){bv.removeEventListener(e,bw,[]false[
+])}}:[]function[](bv,e,bw){[]if[](bv.detachEvent){bv.detachEvent([]"on"[]+e,[] 
+
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 502--502
+[]      \T1/pcr/m/n/7 bw)}};b.Event=[]function[](bv,e){[]if[](!([]this[] instan
+ceof b.Event)){[]return[] []new[] b.Event(bv,e)}[]if[](bv&&bv.type){this.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 503--503
+[]      \T1/pcr/m/n/7 originalEvent=bv;this.type=bv.type;this.isDefaultPrevente
+d=(bv.defaultPrevented||bv.returnValue===[]false[]||bv.[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 504--504
+[]      \T1/pcr/m/n/7 getPreventDefault&&bv.getPreventDefault())?i:bk}[]else[]{
+this.type=bv}[]if[](e){b.extend([]this[],e)}this.timeStamp=bv&&bv[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 507--507
+[]      \T1/pcr/m/n/7 return[]}[]if[](bv.preventDefault){bv.preventDefault()}[]
+else[]{bv.returnValue=[]false[]}},stopPropagation:[]function[](){this.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 508--508
+[]      \T1/pcr/m/n/7 isPropagationStopped=i;var bv=this.originalEvent;[]if[](!
+bv){[]return[]}[]if[](bv.stopPropagation){bv.stopPropagation()}[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 512--512
+[]      \T1/pcr/m/n/7 bindType:e,handle:[]function[](bz){var bB=[]this[],bA=bz.
+relatedTarget,by=bz.handleObj,bw=by.selector,bx;[]if[](!bA||(bA!=[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 513--513
+[]      \T1/pcr/m/n/7 =bB&&!b.contains(bB,bA))){bz.type=by.origType;bx=by.handl
+er.apply([]this[],arguments);bz.type=e}[]return[] bx}}});[]if[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 514--514
+[]      \T1/pcr/m/n/7 (!b.support.submitBubbles){b.event.special.submit={setup:
+[]function[](){[]if[](b.nodeName([]this[],[]"form"[])){[]return[] []false[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 517--517
+[]      \T1/pcr/m/n/7 b.event.add(bv,[]"submit._submit"[],[]function[](e){[]if[
+](this.parentNode&&!e.isTrigger){b.event.simulate([]"submit"[],thi[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 518--519
+[]      \T1/pcr/m/n/7 s.parentNode,e,true)}});bv._submit_attached=[]true[]}})},
+teardown:[]function[](){[]if[](b.nodeName([]this[],[]"form"[])){[]return[] [][]
+ 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 519--519
+[]      \T1/pcr/m/n/7 false[]}b.event.remove([]this[],[]"._submit"[])}}}[]if[](
+!b.support.changeBubbles){b.event.special.change={setup:[]function[]([] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 521--521
+[]      \T1/pcr/m/n/7 propertychange._change"[],[]function[](e){[]if[](e.origin
+alEvent.propertyName===[]"checked"[]){this._just_changed=true}});[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 522--522
+[]      \T1/pcr/m/n/7 b.event.add([]this[],[]"click._change"[],[]function[](e){
+[]if[](this._just_changed&&!e.isTrigger){this._just_changed=false;[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 523--523
+[]      \T1/pcr/m/n/7 b.event.simulate([]"change"[],this,e,true)}})}[]return[] 
+[]false[]}b.event.add([]this[],[]"beforeactivate._change"[],[]function[](bw[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 524--524
+[]      \T1/pcr/m/n/7 ){var bv=bw.target;if(bd.test(bv.nodeName)&&!bv._change_a
+ttached){b.event.add(bv,[]"change._change"[],function(e[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 525--525
+[]      \T1/pcr/m/n/7 ){if(this.parentNode&&!e.isSimulated&&!e.isTrigger){b.eve
+nt.simulate([]"change"[],this.parentNode,e,true)}});bv.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 526--526
+[]      \T1/pcr/m/n/7 _change_attached=true}})},handle:[]function[](bv){var e=b
+v.target;[]if[]([]this[]!==e||bv.isSimulated||bv.isTrigger||(e.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 527--527
+[]      \T1/pcr/m/n/7 type!==[]"radio"[]&&e.type!==[]"checkbox"[])){[]return[] 
+bv.handleObj.handler.apply([]this[],arguments)}},teardown:[]function[]([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 532--532
+[]      \T1/pcr/m/n/7 b.fn.extend({on:function(bw,e,bz,by,bv){var bA,bx;if(type
+of bw===[]"object"[]){if(typeof e!==[]"string"[]){bz=e;e=L[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 533--533
+[]      \T1/pcr/m/n/7 }for(bx in bw){this.on(bx,e,bz,bw[bx],bv)}return this}if(
+bz==null&&by==null){by=e;bz=e=L}else{if(by==null){i[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 534--534
+[]      \T1/pcr/m/n/7 f(typeof e===[]"string"[]){by=bz;bz=L}else{by=bz;bz=e;e=L
+}}}if(by===false){by=bk}else{if(!by){return this}}if(bv[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 535--535
+[]      \T1/pcr/m/n/7 ===1){bA=by;by=function(bB){b().off(bB);return bA.apply(t
+his,arguments)};by.guid=bA.guid||(bA.guid=b.guid++)[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 536--536
+[]      \T1/pcr/m/n/7 }return this.each(function(){b.event.add(this,bw,by,bz,e)
+})},one:[]function[](bv,e,bx,bw){return this.on.call(th[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 537--537
+[]      \T1/pcr/m/n/7 is,bv,e,bx,bw,1)},off:[]function[](bw,e,by){if(bw&&bw.pre
+ventDefault&&bw.handleObj){var bv=bw.handleObj;b(bw.del[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 538--538
+[]      \T1/pcr/m/n/7 egateTarget).off(bv.namespace?bv.type+[]"."[]+bv.namespac
+e:bv.type,bv.selector,bv.handler);return this}[]if[](typeof[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 539--539
+[]       \T1/pcr/m/n/7 bw===[]"object"[]){for(var bx in bw){this.off(bx,e,bw[bx
+])}[]return[] []this[]}[]if[](e===[]false[]||typeof e===[]"function"[]){by=[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 540--540
+[]      \T1/pcr/m/n/7 e;e=L}[]if[](by===[]false[]){by=bk}[]return[] this.each([
+]function[](){b.event.remove([]this[],bw,by,e)})},bind:[]function[](e,bw,bv[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 543--543
+[]      \T1/pcr/m/n/7 selector||[]"**"[],bv);[]return[] []this[]},delegate:[]fu
+nction[](e,bv,bx,bw){[]return[] this.on(bv,e,bx,bw)},undelegate:[]function[](e,
+bv[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 548--548
+[]      \T1/pcr/m/n/7 b._data([]this[],[]"lastToggle"[]+bx.guid,bA+1);bz.preven
+tDefault();[]return[] bv[bA].apply([]this[],arguments)||[]false[]};by.[] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 550--552
+[]      \T1/pcr/m/n/7 mouseenter(e).mouseleave(bv||e)}});b.each(([]"blur focus 
+focusin focusout load resize scroll unload click dblclick[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 552--552
+[]       \T1/pcr/m/n/7 mousedown mouseup mousemove mouseover mouseout mouseente
+r mouseleave change select submit keydown keypress keyup[] 
+ []
+
+
+Overfull \hbox (287.64151pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 )*)/g,bC="sizcache"+(Math.random()+"").replace(".",""),bI
+=0,bL=Object.prototype.toString,bB=false,bA=true,bK=/$\OMS/cmsy/m/n/7 n$$n$\T1/
+pcr/m/n/7 /g,bO=/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 r$\OMS/cmsy/m/n/7 n$\T1/pcr/m
+/n/7 n/g,bQ=/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 W/;[0,0].sort(function(){bA=false
+;return[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 bS=bH.exec(b0);if(bS){b0=bS[3];bW.push(bS[1]);if(bS[2]){b
+R=bS[3];break}}}while(bS);if(bW.length>1&&bD.exec(b[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 V)){if(bW.length===2&&bE.relative[bW[0]]){b3=bM(bW[0]+bW[
+1],e,bZ)}else{b3=bE.relative[bW[0]]?[e]:by(bW.shift[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 (),e);while(bW.length){bV=bW.shift();if(bE.relative[bV]){
+bV+=bW.shift()}b3=bM(bV,b3,bZ)}}}else{if(!bZ&&bW.le[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 ngth>1&&e.nodeType===9&&!bT&&bE.match.ID.test(bW[0])&&!bE
+.match.ID.test(bW[bW.length-1])){b2=by.find(bW.shif[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 t(),e,bT);e=b2.expr?by.filter(b2.expr,b2.set)[0]:b2.set[0
+]}if(e){b2=bZ?{expr:bW.pop(),set:bF(bZ)}:by.find(bW[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 .pop(),bW.length===1&&(bW[0]==="~"||bW[0]==="+")&&e.paren
+tNode?e.parentNode:e,bT);b3=b2.expr?by.filter(b2.ex[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 pr,b2.set):b2.set;if(bW.length>0){b6=bF(b3)}else{bU=false
+}while(bW.length){b5=bW.pop();b4=b5;if(!bE.relative[] 
+ []
+
+
+Overfull \hbox (212.5554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 [b5]){b5=""}else{b4=bW.pop()}if(b4==null){b4=e}bE.relativ
+e[b5](b6,b4,bT)}}else{b6=bW=[]}}if(!b6){b6=b3}if(!b6){by.error(b5||bV)}if(bL.ca
+ll(b6)==="[object[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 1){for(bX=0;b6[bX]!=null;bX++){if(b6[bX]&&(b6[bX]===true|
+|b6[bX].nodeType===1&&by.contains(e,b6[bX]))){bY.pu[] 
+ []
+
+
+Overfull \hbox (241.95538pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 sh(b3[bX])}}}else{for(bX=0;b6[bX]!=null;bX++){if(b6[bX]&&
+b6[bX].nodeType===1){bY.push(b3[bX])}}}}}else{bF(b6,bY)}if(bR){by(bR,b1,bY,bZ);
+by.uniqueSort(bY)}return[] 
+ []
+
+
+Overfull \hbox (153.75545pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bY};by.uniqueSort=function(bR){if(bJ){bB=bA;bR.sort(bJ);
+if(bB){for(var e=1;e<bR.length;e++){if(bR[e]===bR[e-1]){bR.splice(e--,1)}}}}ret
+urn[] 
+ []
+
+
+Overfull \hbox (334.14978pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bW,bS,bU,bT,bV,bR;if(!bX){return[]}for(bS=0,bU=bE.order.
+length;bS<bU;bS++){bV=bE.order[bS];if((bT=bE.leftMatch[bV].exec(bX))){bR=bT[1];
+bT.splice(1,1);if(bR.substr(bR.length-1)!=="$\OMS/cmsy/m/n/7 n$$n$[] 
+ []
+
+
+Overfull \hbox (82.3555pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 =(bT[1]||"").replace(bK,"");bW=bE.find[bV](bT,e,bY);if(bW
+!=null){bX=bX.replace(bE.match[bV],"");break}}}}if(!bW){bW=typeof[] 
+ []
+
+
+Overfull \hbox (107.55548pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 e.getElementsByTagName!=="undefined"?e.getElementsByTagN
+ame("*"):[]}return{set:bW,expr:bX}};by.filter=function(b1,b0,b4,bU){var[] 
+ []
+
+
+Overfull \hbox (157.74991pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bE.filter){if((bW=bE.leftMatch[bZ].exec(b1))!=null&&bW[2
+]){bR=bE.filter[bZ];bT=bW[1];e=false;bW.splice(1,1);if(bT.substr(bT.length-1)==
+="$\OMS/cmsy/m/n/7 n$$n$[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 [bZ]){bW=bE.preFilter[bZ](bW,bY,b4,b5,bU,bX);if(!bW){e=b6
+=true}else{if(bW===true){continue}}}if(bW){for(bV=0[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 ;(b3=bY[bV])!=null;bV++){if(b3){b6=bR(b3,bW,bV,bY);b2=bU^
+b6;if(b4&&b6!=null){if(b2){e=true}else{bY[bV]=false[] 
+ []
+
+
+Overfull \hbox (464.55522pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 }}else{if(b2){b5.push(b3);e=true}}}}}if(b6!==L){if(!b4){b
+Y=b5}b1=b1.replace(bE.match[bZ],"");if(!e){return[]}break}}}if(b1===bS){if(e==n
+ull){by.error(b1)}else{break}}bS=b1}return bY};by.error=function(e){throw new[]
+ 
+ []
+
+
+Overfull \hbox (86.5555pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bS,bT,e=bU.nodeType,bR="";if(e){if(e===1||e===9){if(type
+of bU.textContent==="string"){return bU.textContent}else{if(typeof[] 
+ []
+
+
+Overfull \hbox (69.75551pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bU.innerText.replace(bO,"")}else{for(bU=bU.firstChild;bU
+;bU=bU.nextSibling){bR+=bw(bU)}}}}else{if(e===3||e===4){return[] 
+ []
+
+
+Overfull \hbox (312.73872pt too wide) in paragraph at lines 591--591
+[]       \T1/pcr/m/n/7 bU.nodeValue}}}else{for(bS=0;(bT=bU[bS]);bS++){if(bT.nod
+eType!==8){bR+=bw(bT)}}}return bR};var bE=by.selectors={order:["ID","NAME","TAG
+"],match:{ID:/#((?:[$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 n$\T1/pc
+r/m/n/7 u00c0-$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 uFFFF$\OMS/cmsy/m/n/7 n$\T1/pcr/
+m/n/7 -]|$\OMS/cmsy/m/n/7 n$$n$[] 
+ []
+
+
+Overfull \hbox (38.71124pt too wide) in paragraph at lines 591--591
+[]      \T1/pcr/m/n/7 .)+)/,CLASS:/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 .((?:[$\OMS
+/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 u00c0-$\OMS/cmsy/
+m/n/7 n$\T1/pcr/m/n/7 uFFFF$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]|$\OMS/cmsy/m/n/7
+ n$$n$\T1/pcr/m/n/7 .)+)/,NAME:/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 [name=['[][]"]
+*((?:[$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 u00c0-
+$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 uFFFF$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]|$\OMS
+/cmsy/m/n/7 n$$n$\T1/pcr/m/n/7 .)+)['"[]]*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ]/,A
+TTR:/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 [[] 
+ []
+
+
+Overfull \hbox (22.32233pt too wide) in paragraph at lines 595--595
+[]      \T1/pcr/m/n/7 +|(?:[+$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]?$\OMS/cmsy/m/n
+/7 n$\T1/pcr/m/n/7 d*)?n$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*(?:[+$\OMS/cmsy/m/n/
+7 n$\T1/pcr/m/n/7 -]$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*$\OMS/cmsy/m/n/7 n$\T1/p
+cr/m/n/7 d+)?))$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/
+n/7 ))?/,POS:/:(nth|eq|gt|lt|first|last|even|odd)(?:$\OMS/cmsy/m/n/7 n$\T1/pcr/
+m/n/7 (($\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 d*)$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ))
+?(?=[^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -[] 
+ []
+
+
+Overfull \hbox (78.1555pt too wide) in paragraph at lines 596--597
+[]      \T1/pcr/m/n/7 )?/},leftMatch:{},attrMap:{"[][]class[][]":"[]className[]
+","[][]for[][]":"[]htmlFor[]"},attrHandle:{href:function(e){return e.getAttribu
+te("[]href[]"[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 597--600
+[]      \T1/pcr/m/n/7 )},type:function(e){return e.getAttribute("[]type[]")}},r
+elative:{"[]+[]":function(bW,bR){var bT=typeof bR==="[][]string[][]"[] 
+ []
+
+
+Overfull \hbox (363.7553pt too wide) in paragraph at lines 600--603
+[]      \T1/pcr/m/n/7 (bU=bU.previousSibling)&&bU.nodeType!==1){}bW[bS]=bX||bU&
+&bU.nodeName.toLowerCase()===bR?bU||false:bU===bR}}if(bX){by.filter(bR,bW,true)
+}},"[]>[]":function(bW,bR){var bV,bU=typeof bR==="[][]string[][]"[] 
+ []
+
+
+Overfull \hbox (435.15524pt too wide) in paragraph at lines 603--604
+[]      \T1/pcr/m/n/7 owerCase()===bR?bT:false}}}else{for(;bS<e;bS++){bV=bW[bS]
+;if(bV){bW[bS]=bU?bV.parentNode:bV.parentNode===bR}}if(bU){by.filter(bR,bW,true
+)}}},"[][]":function(bT,bR,bV){var bU,bS=bI++,e=bN;if(typeof bR==="[][]string[]
+[]"[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 605--606
+[]       \T1/pcr/m/n/7 bU,bS=bI++,e=bN;if(typeof bR==="[][]string[][]"&&!bQ.tes
+t(bR)){bR=bR.toLowerCase();bU=bR;e=bv}e("[]previousSibling[]"[] 
+ []
+
+
+Overfull \hbox (115.95547pt too wide) in paragraph at lines 607--608
+[]       \T1/pcr/m/n/7 e=bS.getElementById(bR[1]);return e&&e.parentNode?[e]:[]
+}},NAME:function(bS,bV){if(typeof bV.getElementsByName!=="[]undefined[]"){var[]
+ 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 609--609
+[]      \T1/pcr/m/n/7 )===bS[1]){bR.push(bU[bT])}}return bR.length===0?null:bR}
+},TAG:function(e,bR){if(typeof bR.getElementsByTagName!=="[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 611--612
+[]      \T1/pcr/m/n/7 +bT[1].replace(bK,"[][]")+"[] []";if(bX){return bT}for(va
+r bU=0,bV;(bV=bR[bU])!=null;bU++){if(bV){if(bW^(bV.className&&("[] [][] 
+ []
+
+
+Overfull \hbox (279.75536pt too wide) in paragraph at lines 613--614
+[]      \T1/pcr/m/n/7 ).indexOf(bT)>=0)){if(!bS){e.push(bV)}}else{if(bS){bR[bU]
+=false}}}}return false},ID:function(e){return e[1].replace(bK,"[][]")},TAG:func
+tion(bR,e){return bR[1].replace(bK,"[][]"[] 
+ []
+
+
+Overfull \hbox (23.35pt too wide) in paragraph at lines 614--615
+[]      \T1/pcr/m/n/7 ).toLowerCase()},CHILD:function(e){if(e[1]==="[]nth[]"){i
+f(!e[2]){by.error(e[0])}e[2]=e[2].replace(/^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 +|
+$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*/g,"[][]"[] 
+ []
+
+
+Overfull \hbox (27.34447pt too wide) in paragraph at lines 615--617
+[]      \T1/pcr/m/n/7 );var bR=/(-?)($\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 d*)(?:n([
++$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 -]?$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 d*))?/.ex
+ec(e[2]==="[]even[]"&&"[]2n[]"||e[2]==="[]odd[]"&&"[]2n+1[]"||!/$\OMS/cmsy/m/n/
+7 n$\T1/pcr/m/n/7 D/.test(e[2])&&"[]0n+[]"[] 
+ []
+
+
+Overfull \hbox (115.95547pt too wide) in paragraph at lines 618--619
+[]      \T1/pcr/m/n/7 );if(!bW&&bE.attrMap[bT]){bU[1]=bE.attrMap[bT]}bU[4]=(bU[
+4]||bU[5]||"[][]").replace(bK,"[][]");if(bU[2]==="[]~=[]"){bU[4]="[] []"+bU[4]+
+"[] []"}return[] 
+ []
+
+
+Overfull \hbox (73.9555pt too wide) in paragraph at lines 622--622
+[]      \T1/pcr/m/n/7 /.test(bU[3])){bU[3]=by(bU[3],null,null,bR)}else{var bT=b
+y.filter(bU[3],bR,bS,true^bV);if(!bS){e.push.apply(e,bT)}return[] 
+ []
+
+
+Overfull \hbox (124.35547pt too wide) in paragraph at lines 622--622
+[]       \T1/pcr/m/n/7 false}}else{if(bE.match.POS.test(bU[0])||bE.match.CHILD.
+test(bU[0])){return true}}return bU},POS:function(e){e.unshift(true);return[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 622--626
+[]       \T1/pcr/m/n/7 e}},filters:{enabled:function(e){return e.disabled===fal
+se&&e.type!=="[]hidden[]"},disabled:function(e){return[] 
+ []
+
+
+Overfull \hbox (309.15533pt too wide) in paragraph at lines 626--626
+[]       \T1/pcr/m/n/7 e.checked===true},selected:function(e){if(e.parentNode){
+e.parentNode.selectedIndex}return e.selected===true},parent:function(e){return 
+!!e.firstChild},empty:function(e){return[] 
+ []
+
+
+Overfull \hbox (94.95549pt too wide) in paragraph at lines 626--627
+[]      \T1/pcr/m/n/7 /i).test(e.nodeName)},text:function(bS){var e=bS.getAttri
+bute("[]type[]"),bR=bS.type;return bS.nodeName.toLowerCase()==="[]input[]"&&[] 
+
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 629--630
+[]      \T1/pcr/m/n/7 ===e.type},file:function(e){return e.nodeName.toLowerCase
+()==="[]input[]"&&"[]file[]"===e.type},password:function(e){return[] 
+ []
+
+
+Overfull \hbox (107.55548pt too wide) in paragraph at lines 630--631
+[]       \T1/pcr/m/n/7 e.nodeName.toLowerCase()==="[]input[]"&&"[]password[]"==
+=e.type},submit:function(bR){var e=bR.nodeName.toLowerCase();return(e==="[]inpu
+t[]"[] 
+ []
+
+
+Overfull \hbox (57.15552pt too wide) in paragraph at lines 633--639
+[]      \T1/pcr/m/n/7 ===bR.type},button:function(bR){var e=bR.nodeName.toLower
+Case();return e==="[]input[]"&&"[]button[]"===bR.type||e==="[]button[]"[] 
+ []
+
+
+Overfull \hbox (57.15552pt too wide) in paragraph at lines 639--639
+[]       \T1/pcr/m/n/7 e===e.ownerDocument.activeElement}},setFilters:{first:fu
+nction(bR,e){return e===0},last:function(bS,bR,e,bT){return[] 
+ []
+
+
+Overfull \hbox (57.15552pt too wide) in paragraph at lines 639--639
+[]       \T1/pcr/m/n/7 e%2===1},lt:function(bS,bR,e){return bR<e[3]-0},gt:funct
+ion(bS,bR,e){return bR>e[3]-0},nth:function(bS,bR,e){return[] 
+ []
+
+
+Overfull \hbox (111.75548pt too wide) in paragraph at lines 639--640
+[]       \T1/pcr/m/n/7 e=bX[1],bR=bE.filters[e];if(bR){return bR(bS,bW,bX,bY)}e
+lse{if(e==="[]contains[]"){return(bS.textContent||bS.innerText||bw([bS])||"[][]
+"[] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 640--642
+[]      \T1/pcr/m/n/7 ).indexOf(bX[3])>=0}else{if(e==="[]not[]"){var bT=bX[3];f
+or(var bV=0,bU=bT.length;bV<bU;bV++){if(bT[bV]===bS){return[] 
+ []
+
+
+Overfull \hbox (199.95541pt too wide) in paragraph at lines 642--643
+[]       \T1/pcr/m/n/7 bT,b0,bW,bZ,e,bV,bY,bX=bU[1],bR=bS;switch(bX){case"[]onl
+y[]":case"[]first[]":while((bR=bR.previousSibling)){if(bR.nodeType===1){return 
+false}}if(bX==="[]first[]"[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 643--647
+[]      \T1/pcr/m/n/7 ){return true}bR=bS;case"[]last[]":while((bR=bR.nextSibli
+ng)){if(bR.nodeType===1){return false}}return true;case"[]nth[]"[] 
+ []
+
+
+Overfull \hbox (422.55525pt too wide) in paragraph at lines 647--647
+[]      \T1/pcr/m/n/7 ){bV=0;for(bR=bZ.firstChild;bR;bR=bR.nextSibling){if(bR.n
+odeType===1){bR.nodeIndex=++bV}}bZ[bC]=bW}bY=bS.nodeIndex-b0;if(bT===0){return 
+bY===0}else{return(bY%bT===0&&bY/bT>=0)}}},ID:function(bR,e){return[] 
+ []
+
+
+Overfull \hbox (166.35544pt too wide) in paragraph at lines 648--650
+[]      \T1/pcr/m/n/7 &&bR.nodeType===1)||!!bR.nodeName&&bR.nodeName.toLowerCas
+e()===e},CLASS:function(bR,e){return("[] []"+(bR.className||bR.getAttribute("[]
+[]class[][]"))+"[] []"[] 
+ []
+
+
+Overfull \hbox (262.95537pt too wide) in paragraph at lines 650--651
+[]       \T1/pcr/m/n/7 bS=bT[1],e=by.attr?by.attr(bV,bS):bE.attrHandle[bS]?bE.a
+ttrHandle[bS](bV):bV[bS]!=null?bV[bS]:bV.getAttribute(bS),bW=e+"[][]",bU=bT[2],
+bR=bT[4];return e==null?bU==="[]!=[]"[] 
+ []
+
+
+Overfull \hbox (145.35545pt too wide) in paragraph at lines 652--653
+[]      \T1/pcr/m/n/7 ).indexOf(bR)>=0:!bR?bW&&e!==false:bU==="[]!=[]"?bW!==bR:
+bU==="[]^=[]"?bW.indexOf(bR)===0:bU==="[]$=[]"?bW.substr(bW.length-bR.length)==
+=bR:bU==="[]|=[]"[] 
+ []
+
+
+Overfull \hbox (132.54993pt too wide) in paragraph at lines 654--658
+[]       \T1/pcr/m/n/7 e=bR[2],bT=bE.setFilters[e];if(bT){return bT(bU,bS,bR,bV
+)}}}};var bD=bE.match.POS,bx=function(bR,e){return"[]$\OMS/cmsy/m/n/7 n$$n$[]\T
+1/pcr/m/n/7 "+(e-0+1)};for(var bz in[] 
+ []
+
+
+Overfull \hbox (39.94446pt too wide) in paragraph at lines 658--658
+[]       \T1/pcr/m/n/7 bE.match){bE.match[bz]=new RegExp(bE.match[bz].source+(/
+(?![^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 []*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ])(?!
+[^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 (]*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ))/.sour
+ce));bE.leftMatch[bz]=new[] 
+ []
+
+
+Overfull \hbox (216.7554pt too wide) in paragraph at lines 658--658
+[]       \T1/pcr/m/n/7 bR};try{Array.prototype.slice.call(av.documentElement.ch
+ildNodes,0)[0].nodeType}catch(bP){bF=function(bU,bT){var bS=0,bR=bT||[];if(bL.c
+all(bU)==="[][[]object[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 669--669
+[]       \T1/pcr/m/n/7 0}if(!bR.compareDocumentPosition||!e.compareDocumentPosi
+tion){return bR.compareDocumentPosition?-1:1}return[] 
+ []
+
+
+Overfull \hbox (149.55545pt too wide) in paragraph at lines 669--669
+[]       \T1/pcr/m/n/7 bR.compareDocumentPosition(e)&4?-1:1}}else{bJ=function(b
+Y,bX){if(bY===bX){bB=true;return 0}else{if(bY.sourceIndex&&bX.sourceIndex){retu
+rn[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 669--669
+[]       \T1/pcr/m/n/7 bY.sourceIndex-bX.sourceIndex}}var bV,bR,bS=[],e=[],bU=b
+Y.parentNode,bW=bX.parentNode,bZ=bU;if(bU===bW){return[] 
+ []
+
+
+Overfull \hbox (99.15549pt too wide) in paragraph at lines 669--669
+[]       \T1/pcr/m/n/7 1}}}while(bZ){bS.unshift(bZ);bZ=bZ.parentNode}bZ=bW;whil
+e(bZ){e.unshift(bZ);bZ=bZ.parentNode}bV=bS.length;bR=e.length;for(var[] 
+ []
+
+
+Overfull \hbox (220.9554pt too wide) in paragraph at lines 669--669
+[]       \T1/pcr/m/n/7 bT=0;bT<bV&&bT<bR;bT++){if(bS[bT]!==e[bT]){return bG(bS[
+bT],e[bT])}}return bT===bV?bG(bY,e[bT],-1):bG(bS[bT],bX,1)};bG=function(bR,e,bS
+){if(bR===e){return[] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 669--671
+[]       \T1/pcr/m/n/7 bR=av.createElement("[]div[]"),bS="[]script[]"+(new Date
+()).getTime(),e=av.documentElement;bR.innerHTML="[]<a name=[]'"+bS+"'[]/>[]"[] 
+
+ []
+
+
+Overfull \hbox (90.7555pt too wide) in paragraph at lines 672--673
+[]       \T1/pcr/m/n/7 bT.getAttributeNode!=="[]undefined[]"&&bT.getAttributeNo
+de("[][]id[][]").nodeValue===bU[1]?[bT]:L:[]}};bE.filter.ID=function(bV,bT){var
+[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 674--675
+[]       \T1/pcr/m/n/7 bV.nodeType===1&&bU&&bU.nodeValue===bT}}e.removeChild(bR
+);e=bR=null})();(function(){var e=av.createElement("[]div[]"[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 675--676
+[]      \T1/pcr/m/n/7 );e.appendChild(av.createComment("[][]"));if(e.getElement
+sByTagName("[]*[]").length>0){bE.find.TAG=function(bR,bV){var[] 
+ []
+
+
+Overfull \hbox (288.15535pt too wide) in paragraph at lines 677--678
+[]       \T1/pcr/m/n/7 bS=0;bU[bS];bS++){if(bU[bS].nodeType===1){bT.push(bU[bS]
+)}}bU=bT}return bU}}e.innerHTML="[]<a href=[]'#'[]></a>[]";if(e.firstChild&&typ
+eof e.firstChild.getAttribute!=="[]undefined[]"[] 
+ []
+
+
+Overfull \hbox (60.7389pt too wide) in paragraph at lines 684--684
+[]      \T1/pcr/m/n/7 ).length===0){return}by=function(b4,bV,bZ,b3){bV=bV||av;i
+f(!b3&&!by.isXML(bV)){var b2=/^($\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w+$)|^$\OMS/cm
+sy/m/n/7 n$\T1/pcr/m/n/7 .([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 
+n$\T1/pcr/m/n/7 -]+$)|^#([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w$\OMS/cmsy/m/n/7 n$
+\T1/pcr/m/n/7 -[] 
+ []
+
+
+Overfull \hbox (132.75546pt too wide) in paragraph at lines 684--686
+[]       \T1/pcr/m/n/7 bF(bV.getElementsByClassName(b2[2]),bZ)}}}if(bV.nodeType
+===9){if(b4==="[]body[]"&&bV.body){return bF([bV.body],bZ)}else{if(b2&&b2[3]){v
+ar[] 
+ []
+
+
+Overfull \hbox (86.5555pt too wide) in paragraph at lines 686--686
+[]       \T1/pcr/m/n/7 bY=bV.getElementById(b2[3]);if(bY&&bY.parentNode){if(bY.
+id===b2[3]){return bF([bY],bZ)}}else{return bF([],bZ)}}}try{return[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 686--687
+[]       \T1/pcr/m/n/7 bF(bV.querySelectorAll(b4),bZ)}catch(b0){}}else{if(bV.no
+deType===1&&bV.nodeName.toLowerCase()!=="[][]object[][]"){var[] 
+ []
+
+
+Overfull \hbox (31.85277pt too wide) in paragraph at lines 687--688
+[]       \T1/pcr/m/n/7 bW=bV,bX=bV.getAttribute("[][]id[][]"),bU=bX||bS,b6=bV.p
+arentNode,b5=/^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s*[+~]/.test(b4);if(!bX){bV.set
+Attribute("[][]id[][]"[] 
+ []
+
+
+Overfull \hbox (98.94995pt too wide) in paragraph at lines 688--689
+[]      \T1/pcr/m/n/7 ,bU)}else{bU=bU.replace(/'/g,"[]$\OMS/cmsy/m/n/7 n$$n$\T1
+/pcr/m/n/7 $&[]")}if(b5&&b6){bV=bV.parentNode}try{if(!b5||b6){return bF(bV.quer
+ySelectorAll("[][[]id[]=[]'"+bU+"'[]] [][] 
+ []
+
+
+Overfull \hbox (254.55537pt too wide) in paragraph at lines 691--692
+[]       \T1/pcr/m/n/7 e=av.documentElement,bS=e.matchesSelector||e.mozMatchesS
+elector||e.webkitMatchesSelector||e.msMatchesSelector;if(bS){var bU=!bS.call(av
+.createElement("[]div[]"),"[]div[]"[] 
+ []
+
+
+Overfull \hbox (279.24152pt too wide) in paragraph at lines 693--693
+[]      \T1/pcr/m/n/7 )}catch(bT){bR=true}by.matchesSelector=function(bW,bY){bY
+=bY.replace(/$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 =$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7
+ s*([^'"[]$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ]]*)$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7
+ s*$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 ]/g,[]"='$1']"[]);[]if[](!by.isXML(bW)){[]t
+ry[]{[]if[](bR||!bE.match.PSEUDO.test(bY)&&!/!=/.test[] 
+ []
+
+
+Overfull \hbox (61.35551pt too wide) in paragraph at lines 696--696
+[]       \T1/pcr/m/n/7 class='test e'></div><div class='test'></div>"[];[]if[](
+!e.getElementsByClassName||e.getElementsByClassName([]"e"[]).length===[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 697--698
+[]      \T1/pcr/m/n/7 0){[]return[]}e.lastChild.className=[]"e"[];[]if[](e.getE
+lementsByClassName([]"e"[]).length===1){[]return[]}bE.order.splice(1,0,[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 698--698
+[]      \T1/pcr/m/n/7 "CLASS"[]);bE.find.CLASS=[]function[](bR,bS,bT){[]if[](ty
+peof bS.getElementsByClassName!==[]"undefined"[]&&!bT){[]return[] bS.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 699--699
+[]      \T1/pcr/m/n/7 getElementsByClassName(bR[1])}};e=null})();[]function[] b
+v(bR,bW,bV,bZ,bX,bY){[]for[](var bT=0,bS=bZ.length;bT<bS;bT[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 700--700
+[]      \T1/pcr/m/n/7 ++){var e=bZ[bT];[]if[](e){var bU=[]false[];e=e[bR];[]whi
+le[](e){[]if[](e[bC]===bV){bU=bZ[e.sizset];[]break[]}[]if[](e.nodeType===1[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 701--701
+[]      \T1/pcr/m/n/7 &&!bY){e[bC]=bV;e.sizset=bT}[]if[](e.nodeName.toLowerCase
+()===bW){bU=e;[]break[]}e=e[bR]}bZ[bT]=bU}}}[]function[] bN(bR,[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 702--702
+[]      \T1/pcr/m/n/7 bW,bV,bZ,bX,bY){[]for[](var bT=0,bS=bZ.length;bT<bS;bT++)
+{var e=bZ[bT];[]if[](e){var bU=[]false[];e=e[bR];[]while[](e){[]if[](e[[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 703--703
+[]      \T1/pcr/m/n/7 bC]===bV){bU=bZ[e.sizset];[]break[]}[]if[](e.nodeType===1
+){[]if[](!bY){e[bC]=bV;e.sizset=bT}[]if[](typeof bW!==[]"string"[]){[]if[](e[] 
+
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 705--705
+[]      \T1/pcr/m/n/7 documentElement.contains){by.contains=[]function[](bR,e){
+[]return[] bR!==e&&(bR.contains?bR.contains(e):[]true[])}}[]else[]{[]if[](av.[]
+ 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 706--707
+[]      \T1/pcr/m/n/7 documentElement.compareDocumentPosition){by.contains=[]fu
+nction[](bR,e){[]return[] !!(bR.compareDocumentPosition(e)&16)}}[][] 
+ []
+
+
+Overfull \hbox (65.55551pt too wide) in paragraph at lines 708--709
+[]      \T1/pcr/m/n/7 documentElement;[]return[] bR?bR.nodeName!==[]"HTML"[]:[]
+false[]};var bM=[]function[](bS,e,bW){var bV,bX=[],bU=[]""[],bY=e.nodeType?[e]:
+e;[][] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 709--710
+[]      \T1/pcr/m/n/7 while[]((bV=bE.match.PSEUDO.exec(bS))){bU+=bV[0];bS=bS.re
+place(bE.match.PSEUDO,[]""[])}bS=bE.relative[bS]?bS+[]"*"[]:bS;[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 712--712
+[]      \T1/pcr/m/n/7 b.unique=by.uniqueSort;b.text=by.getText;b.isXMLDoc=by.is
+XML;b.contains=by.contains})();var ab=/Until$/,aq=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 714--715
+[]      \T1/pcr/m/n/7 b.expr.match.POS,ay={children:[]true[],contents:[]true[],
+next:[]true[],prev:[]true[]};b.fn.extend({find:[]function[](e){var bw=[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 715--715
+[]      \T1/pcr/m/n/7 this[],by,bv;[]if[](typeof e!==[]"string"[]){[]return[] b
+(e).filter([]function[](){[]for[](by=0,bv=bw.length;by<bv;by++){if(b.cont[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 716--716
+[]      \T1/pcr/m/n/7 ains(bw[by],this)){return true}}})}var bx=this.pushStack(
+[]""[],[]"find"[],e),bA,bB,bz;[]for[](by=0,bv=this.length;by<bv[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 717--717
+[]      \T1/pcr/m/n/7 ;by++){bA=bx.length;b.find(e,[]this[][by],bx);[]if[](by>0
+){[]for[](bB=bA;bB<bx.length;bB++){[]for[](bz=0;bz<bA;bz++){[]if[](bx[[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 718--718
+[]      \T1/pcr/m/n/7 bz]===bx[bB]){bx.splice(bB--,1);[]break[]}}}}}[]return[] 
+bx},has:[]function[](bv){var e=b(bv);[]return[] this.filter([]function[][] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 719--719
+[]      \T1/pcr/m/n/7 (){[]for[](var bx=0,bw=e.length;bx<bw;bx++){if(b.contains
+(this,e[bx])){return true}}})},not:[]function[](e){[]return[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 720--720
+[]      \T1/pcr/m/n/7 this.pushStack(aG([]this[],e,[]false[]),[]"not"[],e)},fil
+ter:[]function[](e){[]return[] this.pushStack(aG([]this[],e,[]true[]),[]"filter
+"[],e[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 725--725
+[]      \T1/pcr/m/n/7 test(by)||typeof by!==[]"string"[]?b(by,bx||this.context)
+:0;[]for[](bw=0,e=this.length;bw<e;bw++){bz=[]this[][bw];[]while[](bz)[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 726--726
+[]      \T1/pcr/m/n/7 {[]if[](bA?bA.index(bz)>-1:b.find.matchesSelector(bz,by))
+{bv.push(bz);[]break[]}[]else[]{bz=bz.parentNode;[]if[](!bz||!bz.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 727--728
+[]      \T1/pcr/m/n/7 ownerDocument||bz===bx||bz.nodeType===11){[]break[]}}}}bv
+=bv.length>1?b.unique(bv):bv;[]return[] this.pushStack(bv,[]"[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 728--728
+[]      \T1/pcr/m/n/7 closest"[],by)},index:[]function[](e){[]if[](!e){[]return
+[]([]this[][0]&&[]this[][0].parentNode)?this.prevAll().length:-1}[]if[](typeof[
+] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 729--729
+[]      \T1/pcr/m/n/7 e===[]"string"[]){[]return[] b.inArray([]this[][0],b(e))}
+[]return[] b.inArray(e.jquery?e[0]:e,[]this[])},add:[]function[](e,bv){var[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 731--731
+[]      \T1/pcr/m/n/7 pushStack(C(bx[0])||C(bw[0])?bw:b.unique(bw))},andSelf:[]
+function[](){[]return[] this.add(this.prevObject)}});[]function[] C(e[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 733--733
+[]      \T1/pcr/m/n/7 return[] e&&e.nodeType!==11?e:null},parents:[]function[](
+e){[]return[] b.dir(e,[]"parentNode"[])},parentsUntil:[]function[](bv,e,bw[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 735--736
+[]      \T1/pcr/m/n/7 return[] b.nth(e,2,[]"previousSibling"[])},nextAll:[]func
+tion[](e){[]return[] b.dir(e,[]"nextSibling"[])},prevAll:[]function[](e){[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 736--737
+[]      \T1/pcr/m/n/7 return[] b.dir(e,[]"previousSibling"[])},nextUntil:[]func
+tion[](bv,e,bw){[]return[] b.dir(bv,[]"nextSibling"[],bw)},prevUntil:[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 737--737
+[]      \T1/pcr/m/n/7 function[](bv,e,bw){[]return[] b.dir(bv,[]"previousSiblin
+g"[],bw)},siblings:[]function[](e){[]return[] b.sibling(e.parentNode.[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 739--739
+[]      \T1/pcr/m/n/7 b.nodeName(e,[]"iframe"[])?e.contentDocument||e.contentWi
+ndow.document:b.makeArray(e.childNodes)}},[]function[](e,[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 740--740
+[]      \T1/pcr/m/n/7 bv){b.fn[e]=[]function[](by,bw){var bx=b.map([]this[],bv,
+by);[]if[](!ab.test(e)){bw=by}[]if[](bw&&typeof bw===[]"string"[]){bx=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 741--741
+[]      \T1/pcr/m/n/7 b.filter(bw,bx)}bx=this.length>1&&!ay[e]?b.unique(bx):bx;
+[]if[]((this.length>1||a9.test(bw))&&aq.test(e)){bx=bx[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 742--742
+[]      \T1/pcr/m/n/7 .reverse()}[]return[] this.pushStack(bx,e,P.call(argument
+s).join([]","[]))}});b.extend({filter:[]function[](bw,e,bv){[]if[]([] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 745--745
+[]      \T1/pcr/m/n/7 L||bx.nodeType!==1||!b(bx).is(by))){[]if[](bx.nodeType===
+1){e.push(bx)}bx=bx[bv]}[]return[] e},nth:[]function[](by,e,bw[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 746--746
+[]      \T1/pcr/m/n/7 ,bx){e=e||1;var bv=0;[]for[](;by;by=by[bw]){[]if[](by.nod
+eType===1&&++bv===e){[]break[]}}[]return[] by},sibling:[]function[](bw,[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 747--747
+[]      \T1/pcr/m/n/7 bv){var e=[];[]for[](;bw;bw=bw.nextSibling){[]if[](bw.nod
+eType===1&&bw!==bv){e.push(bw)}}[]return[] e}});[]function[] aG(bx,[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 748--748
+[]      \T1/pcr/m/n/7 bw,e){bw=bw||0;[]if[](b.isFunction(bw)){[]return[] b.grep
+(bx,[]function[](bz,by){var bA=!!bw.call(bz,by,bz);[]return[] bA===[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 749--749
+[]      \T1/pcr/m/n/7 e})}[]else[]{[]if[](bw.nodeType){[]return[] b.grep(bx,[]f
+unction[](bz,by){[]return[](bz===bw)===e})}[]else[]{[]if[](typeof bw===[]"strin
+g"[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 750--750
+[]      \T1/pcr/m/n/7 ){var bv=b.grep(bx,[]function[](by){[]return[] by.nodeTyp
+e===1});[]if[](bp.test(bw)){[]return[] b.filter(bw,bv,!e)}[]else[]{bw=[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 751--751
+[]      \T1/pcr/m/n/7 b.filter(bw,bv)}}}}[]return[] b.grep(bx,[]function[](bz,b
+y){[]return[](b.inArray(bz,bw)>=0)===e})}[]function[] a(e){var bw=[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 752--752
+[]      \T1/pcr/m/n/7 aR.split([]"|"[]),bv=e.createDocumentFragment();[]if[](bv
+.createElement){[]while[](bw.length){bv.createElement(bw.pop())[] 
+ []
+
+
+Overfull \hbox (392.84697pt too wide) in paragraph at lines 754--754
+[]      \T1/pcr/m/n/7 abbr|article|aside|audio|canvas|datalist|details|figcapti
+on|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|t
+ime|video"[],ag=/ jQuery$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 d+=[]"(?:$\OMS/cmsy/m/
+n/7 n$\T1/pcr/m/n/7 d+|null)"[]/g,ar=/^$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 s+/,R=/
+<(?![] 
+ []
+
+
+Overfull \hbox (23.14447pt too wide) in paragraph at lines 755--755
+[]      \T1/pcr/m/n/7 area|br|col|embed|hr|img|input|link|meta|param)(([$\OMS/c
+msy/m/n/7 n$\T1/pcr/m/n/7 w:]+)[^>]*)$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 />/ig,d=/
+<([$\OMS/cmsy/m/n/7 n$\T1/pcr/m/n/7 w:]+)/,w=/<tbody/i,W=/<|&#?$\OMS/cmsy/m/n/7
+ n$\T1/pcr/m/n/7 w+;/[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 758--758
+[]      \T1/pcr/m/n/7 <select multiple='multiple'>"[],[]"</select>"[]],legend:[
+1,[]"<fieldset>"[],[]"</fieldset>"[]],thead:[1,[]"<table>"[],[]"</table>"[]],tr
+[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 760--760
+[]      \T1/pcr/m/n/7 <table><tbody></tbody><colgroup>"[],[]"</colgroup></table
+>"[]],area:[1,[]"<map>"[],[]"</map>"[]],_default:[0,[]""[],[]""[]]},ac=a(av);ax
+.[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 764--765
+[]      \T1/pcr/m/n/7 typeof e!==[]"object"[]&&e!==L){[]return[] this.empty().a
+ppend(([]this[][0]&&[]this[][0].ownerDocument||av).createTextNode(e))}[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 766--766
+[]      \T1/pcr/m/n/7 b([]this[]).wrapAll(e.call([]this[],bw))})}[]if[]([]this[
+][0]){var bv=b(e,[]this[][0].ownerDocument).eq(0).clone([]true[]);[]if[]([]this
+[][[] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 771--771
+[]      \T1/pcr/m/n/7 function[](e){var bv=b.isFunction(e);[]return[] this.each
+([]function[](bw){b([]this[]).wrapAll(bv?e.call([]this[],bw):e)})},unwrap[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 773--773
+[]      \T1/pcr/m/n/7 childNodes)}}).end()},append:[]function[](){[]return[] th
+is.domManip(arguments,[]true[],[]function[](e){[]if[](this.nodeType===1){[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 774--774
+[]      \T1/pcr/m/n/7 this.appendChild(e)}})},prepend:[]function[](){[]return[]
+ this.domManip(arguments,[]true[],[]function[](e){[]if[](this.nodeType===1[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 776--776
+[]      \T1/pcr/m/n/7 domManip(arguments,[]false[],[]function[](bv){this.parent
+Node.insertBefore(bv,[]this[])})}[]else[]{[]if[](arguments.length){var e=[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 778--778
+[]      \T1/pcr/m/n/7 function[](){[]if[]([]this[][0]&&[]this[][0].parentNode){
+[]return[] this.domManip(arguments,[]false[],[]function[](bv){this.parentNode.[
+] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 779--779
+[]      \T1/pcr/m/n/7 insertBefore(bv,this.nextSibling)})}[]else[]{[]if[](argum
+ents.length){var e=this.pushStack([]this[],[]"after"[],arguments);e.[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 780--781
+[]      \T1/pcr/m/n/7 push.apply(e,b.clean(arguments));[]return[] e}}},[]remove
+[]:[]function[](e,bx){[]for[](var bv=0,bw;(bw=[]this[][bv])!=null;bv++){[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 782--782
+[]      \T1/pcr/m/n/7 b.cleanData([bw])}[]if[](bw.parentNode){bw.parentNode.rem
+oveChild(bw)}}}[]return[] []this[]},empty:[]function[](){[]for[](var e[] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 784--785
+[]      \T1/pcr/m/n/7 firstChild){bv.removeChild(bv.firstChild)}}[]return[] []t
+his[]},clone:[]function[](bv,e){bv=bv==null?[]false[]:bv;e=e==null?bv:e;[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 785--785
+[]      \T1/pcr/m/n/7 return[] this.map([]function[](){[]return[] b.clone([]thi
+s[],bv,e)})},html:[]function[](bx){[]if[](bx===L){[]return[] []this[][0]&&[]thi
+s[][0].[] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 787--788
+[]      \T1/pcr/m/n/7 b.support.leadingWhitespace||!ar.test(bx))&&!ax[(d.exec(b
+x)||[[]""[],[]""[]])[1].toLowerCase()]){bx=bx.replace(R,[]"[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 789--790
+[]      \T1/pcr/m/n/7 b.cleanData([]this[][bw].getElementsByTagName([]"*"[]));[
+]this[][bw].innerHTML=bx}}}[]catch[](by){this.empty().append(bx)}}[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 792--792
+[]      \T1/pcr/m/n/7 b.isFunction(e)){[]return[] this.each([]function[](bx){va
+r bw=b([]this[]),bv=bw.html();bw.replaceWith(e.call([]this[],bx,bv[] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 795--796
+[]      \T1/pcr/m/n/7 pushStack(b(b.isFunction(e)?e():e),[]"replaceWith"[],e):t
+his}},detach:function(e){[]return[] this.[]remove[](e,[]true[])},domManip:[][] 
+
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 796--796
+[]      \T1/pcr/m/n/7 function[](bB,bF,bE){var bx,by,bA,bD,bC=bB[0],bv=[];[]if[
+](!b.support.checkClone&&arguments.length===3&&typeof bC[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 799--799
+[]      \T1/pcr/m/n/7 L);bG.domManip(bB,bF,bE)})}[]if[]([]this[][0]){bD=bC&&bC.
+parentNode;[]if[](b.support.parentNode&&bD&&bD.nodeType===11&&[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 800--800
+[]      \T1/pcr/m/n/7 bD.childNodes.length===[]this[].length){bx={fragment:bD}}
+[]else[]{bx=b.buildFragment(bB,[]this[],bv)}bA=bx.fragment;[]if[]([] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 803--803
+[]      \T1/pcr/m/n/7 cacheable||(e>1&&bw<bz)?b.clone(bA,[]true[],[]true[]):bA)
+}}[]if[](bv.length){b.each(bv,bo)}}[]return[] []this[]}});[]function[] ba(e,bv[
+] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 806--806
+[]      \T1/pcr/m/n/7 b._data(bB),bz=b._data(bv,bA),bw=bA.events;[]if[](bw){[]d
+elete[] bz.handle;bz.events={};[]for[](by in bw){[]for[](bx=0,e=bw[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 807--807
+[]      \T1/pcr/m/n/7 [by].length;bx<e;bx++){b.event.add(bv,by+(bw[by][bx].[]na
+mespace[]?[]"."[]:[]""[])+bw[by][bx].[]namespace[],bw[by][bx],bw[by[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 808--809
+[]      \T1/pcr/m/n/7 ][bx].data)}}}[]if[](bz.data){bz.data=b.extend({},bz.data
+)}}[]function[] ai(bv,e){var bw;[]if[](e.nodeType!==1){[]return[]}[][] 
+ []
+
+
+Overfull \hbox (44.55553pt too wide) in paragraph at lines 810--811
+[]      \T1/pcr/m/n/7 toLowerCase();[]if[](bw===[]"object"[]){e.outerHTML=bv.ou
+terHTML}[]else[]{[]if[](bw===[]"input"[]&&(bv.type===[]"checkbox"[]||bv.type===
+[]"[] 
+ []
+
+
+Overfull \hbox (36.15553pt too wide) in paragraph at lines 811--811
+[]      \T1/pcr/m/n/7 radio"[])){[]if[](bv.checked){e.defaultChecked=e.checked=
+bv.checked}[]if[](e.value!==bv.value){e.value=bv.value}}[]else[]{[]if[]([] 
+ []
+
+
+Overfull \hbox (52.95552pt too wide) in paragraph at lines 813--813
+[]      \T1/pcr/m/n/7 defaultValue}}}}e.removeAttribute(b.expando)}b.buildFragm
+ent=[]function[](bz,bx,bv){var by,e,bw,bA,bB=bz[0];[]if[](bx&&bx[0[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 814--814
+[]      \T1/pcr/m/n/7 ]){bA=bx[0].ownerDocument||bx[0]}[]if[](!bA.createDocumen
+tFragment){bA=av}[]if[](bz.length===1&&typeof bB===[]"string"[][] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 817--817
+[]      \T1/pcr/m/n/7 createDocumentFragment();b.clean(bz,bA,by,bv)}[]if[](e){b
+.fragments[bB]=bw?by:1}[]return[]{fragment:by,cacheable:e}};[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 819--819
+[]      \T1/pcr/m/n/7 replaceAll:[]"replaceWith"[]},[]function[](e,bv){b.fn[e]=
+[]function[](bw){var bz=[],bC=b(bw),bB=this.length===1&&[]this[][0].[] 
+ []
+
+
+Overfull \hbox (31.95554pt too wide) in paragraph at lines 820--821
+[]      \T1/pcr/m/n/7 parentNode;[]if[](bB&&bB.nodeType===11&&bB.childNodes.len
+gth===1&&bC.length===1){bC[bv]([]this[][0]);[]return[] []this[]}[]else[]{[][] 
+ []
+
+
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 822--823
+[]      \T1/pcr/m/n/7 concat(by)}[]return[] this.pushStack(bz,e,bC.selector)}}}
+);[]function[] bg(e){[]if[](typeof e.getElementsByTagName!==[]"[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 824--824
+[]      \T1/pcr/m/n/7 querySelectorAll([]"*"[])}[]else[]{[]return[][]}}}[]funct
+ion[] az(e){[]if[](e.type===[]"checkbox"[]||e.type===[]"radio"[]){e.defaultChec
+ked=e.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 825--825
+[]      \T1/pcr/m/n/7 checked}}[]function[] E(e){var bv=(e.nodeName||[]""[]).to
+LowerCase();[]if[](bv===[]"input"[]){az(e)}[]else[]{[]if[](bv!==[]"script"[]&&[
+] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 826--826
+[]      \T1/pcr/m/n/7 typeof e.getElementsByTagName!==[]"undefined"[]){b.grep(e
+.getElementsByTagName([]"input"[]),az)}}}[]function[] al(e){var bv=[] 
+ []
+
+
+Overfull \hbox (48.75552pt too wide) in paragraph at lines 829--829
+[]      \T1/pcr/m/n/7 cloneNode([]true[]):al(by);[]if[]((!b.support.noCloneEven
+t||!b.support.noCloneChecked)&&(by.nodeType===1||by.nodeType===11[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 830--830
+[]      \T1/pcr/m/n/7 )&&!b.isXMLDoc(by)){ai(by,bz);e=bg(by);bv=bg(bz);[]for[](
+bx=0;e[bx];++bx){[]if[](bv[bx]){ai(e[bx],bv[bx])}}}[]if[](bA){t[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 831--831
+[]      \T1/pcr/m/n/7 (by,bz);[]if[](bw){e=bg(by);bv=bg(bz);[]for[](bx=0;e[bx];
+++bx){t(e[bx],bv[bx])}}}e=bv=null;[]return[] bz},clean:[]function[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 832--832
+[]      \T1/pcr/m/n/7 (bw,by,bH,bA){var bF;by=by||av;[]if[](typeof by.createEle
+ment===[]"undefined"[]){by=by.ownerDocument||by[0]&&by[0].[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 833--833
+[]      \T1/pcr/m/n/7 ownerDocument||av}var bI=[],bB;[]for[](var bE=0,bz;(bz=bw
+[bE])!=null;bE++){[]if[](typeof bz===[]"number"[]){bz+=[]""[]}[]if[](!bz[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 834--835
+[]      \T1/pcr/m/n/7 ){[]continue[]}[]if[](typeof bz===[]"string"[]){[]if[](!W
+.test(bz)){bz=by.createTextNode(bz)}[]else[]{bz=bz.replace(R,[]"<$1></$2>[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 835--836
+[]      \T1/pcr/m/n/7 "[]);var bK=(d.exec(bz)||[[]""[],[]""[]])[1].toLowerCase(
+),bx=ax[bK]||ax._default,bD=bx[0],bv=by.createElement([]"div"[]);[][] 
+ []
+
+
+Overfull \hbox (40.35553pt too wide) in paragraph at lines 837--837
+[]      \T1/pcr/m/n/7 lastChild}[]if[](!b.support.tbody){var e=w.test(bz),bC=bK
+===[]"table"[]&&!e?bv.firstChild&&bv.firstChild.childNodes:bx[1[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 839--839
+[]      \T1/pcr/m/n/7 childNodes.length){bC[bB].parentNode.removeChild(bC[bB])}
+}}[]if[](!b.support.leadingWhitespace&&ar.test(bz)){bv.[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 841--841
+[]      \T1/pcr/m/n/7 b.support.appendChecked){[]if[](bz[0]&&typeof(bG=bz.lengt
+h)===[]"number"[]){[]for[](bB=0;bB<bG;bB++){E(bz[bB])}}[]else[]{E([] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 842--842
+[]      \T1/pcr/m/n/7 bz)}}[]if[](bz.nodeType){bI.push(bz)}[]else[]{bI=b.merge(
+bI,bz)}}[]if[](bH){bF=[]function[](bL){[]return[] !bL.type||bm.test(bL.[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 843--844
+[]      \T1/pcr/m/n/7 type)};[]for[](bE=0;bI[bE];bE++){[]if[](bA&&b.nodeName(bI
+[bE],[]"script"[])&&(!bI[bE].type||bI[bE].type.toLowerCase()===[][] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 844--844
+[]      \T1/pcr/m/n/7 "text/javascript"[])){bA.push(bI[bE].parentNode?bI[bE].pa
+rentNode.removeChild(bI[bE]):bI[bE])}[]else[]{[]if[](bI[bE].[] 
+ []
+
+
+Overfull \hbox (27.75554pt too wide) in paragraph at lines 845--845
+[]      \T1/pcr/m/n/7 nodeType===1){var bJ=b.grep(bI[bE].getElementsByTagName([
+]"script"[]),bF);bI.splice.apply(bI,[bE+1,0].concat(bJ))[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 848--848
+[]      \T1/pcr/m/n/7 b.noData[bx.nodeName.toLowerCase()]){[]continue[]}bw=bx[b
+.expando];[]if[](bw){by=e[bw];[]if[](by&&by.events){[]for[](var bC[] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 849--849
+[]       \T1/pcr/m/n/7 in by.events){[]if[](bB[bC]){b.event.remove(bx,bC)}[]els
+e[]{b.removeEvent(bx,bC,by.handle)}}[]if[](by.handle){by.handle[] 
+ []
+
+
+Overfull \hbox (19.35555pt too wide) in paragraph at lines 851--851
+[]      \T1/pcr/m/n/7 b.expando)}}[]delete[] e[bw]}}}});[]function[] bo(e,bv){[
+]if[](bv.src){b.ajax({url:bv.src,async:[]false[],dataType:[]"script"[][] 
+ []
+
+
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 852--852
+[]      \T1/pcr/m/n/7 })}[]else[]{b.globalEval((bv.text||bv.textContent||bv.inn
+erHTML||[]""[]).replace(aN,[]"/*$0*/"[]))}[]if[](bv.parentNode){bv.[] 
+ []
+
+[17]) (./all__0_8js.tex) (./all__1_8js.tex [18]) (./all__2_8js.tex)
+(./all__3_8js.tex) (./all__4_8js.tex [19]) (./all__5_8js.tex) (./all__6_8js.tex
+) (./all__7_8js.tex [20]) (./classes__0_8js.tex) (./classes__1_8js.tex [21])
+(./defines__0_8js.tex) (./files__0_8js.tex) (./functions__0_8js.tex [22])
+(./functions__1_8js.tex) (./functions__2_8js.tex [23]) (./functions__3_8js.tex)
+(./search_8js.tex [24]) (./searchdata_8js.tex [25]) (./variables__0_8js.tex)
+(./variables__1_8js.tex [26]) (./variables__2_8js.tex) (./variables__3_8js.tex
+[27]) (./openmp_2main_8c.tex
+<openmp_2main_8c__incl.pdf, id=131, 584.1825pt x 156.585pt>
+File: openmp_2main_8c__incl.pdf Graphic file (type pdf)
+
+<use openmp_2main_8c__incl.pdf>
+Package pdftex.def Info: openmp_2main_8c__incl.pdf used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 93.81792pt.
+ [28 <./openmp_2main_8c__incl.pdf>])
+(./procedural_2main_8c.tex
+<procedural_2main_8c__incl.pdf, id=141, 584.1825pt x 156.585pt>
+File: procedural_2main_8c__incl.pdf Graphic file (type pdf)
+
+<use procedural_2main_8c__incl.pdf>
+Package pdftex.def Info: procedural_2main_8c__incl.pdf used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 93.81792pt.
+ [29] [30 <./procedural_2main_8c__incl.pdf>]) [31] [32
+
+] (./refman.ind [33
+
+
+] [34] [35]) (./refman.aux) ) 
+Here is how much of TeX's memory you used:
+ 8306 strings out of 494953
+ 119988 string characters out of 6180977
+ 204167 words of memory out of 5000000
+ 11290 multiletter control sequences out of 15000+600000
+ 57027 words of font info for 64 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 53i,16n,92p,12836b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
+ic/uhvbo8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (43 pages, 222665 bytes).
+PDF statistics:
+ 208 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
