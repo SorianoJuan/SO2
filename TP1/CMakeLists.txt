@@ -1,13 +1,10 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required(VERSION 3.13)
 
 enable_language(C)
 FIND_PACKAGE(Threads)
+set(CMAKE_CXX_STANDARD 14)
 
-SET(CMAKE_CXX_FLAGS -pthread)
-
-
-project (TP1)
-
+project(TP1)
 
 add_executable(server
         src/server/main.c)
@@ -15,5 +12,7 @@ add_executable(server
 add_executable(cliente
         src/client/main.c)
 
-target_link_libraries(cliente pthread)
+add_custom_target(TP1 COMMAND make -C ${TP1_SOURCE_DIR}
+        CLION_EXE_DIR=${build})
 
+target_link_libraries(cliente pthread)
