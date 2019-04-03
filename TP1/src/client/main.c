@@ -7,13 +7,16 @@
 #include <linux/kernel.h>
 #include <sys/sysinfo.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 #define BUFF_SIZE 1024
+#define FILE_BUFFER_SIZE 1500
 #define ID 1
 #define FIRMWARE_FILE "firmware.bin"
 
 void *writeto_socket(void *arg);
 void sendTelemetria(void);
+int sendScan(int sockfd);
 
 struct sockbuff {
     int sockfd;
@@ -153,6 +156,7 @@ void *writeto_socket(void *arg)
 
                 case 2:
                     printf("DEBUG: start scanning\n");
+                    sendScan(sockfd);
                     break;
 
                 case 3:
@@ -231,4 +235,32 @@ void sendTelemetria(void)
     }
     printf ("DEBUG: telemetria enviada\n");
     shutdown(sockfd, 2);
+}
+
+int sendScan (int sockfd) {
+    int imageFilefd;
+
+    if ((imageFilefd = open("../2019.jpg", O_RDONLY)) <0)
+    {
+        printf("No existe la imagen\n");
+        return 0;
+    }
+
+    int count;
+    char sendBuffer[FILE_BUFFER_SIZE];
+
+    while ((count = (int) read(imageFilefd,sendBuffer,FILE_BUFFER_SIZE)) > 0) {
+        if (send(sockfd, sendBuffer, strlen(sendBuffer), 0) < 0) {
+            perror("ERROR enviando");
+        }
+        memset(sendBuffer, 0, BUFF_SIZE);
+    }
+    close(imageFilefd);
+
+    strcpy(sendBuffer, "endfiletcp");
+    if (send(sockfd, sendBuffer, strlen(sendBuffer), 0) < 0) {
+        perror("ERROR enviando");
+    }
+
+    return 1;
 }
