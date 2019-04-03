@@ -5,8 +5,10 @@
 #include <sys/socket.h> //Estructuras necesarias para los sockets
 #include <unistd.h>
 #include <signal.h>
+#include <arpa/inet.h>
 
 #define LISTEN_PORT 2019 // Puerto TCP
+#define UDP_CLIENT_PORT 2019
 
 #define SNAME 20
 #define USER_NR 2
@@ -21,15 +23,16 @@ struct Login {
 };
 
 int verificar(char *user, char *password);
+int getTelemetria(char *ipaddr);
 
 int main(void)
 {
     int sockfd, sockfd2, clientaddrsize;
 
-    char buffer[BUFF_SIZE];
+    char buffer[BUFF_SIZE], bufferaux[BUFF_SIZE];
     int pid;
     long byteRead = 0;
-    char *msg;
+    char *msg, *keyword;
 
     struct sockaddr_in serv_addr,
             cli_addr;
@@ -135,7 +138,7 @@ int main(void)
 
             } //Fin de autenticacion
             while (1) { //Recepcion de comandos
-                msg = "@base_terrestre >>>";
+                msg = "@base_terrestre >>> ";
                 if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
                     perror("ERROR escribiendo en el socket TCP");
                 }
@@ -146,6 +149,18 @@ int main(void)
                     } else {
                         buffer[byteRead] = '\0';
                         printf("Mensaje del cliente: %s", buffer);
+                        strcpy(bufferaux,buffer);
+                        keyword = strtok(bufferaux, "\n");
+                        if (keyword != NULL) {
+                            if (strcmp(keyword, "update firmware.bin") == 0) { //enviar archivo firmware.bin
+                                printf("DEBUG: peticion de update de firmware\n");
+                            } else if (strcmp(keyword, "start scanning") == 0) { //recibir imagen
+                                printf("DEBUG: imagen de satelite\n");
+                            } else if (strcmp(keyword, "obtener telemetria") == 0) { //abrir socket UDP para escuchar
+                                printf("DEBUG: recibiendo telemetria\n");
+                                getTelemetria(inet_ntoa(cli_addr.sin_addr));
+                            }
+                        }
                     }
                 }
             }
@@ -178,4 +193,67 @@ int verificar(char *user, char *password) {
         }
     }
     return 0;
+}
+
+int getTelemetria (char *ipaddr){
+
+    int sockfd, sizeofdest;
+    struct sockaddr_in dest_addr;
+
+    char buffer[BUFF_SIZE], bufferaux[BUFF_SIZE];
+
+    char * word = NULL;
+
+    int success = 0;
+
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sockfd < 0) {
+        perror("ERROR en apertura de socket");
+        exit(1);
+    }
+    memset(&dest_addr, 0, sizeof(dest_addr));
+
+    dest_addr.sin_family = AF_INET;
+    dest_addr.sin_port = htons(UDP_CLIENT_PORT);
+    inet_aton(ipaddr, &dest_addr.sin_addr);
+
+    sizeofdest = sizeof(dest_addr);
+
+    char *msg = "udpopen";
+    // Enviar un mensaje al cliente para indicarle que el puerto UDP esta siendo escuchado
+    if (sendto(sockfd, msg, strlen(msg), 0,
+               (struct sockaddr *)&dest_addr, (socklen_t)sizeofdest) < 0) {
+        perror("ERROR durante escritura en socket UDP");
+        exit(0);
+    }
+
+    int finish = 0;
+
+    while (finish == 0) {
+        memset(buffer, 0, BUFF_SIZE);
+
+        if (recvfrom(sockfd, buffer, BUFF_SIZE, 0, (struct sockaddr *)&dest_addr,
+                     (socklen_t *)&sizeofdest) < 0) {
+            perror("ERROR durante lectura en socket UDP");
+            exit(0);
+        }
+
+        if (!strcmp(buffer, "finishudp")) {
+            finish = 1;
+        } else {
+            printf("Recibido UDP: %s\n" , buffer);
+            strcpy(bufferaux,buffer);
+            printf("telemetria recibida: \n");
+            word = strtok(bufferaux, "|");
+            printf("ID del satelite = %s\n", word);
+            word = strtok(NULL, "|");
+            printf("uptime = %s segundos\n",  word);
+            word = strtok(NULL, "|");
+            printf("version del software = %s\n", word);
+            word = strtok(NULL, "\n");
+            printf("freeram = %s bytes\n", word);
+        }
+    }
+    shutdown(sockfd, 2);
+    return success;
 }

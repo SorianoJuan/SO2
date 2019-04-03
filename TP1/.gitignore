@@ -5,4 +5,5 @@ cmake-build-release/
 .idea/*
 #build
 build/*
-!build/outgoingFile
+#spacemacs
+.*
