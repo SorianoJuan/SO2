@@ -202,7 +202,7 @@ int verificar(char *user, char *password) {
 int getScan (int sockfd2)
 {
     int imageFilefd;
-    if ((imageFilefd = open("../incoming_2019.jpg", O_WRONLY|O_CREAT, 0666)) <0)
+    if ((imageFilefd = open("../incoming_2019.jpg", O_WRONLY|O_CREAT|O_TRUNC, 0666)) <0)
     {
         printf("Error creando el file\n");
         return 0;
@@ -212,7 +212,8 @@ int getScan (int sockfd2)
     int finish = 0;
 
     while (!finish) {
-        if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE-1, 0)) != 0) {
+        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
+        if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
             if (byteRead <= 0) {
                 perror ("ERROR leyendo del socket");
                 continue;
@@ -220,6 +221,7 @@ int getScan (int sockfd2)
         }
         if (!strcmp(recvBuffer, "endfiletcp")) {
             finish = 1;
+            printf("endfiletcp\n");
         } else {
             if ((write(imageFilefd, recvBuffer, (size_t) byteRead) < 0))
             {
@@ -229,6 +231,19 @@ int getScan (int sockfd2)
         }
     }
 
+/*    while ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) > 0){
+        if (byteRead < 0) {
+            perror ("ERROR leyendo del socket");
+            continue;
+        } else if ((write(imageFilefd, recvBuffer, (size_t) byteRead) < 0)){
+            perror("ERROR escribiendo en el file");
+            exit(EXIT_FAILURE);
+        }
+        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
+    }*/
+    close(imageFilefd);
+    printf("DEBUG: Finalizada la recepcion de scan\n");
+    //sleep(0.5);
     return 1;
 }
 

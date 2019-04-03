@@ -250,15 +250,18 @@ int sendScan (int sockfd) {
     char sendBuffer[FILE_BUFFER_SIZE];
 
     while ((count = (int) read(imageFilefd,sendBuffer,FILE_BUFFER_SIZE)) > 0) {
-        if (send(sockfd, sendBuffer, strlen(sendBuffer), 0) < 0) {
+        if (send(sockfd, sendBuffer, count, 0) < 0) {
             perror("ERROR enviando");
         }
         memset(sendBuffer, 0, BUFF_SIZE);
     }
     close(imageFilefd);
+//    printf("DEBUG: Finalizado envio de scan\n");
 
-    strcpy(sendBuffer, "endfiletcp");
-    if (send(sockfd, sendBuffer, strlen(sendBuffer), 0) < 0) {
+    char *end = NULL;
+    end = "endfiletcp";
+    printf("DEBUG: Finalizado envio de scan, enviando trama de finalizacion\n");
+    if (send(sockfd, end, strlen(end), 0) < 0) {
         perror("ERROR enviando");
     }
 
