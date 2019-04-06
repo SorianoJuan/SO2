@@ -209,8 +209,31 @@ int getScan (int sockfd2)
     }
     char recvBuffer[FILE_BUFFER_SIZE];
     long byteRead = 0;
-    int finish = 0;
+    //int finish = 0;
 
+    uint32_t npackages;
+    if ((byteRead = recv(sockfd2, &npackages, 4, 0)) != 0) {
+        if (byteRead <= 0) {
+            perror ("ERROR leyendo del socket");
+        }
+    }
+
+    for (int i=0; i<npackages; i++){
+        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
+        if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
+            if (byteRead <= 0) {
+                perror ("ERROR leyendo del socket");
+                continue;
+            }
+        }
+        if ((write(imageFilefd, recvBuffer, (size_t) byteRead) < 0))
+        {
+            perror("ERROR escribiendo en el file");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+/*
     while (!finish) {
         memset(recvBuffer, 0, FILE_BUFFER_SIZE);
         if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
@@ -229,7 +252,7 @@ int getScan (int sockfd2)
                 exit(EXIT_FAILURE);
             }
         }
-    }
+    }*/
 
 /*    while ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) > 0){
         if (byteRead < 0) {
@@ -240,6 +263,10 @@ int getScan (int sockfd2)
             exit(EXIT_FAILURE);
         }
         memset(recvBuffer, 0, FILE_BUFFER_SIZE);
+    }*/
+    /*char *msg = "@base_terrestre: Archivo recibido exitosamente";
+    if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
+        perror("ERROR escribiendo en el socket TCP");
     }*/
     close(imageFilefd);
     printf("DEBUG: Finalizada la recepcion de scan\n");

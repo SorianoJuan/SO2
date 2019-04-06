@@ -6,8 +6,10 @@
 #include <linux/unistd.h>
 #include <linux/kernel.h>
 #include <sys/sysinfo.h>
+#include <sys/stat.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <math.h>
 
 #define BUFF_SIZE 1024
 #define FILE_BUFFER_SIZE 1500
@@ -239,7 +241,7 @@ void sendTelemetria(void)
 
 int sendScan (int sockfd) {
     int imageFilefd;
-
+    struct stat buf;
     if ((imageFilefd = open("../2019.jpg", O_RDONLY)) <0)
     {
         printf("No existe la imagen\n");
@@ -248,6 +250,16 @@ int sendScan (int sockfd) {
 
     int count;
     char sendBuffer[FILE_BUFFER_SIZE];
+    fstat(imageFilefd, &buf);
+    off_t fileSize = buf.st_size;
+    printf("DEBUG: filesize: %li\n", fileSize);
+    char npackages [4];
+    *((int*)npackages)= (fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE);
+    printf("DEBUG: n° de paquetes a enviar : %s\n", npackages);
+
+    if (send(sockfd, npackages, 4, 0) < 0) {
+        perror("ERROR enviando");
+    }
 
     while ((count = (int) read(imageFilefd,sendBuffer,FILE_BUFFER_SIZE)) > 0) {
         if (send(sockfd, sendBuffer, count, 0) < 0) {
@@ -257,13 +269,13 @@ int sendScan (int sockfd) {
     }
     close(imageFilefd);
 //    printf("DEBUG: Finalizado envio de scan\n");
-
+/*
     char *end = NULL;
     end = "endfiletcp";
     printf("DEBUG: Finalizado envio de scan, enviando trama de finalizacion\n");
     if (send(sockfd, end, strlen(end), 0) < 0) {
         perror("ERROR enviando");
     }
-
+*/
     return 1;
 }
