@@ -26,12 +26,11 @@ char ipaddrbuff [20] = "127.0.0.1";
 char * ipaddr = NULL;
 char firmware_version [20] = "1.0.0";
 
-int main(void)
-{
+int main(void) {
     int sockfd;
     long byteRead = 0;
     struct sockaddr_in dest_addr;
-    char buffer[BUFF_SIZE],auxbuf[BUFF_SIZE];
+    char buffer[BUFF_SIZE], auxbuf[BUFF_SIZE];
 
     setvbuf(stdout, NULL, _IONBF, 0);
 
@@ -56,10 +55,12 @@ int main(void)
     dest_addr.sin_port = htons(portnr);
 
     // Conexion
-    if (connect(sockfd, (struct sockaddr *)&dest_addr, sizeof(dest_addr)) < 0) {
-        perror("ERROR conectando al socket");
-        exit(1);
+    while (connect(sockfd, (struct sockaddr *) &dest_addr, sizeof(dest_addr)) < 0) {
+        perror("ERROR reintentando conexion en 5 segundos");
+        sleep(5);
+        continue;
     }
+    printf("Conexion con base terrena exitosa!\n");
 
     // Prompt
     while ((byteRead = recv(sockfd, buffer, sizeof(buffer) - 1, 0)) != 0) {
@@ -68,26 +69,25 @@ int main(void)
             continue;
         } else {
             buffer[byteRead] = '\0';
-            strcpy(auxbuf,buffer);
+            strcpy(auxbuf, buffer);
             keyword = strtok(auxbuf, "\n");
             if (keyword != NULL) {
                 if (strcmp(keyword, "update firmware.bin") == 0) { //enviar archivo firmware.bin
                     printf("DEBUG: peticion de update de firmware\n");
-                    //receiveUpdate(sockfd);
+                    receiveUpdate(sockfd);
                 } else if (strcmp(keyword, "start scanning") == 0) { //recibir imagen
-                    printf("DEBUG: imagen de satelite\n");
-                    //sendScan(sockfd);
+                    printf("DEBUG: Peticion de imagen de satelite\n");
+                    sendScan(sockfd);
                 } else if (strcmp(keyword, "obtener telemetria") == 0) { //abrir socket UDP para escuchar
-                    printf("DEBUG: recibiendo telemetria\n");
-                    //sendTelemetria();
-            }
-        } else {
-                printf("%s", buffer);
-                memset(buffer, 0, sizeof(buffer));
+                    printf("DEBUG: Peticion de telemetria\n");
+                    sendTelemetria();
+                } else {
+                    printf("Mensaje de la base terrena: %s", buffer);
+                    memset(buffer, 0, sizeof(buffer));
+                }
             }
         }
     }
-
 }
 
 void sendTelemetria(void)
@@ -228,12 +228,12 @@ int receiveUpdate (int sockfd)
     close(firmwareFilefd);
     printf("DEBUG: Finalizada la recepcion del update de firmware\n");
     printf("DEBUG: Reiniciando el sistema con el nuevo firmware\n");
-    /*char exec [100] = "./";
+    close(sockfd);
+    char exec [100] = "./";
     strcat (exec, FIRMWARE_FILE);
     char *argv [] = {FIRMWARE_FILE, NULL};
-    if (execv("/usr/bin/bash", argv)){
+    if (execv(FIRMWARE_FILE, argv)){
         perror("Error: execv()");
-    }*/
-    //system("./incoming_updated_client");
+    }
     return 1;
 }

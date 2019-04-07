@@ -92,8 +92,8 @@ int main(void)
              perror("Error en fork()");
         } else if (pid == 0) { //Child
             //Etapa de autenticacion
+            printf("Estacion terrestre. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n");
             while (!autenticado) {
-                printf("Estacion terrestre. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n");
                 printf("Usuario: ");
                 fgets(user,sizeof(user),stdin);
                 user[strlen(user)-1]='\0';
@@ -109,13 +109,14 @@ int main(void)
                 } else { //Intentos agotados
                     printf("Numero de intentos de autenticacion agotados. Cerrando conexion\n");
                     //close(sockfd2);
-                    exit(EXIT_SUCCESS);
                     kill(getpid(),SIGINT);
+                    //exit(EXIT_SUCCESS);
                 }
             } //Fin de autenticacion
             char *msg=buffer, *keyword1, *keyword2, keywords[40];
-            //fflush(stdin);
+            char opcion;
             while (1) {
+                opcion = 0;
                 printf("@base_terrestre >>> ");
                 fgets(msg,sizeof(buffer),stdin);
                 strcpy(auxbuffer, msg);
@@ -126,17 +127,37 @@ int main(void)
                         strcpy(keywords, keyword1);
                         strcat(keywords, keyword2);
                         if (strcmp(keywords, "updatefirmware.bin") == 0) {
-                            printf("DEBUG: firmware\n");
+                            opcion = 1;
                         } else if (strcmp(keywords, "startscanning") == 0) {
-                            printf("DEBUG: start scanning\n");
-                            //getScan(sockfd);
+                            opcion = 2;
                         } else if (strcmp(keywords, "obtenertelemetria") == 0) {
-                            printf("DEBUG: obtener telemetria\n");
-                            //getTelemetria(sockfd);
+                            opcion = 3;
                         }
                     }
                     if (send(sockfd2, msg, strlen(msg), 0) < 0) {
                         perror("ERROR enviando");
+                    }
+                    sleep(0.5);
+                    switch (opcion)
+                    {
+                        case 0:
+                            break;
+
+                        case 1:
+                            printf("DEBUG: firmware\n");
+                            sendUpdate(sockfd2);
+                            kill(getpid(),SIGINT);
+                            break;
+
+                        case 2:
+                            printf("DEBUG: start scanning\n");
+                            getScan(sockfd2);
+                            break;
+
+                        case 3:
+                            printf("DEBUG: obtener telemetria\n");
+                            getTelemetria(inet_ntoa(cli_addr.sin_addr));
+                            break;
                     }
                 }
             }
@@ -181,7 +202,6 @@ int getScan (int sockfd2)
     }
     char recvBuffer[FILE_BUFFER_SIZE];
     long byteRead = 0;
-    //int finish = 0;
 
     uint32_t npackages;
     if ((byteRead = recv(sockfd2, &npackages, 4, 0)) != 0) {
@@ -236,6 +256,7 @@ int getTelemetria (char *ipaddr){
 
     char *msg = "udpopen";
     // Enviar un mensaje al cliente para indicarle que el puerto UDP esta siendo escuchado
+    sleep(0.5);
     if (sendto(sockfd, msg, strlen(msg), 0,
                (struct sockaddr *)&dest_addr, (socklen_t)sizeofdest) < 0) {
         perror("ERROR durante escritura en socket UDP");
@@ -290,11 +311,6 @@ int sendUpdate(int sockfd){
     char *npackages = (char*)&packages;
     printf("DEBUG: n° de paquetes a enviar : %i\n", ntohl(packages));
 
-    char * start = "update requested";
-    if (send(sockfd, start, strlen(start), 0) < 0) {
-        perror("ERROR enviando");
-    }
-
     if (send(sockfd, npackages, 4, 0) < 0) {
         perror("ERROR enviando");
     }
@@ -308,64 +324,3 @@ int sendUpdate(int sockfd){
     close(firmwareFilefd);
     return 1;
 }
-
-/*
-void *writeto_socket(void *arg)
-{*/
-    /**
-       @brief toma los datos ingresados por el teclado y parsea lo ingresado para ver
-       si se trata de un comando o una descarga.
-       @param arg es un puntero a la direccion en memoria del struct sockbuff
-    **/
-/*    int sockfd = ((struct sockbuff *)arg)->sockfd;
-    char *msg = ((struct sockbuff *)arg)->buffer;
-    size_t msg_size = ((struct sockbuff *)arg)->buffer_size;
-    char auxbuffer[BUFF_SIZE];
-    char *keyword1, *keyword2, keywords[40];
-    fflush(stdin);
-    int opcion = 0;
-    while (1) {
-        opcion = 0;
-        fgets(msg, msg_size, stdin);
-        strcpy(auxbuffer, msg);
-        keyword1 = strtok(auxbuffer, " ");
-        keyword2 = strtok(NULL, "\n");
-        if (keyword1 !=NULL){
-            if (keyword2 != NULL){
-                strcpy(keywords, keyword1);
-                strcat(keywords, keyword2);
-                if (strcmp(keywords, "updatefirmware.bin") == 0) {
-                    opcion = 1;
-                } else if (strcmp(keywords, "startscanning") == 0) {
-                    opcion = 2;
-                } else if (strcmp(keywords, "obtenertelemetria") == 0) {
-                    opcion = 3;
-                }
-            }
-            if (send(sockfd, msg, strlen(msg), 0) < 0) {
-                perror("ERROR enviando");
-            }
-            switch (opcion)
-            {
-                case 0:
-                    break;
-
-                case 1:
-                    printf("DEBUG: firmware\n");
-                    //sendUpdate(sockfd);
-                    break;
-
-                case 2:
-                    printf("DEBUG: start scanning\n");
-                    //getScan(sockfd);
-                    break;
-
-                case 3:
-                    printf("DEBUG: obtener telemetria\n");
-                    //getTelemetria(sockfd);
-                    break;
-            }
-        }
-    }
-    return 0;
-}*/
