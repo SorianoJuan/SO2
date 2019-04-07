@@ -67,6 +67,36 @@ int main(void)
                                  htons para convertir el numero de puerto a un orden de
                                  bytes de network*/
 
+
+    int autenticado = 0;
+    int retryCount = RETRY_LIMIT;
+    char user[50];
+    char password[50];
+    //Etapa de autenticacion
+    printf("Estacion terrestre. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n");
+    while (!autenticado) {
+        printf("Usuario: ");
+        fgets(user,sizeof(user),stdin);
+        user[strlen(user)-1]='\0';
+        printf("Ingrese el password: \n");
+        fgets(password,sizeof(password),stdin);
+        password[strlen(password)-1]='\0';
+        if (verificar(user, password)) {
+            autenticado = 1;
+            printf("Autenticacion exitosa!\n");
+        } else if (retryCount > 1){ //Intentos validos
+            retryCount --;
+            printf("Usuario y/o contrasena invalidos, por favor ingrese el usuario\n");
+        } else { //Intentos agotados
+            printf("Numero de intentos de autenticacion agotados. Cerrando conexion\n");
+            //close(sockfd2);
+            kill(getpid(),SIGINT);
+            //exit(EXIT_SUCCESS);
+        }
+    } //Fin de autenticacion
+
+    const int trueValue = 1;
+    setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &trueValue, sizeof(trueValue));
     if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) <0) {  // Llamada de sistema que toma como argumentos
         perror("ERROR en bind()");                                            // el file descriptor, la dirección ip casteada del server
         exit(1); // y el tamanio de la IP
@@ -75,10 +105,6 @@ int main(void)
 
     clientaddrsize = sizeof(cli_addr);
 
-    int autenticado = 0;
-    int retryCount = RETRY_LIMIT;
-    char user[50];
-    char password[50];
     while (1) {
         printf("Esperando que se establezca conexion con algun satelite...\n");
         sockfd2 = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t *)&clientaddrsize); // Bloquea el proceso hasta// que haya una conexion
@@ -86,33 +112,10 @@ int main(void)
             perror("ERROR en accept()");
             exit(1);
         }
-
         pid = fork ();
         if (pid < 0 ) { // ERROR
              perror("Error en fork()");
         } else if (pid == 0) { //Child
-            //Etapa de autenticacion
-            printf("Estacion terrestre. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n");
-            while (!autenticado) {
-                printf("Usuario: ");
-                fgets(user,sizeof(user),stdin);
-                user[strlen(user)-1]='\0';
-                printf("Ingrese el password: \n");
-                fgets(password,sizeof(password),stdin);
-                password[strlen(password)-1]='\0';
-                if (verificar(user, password)) {
-                    autenticado = 1;
-                    printf("Autenticacion exitosa!\n");
-                } else if (retryCount > 1){ //Intentos validos
-                    retryCount --;
-                    printf("Usuario y/o contrasena invalidos, por favor ingrese el usuario\n");
-                } else { //Intentos agotados
-                    printf("Numero de intentos de autenticacion agotados. Cerrando conexion\n");
-                    //close(sockfd2);
-                    kill(getpid(),SIGINT);
-                    //exit(EXIT_SUCCESS);
-                }
-            } //Fin de autenticacion
             char *msg=buffer, *keyword1, *keyword2, keywords[40];
             char opcion;
             while (1) {
@@ -239,8 +242,6 @@ int getTelemetria (char *ipaddr){
 
     char * word = NULL;
 
-    int success = 0;
-
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0) {
         perror("ERROR en apertura de socket");
@@ -252,11 +253,14 @@ int getTelemetria (char *ipaddr){
     dest_addr.sin_port = htons(UDP_CLIENT_PORT);
     inet_aton(ipaddr, &dest_addr.sin_addr);
 
+    const int trueValue = 1;
+    setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &trueValue, sizeof(trueValue));
+
     sizeofdest = sizeof(dest_addr);
 
     char *msg = "udpopen";
+
     // Enviar un mensaje al cliente para indicarle que el puerto UDP esta siendo escuchado
-    sleep(0.5);
     if (sendto(sockfd, msg, strlen(msg), 0,
                (struct sockaddr *)&dest_addr, (socklen_t)sizeofdest) < 0) {
         perror("ERROR durante escritura en socket UDP");
@@ -290,8 +294,11 @@ int getTelemetria (char *ipaddr){
             printf("freeram = %s bytes\n", word);
         }
     }
+    memset(buffer, 0, BUFF_SIZE);
+    memset(bufferaux, 0, BUFF_SIZE);
     shutdown(sockfd, 2);
-    return success;
+    close(sockfd);
+    return 1;
 }
 
 int sendUpdate(int sockfd){

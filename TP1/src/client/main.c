@@ -121,6 +121,9 @@ void sendTelemetria(void)
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons(portnr);
 
+    const int trueValue = 1;
+    setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &trueValue, sizeof(trueValue));
+
     // Bind socket
     if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
         perror("ERROR en bind()");
@@ -153,8 +156,10 @@ void sendTelemetria(void)
         perror("ERROR escribiendo en el socket UDP");
         exit(1);
     }
+    memset(buffer, 0, BUFF_SIZE);
     printf ("DEBUG: telemetria enviada\n");
     shutdown(sockfd, 2);
+    close(sockfd);
 }
 
 int sendScan (int sockfd) {
