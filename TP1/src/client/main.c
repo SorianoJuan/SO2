@@ -176,9 +176,10 @@ int sendScan (int sockfd) {
     fstat(imageFilefd, &buf);
     off_t fileSize = buf.st_size;
     printf("DEBUG: filesize: %li\n", fileSize);
-    int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
+    int32_t packages = htonl(fileSize);
+    //int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
     char *npackages = (char*)&packages;
-    printf("DEBUG: n° de paquetes a enviar : %i\n", ntohl(packages));
+    printf("DEBUG: n° de bytes a enviar : %i\n", ntohl(packages));
 
     if (send(sockfd, npackages, sizeof(packages), 0) < 0) {
         perror("ERROR enviando");

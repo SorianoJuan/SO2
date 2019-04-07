@@ -140,7 +140,7 @@ int main(void)
                     if (send(sockfd2, msg, strlen(msg), 0) < 0) {
                         perror("ERROR enviando");
                     }
-                    sleep(0.5);
+                    sleep(2);
                     switch (opcion)
                     {
                         case 0:
@@ -206,15 +206,15 @@ int getScan (int sockfd2)
     char recvBuffer[FILE_BUFFER_SIZE];
     long byteRead = 0;
 
-    uint32_t npackages;
-    if ((byteRead = recv(sockfd2, &npackages, 4, 0)) != 0) {
+    uint32_t bytesrecv;
+    if ((byteRead = recv(sockfd2, &bytesrecv, 4, 0)) != 0) {
         if (byteRead <= 0) {
             perror ("ERROR leyendo del socket");
         }
     }
-    npackages = ntohl(npackages);
-    printf ("N° de paquetes a recibir: %i\n", npackages);
-    for (int i=0; i<npackages; i++){
+    bytesrecv = ntohl(bytesrecv);
+    printf ("N° de bytes a recibir: %i\n", bytesrecv);
+    while (bytesrecv){
         memset(recvBuffer, 0, FILE_BUFFER_SIZE);
         if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
             if (byteRead <= 0) {
@@ -227,6 +227,7 @@ int getScan (int sockfd2)
             perror("ERROR escribiendo en el file");
             exit(EXIT_FAILURE);
         }
+        bytesrecv -= byteRead;
     }
     close(imageFilefd);
     printf("DEBUG: Finalizada la recepcion de scan\n");
