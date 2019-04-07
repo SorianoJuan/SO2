@@ -8,6 +8,7 @@
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <pthread.h>
 
 #define LISTEN_PORT 2019 // Puerto TCP
 #define UDP_CLIENT_PORT 2019
@@ -24,6 +25,13 @@ struct Login {
     char password[SNAME];
 };
 
+struct sockbuff {
+    int sockfd;
+    char *buffer;
+    size_t buffer_size;
+};
+
+void *writeto_socket(void *arg);
 int verificar(char *user, char *password);
 int getTelemetria(char *ipaddr);
 int getScan(int sockfd);
@@ -32,12 +40,8 @@ int sendUpdate(int sockfd);
 int main(void)
 {
     int sockfd, sockfd2, clientaddrsize;
-
-    char buffer[BUFF_SIZE], bufferaux[BUFF_SIZE];
     int pid;
-    long byteRead = 0;
-    char *msg, *keyword;
-
+    char buffer[BUFF_SIZE], auxbuffer[BUFF_SIZE];
     struct sockaddr_in serv_addr,
             cli_addr;
 
@@ -73,7 +77,10 @@ int main(void)
 
     int autenticado = 0;
     int retryCount = RETRY_LIMIT;
+    char user[50];
+    char password[50];
     while (1) {
+        printf("Esperando que se establezca conexion con algun satelite...\n");
         sockfd2 = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t *)&clientaddrsize); // Bloquea el proceso hasta// que haya una conexion
         if (sockfd2 < 0) {
             perror("ERROR en accept()");
@@ -84,89 +91,52 @@ int main(void)
         if (pid < 0 ) { // ERROR
              perror("Error en fork()");
         } else if (pid == 0) { //Child
-            msg = "Conexion con estacion terrestre establecida. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n";
-            if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                perror("ERROR escribiendo en el socket TCP");
-            }
+            //Etapa de autenticacion
             while (!autenticado) {
-                char user[20];
-                char password[20];
-                //Recibir usuario
-                if ((byteRead = recv(sockfd2, buffer, BUFF_SIZE-1, 0)) != 0) {
-                    if (byteRead <= 0) {
-                        perror ("ERROR leyendo del socket");
-                        continue;
-                    } else {
-                        buffer[byteRead] = '\0';
-                    }
-                }
-                strcpy (user, strtok(buffer, "\n"));
-
-                msg = "Ingrese el password\n";
-                if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                    perror("ERROR escribiendo en el socket TCP");
-                };
-
-                // Recibir password
-                if ((byteRead = recv(sockfd2, buffer, BUFF_SIZE - 1, 0)) != 0) {
-                    if (byteRead <= 0) {
-                        perror("ERROR leyendo del socket");
-                        continue;
-                    } else {
-                        buffer[byteRead] = '\0';
-                    }
-                }
-                strcpy(password, strtok(buffer, "\n"));
+                printf("Estacion terrestre. Dispone de 3 intentos para autenticarse. Ingrese el usuario y luego la contrasena\n");
+                printf("Usuario: ");
+                fgets(user,sizeof(user),stdin);
+                user[strlen(user)-1]='\0';
+                printf("Ingrese el password: \n");
+                fgets(password,sizeof(password),stdin);
+                password[strlen(password)-1]='\0';
                 if (verificar(user, password)) {
                     autenticado = 1;
-                    msg = "autenticado";
-                    if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                        perror("ERROR escribiendo en el socket TCP");
-                    }
-                    sleep(0.5);
+                    printf("Autenticacion exitosa!\n");
                 } else if (retryCount > 1){ //Intentos validos
                     retryCount --;
-                    msg = "Usuario y/o contrasena invalidos (pocos intentos restantes), por favor ingrese el usuario\n";
-                    if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                        perror("ERROR escribiendo en el socket TCP");
-                    }
+                    printf("Usuario y/o contrasena invalidos, por favor ingrese el usuario\n");
                 } else { //Intentos agotados
-                    printf("Cliente agoto el numero de intentos permitidos de login \n");
-                    msg = "Numero de intentos de autenticacion agotados. Cerrando conexion\n";
-                    if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                        perror("ERROR escribiendo en el socket TCP");
-                    }
-                    close(sockfd2);
+                    printf("Numero de intentos de autenticacion agotados. Cerrando conexion\n");
+                    //close(sockfd2);
+                    exit(EXIT_SUCCESS);
                     kill(getpid(),SIGINT);
                 }
-
             } //Fin de autenticacion
-            while (1) { //Recepcion de comandos
-                msg = "@base_terrestre >>> ";
-                if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-                    perror("ERROR escribiendo en el socket TCP");
-                }
-                if ((byteRead = recv(sockfd2, buffer, BUFF_SIZE-1, 0)) != 0) {
-                    if (byteRead <= 0) {
-                        perror ("ERROR leyendo del socket");
-                        continue;
-                    } else {
-                        buffer[byteRead] = '\0';
-                        printf("Mensaje del cliente: %s", buffer);
-                        strcpy(bufferaux,buffer);
-                        keyword = strtok(bufferaux, "\n");
-                        if (keyword != NULL) {
-                            if (strcmp(keyword, "update firmware.bin") == 0) { //enviar archivo firmware.bin
-                                printf("DEBUG: peticion de update de firmware\n");
-                                sendUpdate(sockfd2);
-                            } else if (strcmp(keyword, "start scanning") == 0) { //recibir imagen
-                                printf("DEBUG: imagen de satelite\n");
-                                getScan(sockfd2);
-                            } else if (strcmp(keyword, "obtener telemetria") == 0) { //abrir socket UDP para escuchar
-                                printf("DEBUG: recibiendo telemetria\n");
-                                getTelemetria(inet_ntoa(cli_addr.sin_addr));
-                            }
+            char *msg=buffer, *keyword1, *keyword2, keywords[40];
+            //fflush(stdin);
+            while (1) {
+                printf("@base_terrestre >>> ");
+                fgets(msg,sizeof(buffer),stdin);
+                strcpy(auxbuffer, msg);
+                keyword1 = strtok(auxbuffer, " ");
+                keyword2 = strtok(NULL, "\n");
+                if (keyword1 !=NULL){
+                    if (keyword2 != NULL){
+                        strcpy(keywords, keyword1);
+                        strcat(keywords, keyword2);
+                        if (strcmp(keywords, "updatefirmware.bin") == 0) {
+                            printf("DEBUG: firmware\n");
+                        } else if (strcmp(keywords, "startscanning") == 0) {
+                            printf("DEBUG: start scanning\n");
+                            //getScan(sockfd);
+                        } else if (strcmp(keywords, "obtenertelemetria") == 0) {
+                            printf("DEBUG: obtener telemetria\n");
+                            //getTelemetria(sockfd);
                         }
+                    }
+                    if (send(sockfd2, msg, strlen(msg), 0) < 0) {
+                        perror("ERROR enviando");
                     }
                 }
             }
@@ -338,3 +308,64 @@ int sendUpdate(int sockfd){
     close(firmwareFilefd);
     return 1;
 }
+
+/*
+void *writeto_socket(void *arg)
+{*/
+    /**
+       @brief toma los datos ingresados por el teclado y parsea lo ingresado para ver
+       si se trata de un comando o una descarga.
+       @param arg es un puntero a la direccion en memoria del struct sockbuff
+    **/
+/*    int sockfd = ((struct sockbuff *)arg)->sockfd;
+    char *msg = ((struct sockbuff *)arg)->buffer;
+    size_t msg_size = ((struct sockbuff *)arg)->buffer_size;
+    char auxbuffer[BUFF_SIZE];
+    char *keyword1, *keyword2, keywords[40];
+    fflush(stdin);
+    int opcion = 0;
+    while (1) {
+        opcion = 0;
+        fgets(msg, msg_size, stdin);
+        strcpy(auxbuffer, msg);
+        keyword1 = strtok(auxbuffer, " ");
+        keyword2 = strtok(NULL, "\n");
+        if (keyword1 !=NULL){
+            if (keyword2 != NULL){
+                strcpy(keywords, keyword1);
+                strcat(keywords, keyword2);
+                if (strcmp(keywords, "updatefirmware.bin") == 0) {
+                    opcion = 1;
+                } else if (strcmp(keywords, "startscanning") == 0) {
+                    opcion = 2;
+                } else if (strcmp(keywords, "obtenertelemetria") == 0) {
+                    opcion = 3;
+                }
+            }
+            if (send(sockfd, msg, strlen(msg), 0) < 0) {
+                perror("ERROR enviando");
+            }
+            switch (opcion)
+            {
+                case 0:
+                    break;
+
+                case 1:
+                    printf("DEBUG: firmware\n");
+                    //sendUpdate(sockfd);
+                    break;
+
+                case 2:
+                    printf("DEBUG: start scanning\n");
+                    //getScan(sockfd);
+                    break;
+
+                case 3:
+                    printf("DEBUG: obtener telemetria\n");
+                    //getTelemetria(sockfd);
+                    break;
+            }
+        }
+    }
+    return 0;
+}*/
