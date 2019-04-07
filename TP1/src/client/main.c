@@ -14,11 +14,13 @@
 #define BUFF_SIZE 1024
 #define FILE_BUFFER_SIZE 1500
 #define ID 1
-#define FIRMWARE_FILE "firmware.bin"
+#define FIRMWARE_FILE "incoming_updated_client"
+#define IMAGE_FILE "../2019.jpg"
 
 void *writeto_socket(void *arg);
 void sendTelemetria(void);
 int sendScan(int sockfd);
+int receiveUpdate (int sockfd);
 
 struct sockbuff {
     int sockfd;
@@ -30,6 +32,8 @@ uint16_t portnr = 2019;
 char ipaddrbuff [20] = "127.0.0.1";
 char * ipaddr = NULL;
 char firmware_version [20] = "1.0.0";
+
+char recfirmware = 0;
 
 int main(void)
 {
@@ -48,6 +52,9 @@ int main(void)
     memset(&dest_addr, 0, sizeof(dest_addr));
     memset(buffer, 0, sizeof(buffer));
 
+    printf("DEBUG: Version del firmware: %s\n", firmware_version);
+
+/*
     //version de firmware
     FILE *firmware_file;
     if((firmware_file = fopen(FIRMWARE_FILE, "r"))){
@@ -58,7 +65,7 @@ int main(void)
         printf("DEBUG: cargando firmware stock...\n");
         strcpy(firmware_version,"1.0.0");
     }
-
+*/
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) { // Se produjo un error
         perror("ERROR al abrir el socket");
@@ -102,6 +109,8 @@ int main(void)
                     printf("%s", buffer);
                     printf("@satelite >> ");
                 }
+            } else if (recfirmware) {
+                receiveUpdate(sockfd);
             } else {
                 printf("%s", buffer);
                 memset(buffer, 0, sizeof(buffer));
@@ -154,6 +163,7 @@ void *writeto_socket(void *arg)
 
                 case 1:
                     printf("DEBUG: firmware\n");
+                    recfirmware = 1;
                     break;
 
                 case 2:
@@ -173,7 +183,6 @@ void *writeto_socket(void *arg)
 
 void sendTelemetria(void)
 {
-    //TODO: ERROR en bind(): Address already in use cuando se quiere enviar dos veces seguidas telemetria
     //Get telemetria
     struct sysinfo s_info;
     int error = sysinfo(&s_info);
@@ -242,7 +251,7 @@ void sendTelemetria(void)
 int sendScan (int sockfd) {
     int imageFilefd;
     struct stat buf;
-    if ((imageFilefd = open("../2019.jpg", O_RDONLY)) <0)
+    if ((imageFilefd = open(IMAGE_FILE, O_RDONLY)) <0)
     {
         printf("No existe la imagen\n");
         return 0;
@@ -253,11 +262,11 @@ int sendScan (int sockfd) {
     fstat(imageFilefd, &buf);
     off_t fileSize = buf.st_size;
     printf("DEBUG: filesize: %li\n", fileSize);
-    char npackages [4];
-    *((int*)npackages)= (fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE);
-    printf("DEBUG: n° de paquetes a enviar : %s\n", npackages);
+    int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
+    char *npackages = (char*)&packages;
+    printf("DEBUG: n° de paquetes a enviar : %i\n", ntohl(packages));
 
-    if (send(sockfd, npackages, 4, 0) < 0) {
+    if (send(sockfd, npackages, sizeof(packages), 0) < 0) {
         perror("ERROR enviando");
     }
 
@@ -268,14 +277,55 @@ int sendScan (int sockfd) {
         memset(sendBuffer, 0, BUFF_SIZE);
     }
     close(imageFilefd);
-//    printf("DEBUG: Finalizado envio de scan\n");
-/*
-    char *end = NULL;
-    end = "endfiletcp";
-    printf("DEBUG: Finalizado envio de scan, enviando trama de finalizacion\n");
-    if (send(sockfd, end, strlen(end), 0) < 0) {
-        perror("ERROR enviando");
+    printf("DEBUG: Finalizado envio de scan\n");
+    return 1;
+}
+
+
+int receiveUpdate (int sockfd)
+{
+    int firmwareFilefd;
+    if ((firmwareFilefd = open(FIRMWARE_FILE, O_WRONLY|O_CREAT|O_TRUNC, 0777)) <0)
+    {
+        printf("Error creando el file\n");
+        return 0;
     }
-*/
+    char recvBuffer[FILE_BUFFER_SIZE];
+    long byteRead = 0;
+
+    uint32_t npackages;
+    if ((byteRead = recv(sockfd, &npackages, 4, 0)) != 0) {
+        if (byteRead <= 0) {
+            perror ("ERROR leyendo del socket");
+        }
+    }
+    npackages = ntohl(npackages);
+    printf ("N° de paquetes a recibir: %i\n", npackages);
+
+    for (int i=0; i<npackages; i++){
+        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
+        if ((byteRead = recv(sockfd, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
+            if (byteRead <= 0) {
+                perror ("ERROR leyendo del socket");
+                continue;
+            }
+        }
+        if ((write(firmwareFilefd, recvBuffer, (size_t) byteRead) < 0))
+        {
+            perror("ERROR escribiendo en el file");
+            exit(EXIT_FAILURE);
+        }
+    }
+    close(firmwareFilefd);
+    printf("DEBUG: Finalizada la recepcion del update de firmware\n");
+    printf("DEBUG: Reiniciando el sistema con el nuevo firmware\n");
+    recfirmware=0;
+    /*char exec [100] = "./";
+    strcat (exec, FIRMWARE_FILE);
+    char *argv [] = {FIRMWARE_FILE, NULL};
+    if (execv("/usr/bin/bash", argv)){
+        perror("Error: execv()");
+    }*/
+    //system("./incoming_updated_client");
     return 1;
 }

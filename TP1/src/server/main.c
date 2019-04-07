@@ -7,17 +7,17 @@
 #include <signal.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 
 #define LISTEN_PORT 2019 // Puerto TCP
 #define UDP_CLIENT_PORT 2019
-
 #define SNAME 20
 #define USER_NR 2
-
 #define BUFF_SIZE 1024
 #define FILE_BUFFER_SIZE 1500
-
 #define RETRY_LIMIT 3
+#define FIRMWARE_FILE "../updated_client"
+#define IMAGE_FILE "../incoming_2019.jpg"
 
 struct Login {
     char name[SNAME];
@@ -27,6 +27,7 @@ struct Login {
 int verificar(char *user, char *password);
 int getTelemetria(char *ipaddr);
 int getScan(int sockfd);
+int sendUpdate(int sockfd);
 
 int main(void)
 {
@@ -157,6 +158,7 @@ int main(void)
                         if (keyword != NULL) {
                             if (strcmp(keyword, "update firmware.bin") == 0) { //enviar archivo firmware.bin
                                 printf("DEBUG: peticion de update de firmware\n");
+                                sendUpdate(sockfd2);
                             } else if (strcmp(keyword, "start scanning") == 0) { //recibir imagen
                                 printf("DEBUG: imagen de satelite\n");
                                 getScan(sockfd2);
@@ -202,7 +204,7 @@ int verificar(char *user, char *password) {
 int getScan (int sockfd2)
 {
     int imageFilefd;
-    if ((imageFilefd = open("../incoming_2019.jpg", O_WRONLY|O_CREAT|O_TRUNC, 0666)) <0)
+    if ((imageFilefd = open(IMAGE_FILE, O_WRONLY|O_CREAT|O_TRUNC, 0666)) <0)
     {
         printf("Error creando el file\n");
         return 0;
@@ -217,7 +219,8 @@ int getScan (int sockfd2)
             perror ("ERROR leyendo del socket");
         }
     }
-
+    npackages = ntohl(npackages);
+    printf ("N° de paquetes a recibir: %i\n", npackages);
     for (int i=0; i<npackages; i++){
         memset(recvBuffer, 0, FILE_BUFFER_SIZE);
         if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
@@ -232,45 +235,8 @@ int getScan (int sockfd2)
             exit(EXIT_FAILURE);
         }
     }
-
-/*
-    while (!finish) {
-        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
-        if ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
-            if (byteRead <= 0) {
-                perror ("ERROR leyendo del socket");
-                continue;
-            }
-        }
-        if (!strcmp(recvBuffer, "endfiletcp")) {
-            finish = 1;
-            printf("endfiletcp\n");
-        } else {
-            if ((write(imageFilefd, recvBuffer, (size_t) byteRead) < 0))
-            {
-                perror("ERROR escribiendo en el file");
-                exit(EXIT_FAILURE);
-            }
-        }
-    }*/
-
-/*    while ((byteRead = recv(sockfd2, recvBuffer, FILE_BUFFER_SIZE, 0)) > 0){
-        if (byteRead < 0) {
-            perror ("ERROR leyendo del socket");
-            continue;
-        } else if ((write(imageFilefd, recvBuffer, (size_t) byteRead) < 0)){
-            perror("ERROR escribiendo en el file");
-            exit(EXIT_FAILURE);
-        }
-        memset(recvBuffer, 0, FILE_BUFFER_SIZE);
-    }*/
-    /*char *msg = "@base_terrestre: Archivo recibido exitosamente";
-    if (send(sockfd2, (void *)msg, strlen(msg), 0) < 0) {
-        perror("ERROR escribiendo en el socket TCP");
-    }*/
     close(imageFilefd);
     printf("DEBUG: Finalizada la recepcion de scan\n");
-    //sleep(0.5);
     return 1;
 }
 
@@ -335,4 +301,40 @@ int getTelemetria (char *ipaddr){
     }
     shutdown(sockfd, 2);
     return success;
+}
+
+int sendUpdate(int sockfd){
+    int firmwareFilefd;
+    struct stat buf;
+    if ((firmwareFilefd = open(FIRMWARE_FILE, O_RDONLY)) <0)
+    {
+        printf("No existe el update de firmware solicitado\n");
+        return 0;
+    }
+    int count;
+    char sendBuffer[FILE_BUFFER_SIZE];
+    fstat(firmwareFilefd, &buf);
+    off_t fileSize = buf.st_size;
+    printf("DEBUG: filesize: %li\n", fileSize);
+    int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
+    char *npackages = (char*)&packages;
+    printf("DEBUG: n° de paquetes a enviar : %i\n", ntohl(packages));
+
+    char * start = "update requested";
+    if (send(sockfd, start, strlen(start), 0) < 0) {
+        perror("ERROR enviando");
+    }
+
+    if (send(sockfd, npackages, 4, 0) < 0) {
+        perror("ERROR enviando");
+    }
+
+    while ((count = (int) read(firmwareFilefd,sendBuffer,FILE_BUFFER_SIZE)) > 0) {
+        if (send(sockfd, sendBuffer, count, 0) < 0) {
+            perror("ERROR enviando");
+        }
+        memset(sendBuffer, 0, BUFF_SIZE);
+    }
+    close(firmwareFilefd);
+    return 1;
 }
