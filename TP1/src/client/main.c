@@ -176,12 +176,12 @@ int sendScan (int sockfd) {
     fstat(imageFilefd, &buf);
     off_t fileSize = buf.st_size;
     printf("DEBUG: filesize: %li\n", fileSize);
-    int32_t packages = htonl(fileSize);
+    int32_t bytes = htonl(fileSize);
     //int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
-    char *npackages = (char*)&packages;
-    printf("DEBUG: n° de bytes a enviar : %i\n", ntohl(packages));
+    char *sendbytes = (char*)&bytes;
+    printf("DEBUG: n° de bytes a enviar : %i\n", ntohl(bytes));
 
-    if (send(sockfd, npackages, sizeof(packages), 0) < 0) {
+    if (send(sockfd, sendbytes, sizeof(bytes), 0) < 0) {
         perror("ERROR enviando");
     }
 
@@ -208,16 +208,16 @@ int receiveUpdate (int sockfd)
     char recvBuffer[FILE_BUFFER_SIZE];
     long byteRead = 0;
 
-    uint32_t npackages;
-    if ((byteRead = recv(sockfd, &npackages, 4, 0)) != 0) {
+    uint32_t recbytes;
+    if ((byteRead = recv(sockfd, &recbytes, 4, 0)) != 0) {
         if (byteRead <= 0) {
             perror ("ERROR leyendo del socket");
         }
     }
-    npackages = ntohl(npackages);
-    printf ("N° de paquetes a recibir: %i\n", npackages);
+    recbytes = ntohl(recbytes);
+    printf ("N° de paquetes a recibir: %i\n", recbytes);
 
-    for (int i=0; i<npackages; i++){
+    while (recbytes){
         memset(recvBuffer, 0, FILE_BUFFER_SIZE);
         if ((byteRead = recv(sockfd, recvBuffer, FILE_BUFFER_SIZE, 0)) != 0) {
             if (byteRead <= 0) {
@@ -230,6 +230,7 @@ int receiveUpdate (int sockfd)
             perror("ERROR escribiendo en el file");
             exit(EXIT_FAILURE);
         }
+        recbytes -= byteRead;
     }
     close(firmwareFilefd);
     printf("DEBUG: Finalizada la recepcion del update de firmware\n");

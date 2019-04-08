@@ -140,7 +140,7 @@ int main(void)
                     if (send(sockfd2, msg, strlen(msg), 0) < 0) {
                         perror("ERROR enviando");
                     }
-                    sleep(2);
+                    sleep(0.3);
                     switch (opcion)
                     {
                         case 0:
@@ -315,11 +315,12 @@ int sendUpdate(int sockfd){
     fstat(firmwareFilefd, &buf);
     off_t fileSize = buf.st_size;
     printf("DEBUG: filesize: %li\n", fileSize);
-    int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
-    char *npackages = (char*)&packages;
-    printf("DEBUG: n° de paquetes a enviar : %i\n", ntohl(packages));
+    int32_t bytes = htonl(fileSize);
+    //int32_t packages = htonl((fileSize%(FILE_BUFFER_SIZE)) ? fileSize/(FILE_BUFFER_SIZE)+1 : fileSize/(FILE_BUFFER_SIZE));
+    char *sendbytes = (char*)&bytes;
+    printf("DEBUG: n° de bytes a enviar : %i\n", ntohl(bytes));
 
-    if (send(sockfd, npackages, 4, 0) < 0) {
+    if (send(sockfd, sendbytes, sizeof(bytes), 0) < 0) {
         perror("ERROR enviando");
     }
 
