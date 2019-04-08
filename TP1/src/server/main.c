@@ -260,6 +260,7 @@ int getTelemetria (char *ipaddr){
     sizeofdest = sizeof(dest_addr);
 
     char *msg = "udpopen";
+    sleep(2);
 
     // Enviar un mensaje al cliente para indicarle que el puerto UDP esta siendo escuchado
     if (sendto(sockfd, msg, strlen(msg), 0,
