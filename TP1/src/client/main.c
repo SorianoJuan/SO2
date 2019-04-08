@@ -22,9 +22,9 @@ int sendScan(int sockfd);
 int receiveUpdate (int sockfd);
 
 uint16_t portnr = 2019;
-char ipaddrbuff [20] = "127.0.0.1";
+char ipaddrbuff [20] = "192.168.1.141";
 char * ipaddr = NULL;
-char firmware_version [20] = "1.0.0";
+char firmware_version [20] = "1.1.0";
 
 /**
  * @brief Funcion principal del satelite que corre en el cliente. Se intenta conectar cada 5 segundos a la base terrestre y espera comandos para realizar acciones.
