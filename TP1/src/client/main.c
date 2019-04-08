@@ -12,7 +12,7 @@
 #include <math.h>
 
 #define BUFF_SIZE 1024
-#define FILE_BUFFER_SIZE 1000000
+#define FILE_BUFFER_SIZE 1500
 #define ID 1
 #define FIRMWARE_FILE "incoming_updated_client"
 #define IMAGE_FILE "../2019.jpg"

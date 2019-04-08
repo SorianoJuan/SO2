@@ -16,7 +16,7 @@
 #define SNAME 20
 #define USER_NR 2
 #define BUFF_SIZE 1024
-#define FILE_BUFFER_SIZE 1000000
+#define FILE_BUFFER_SIZE 1500
 #define RETRY_LIMIT 3
 #define FIRMWARE_FILE "../updated_client"
 #define IMAGE_FILE "../incoming_2019.jpg"
