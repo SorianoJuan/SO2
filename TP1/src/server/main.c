@@ -9,13 +9,14 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <pthread.h>
+#include <sys/time.h>
 
 #define LISTEN_PORT 2019 // Puerto TCP
 #define UDP_CLIENT_PORT 2019
 #define SNAME 20
 #define USER_NR 2
 #define BUFF_SIZE 1024
-#define FILE_BUFFER_SIZE 1500
+#define FILE_BUFFER_SIZE 1000000
 #define RETRY_LIMIT 3
 #define FIRMWARE_FILE "../updated_client"
 #define IMAGE_FILE "../incoming_2019.jpg"
@@ -25,13 +26,6 @@ struct Login {
     char password[SNAME];
 };
 
-struct sockbuff {
-    int sockfd;
-    char *buffer;
-    size_t buffer_size;
-};
-
-void *writeto_socket(void *arg);
 int verificar(char *user, char *password);
 int getTelemetria(char *ipaddr);
 int getScan(int sockfd);
@@ -95,8 +89,15 @@ int main(void)
         }
     } //Fin de autenticacion
 
+    //Socket reutilizable por el SO y conseguir el tamaño del socket utilizado
     const int trueValue = 1;
     setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &trueValue, sizeof(trueValue));
+    int socksize;
+    unsigned int m = sizeof(socksize);
+    getsockopt(sockfd,SOL_SOCKET,SO_RCVBUF,(void *)&socksize, &m);
+    printf("DEBUG: Tama\244o del socket TCP: %i\n", socksize);
+
+
     if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) <0) {  // Llamada de sistema que toma como argumentos
         perror("ERROR en bind()");                                            // el file descriptor, la dirección ip casteada del server
         exit(1); // y el tamanio de la IP
@@ -174,7 +175,8 @@ int main(void)
 
 }
 
-int verificar(char *user, char *password) {
+int verificar(char *user, char *password)
+{
     /**
        @brief Verifica del lado del server que los datos ingresados por el cliente
        correspondan a un usuario registrado
@@ -197,6 +199,8 @@ int verificar(char *user, char *password) {
 
 int getScan (int sockfd2)
 {
+    struct timeval start, end;
+
     int imageFilefd;
     if ((imageFilefd = open(IMAGE_FILE, O_WRONLY|O_CREAT|O_TRUNC, 0666)) <0)
     {
@@ -206,6 +210,7 @@ int getScan (int sockfd2)
     char recvBuffer[FILE_BUFFER_SIZE];
     long byteRead = 0;
 
+    gettimeofday(&start, NULL);
     uint32_t bytesrecv;
     if ((byteRead = recv(sockfd2, &bytesrecv, 4, 0)) != 0) {
         if (byteRead <= 0) {
@@ -229,8 +234,9 @@ int getScan (int sockfd2)
         }
         bytesrecv -= byteRead;
     }
+    gettimeofday(&end,NULL);
     close(imageFilefd);
-    printf("DEBUG: Finalizada la recepcion de scan\n");
+    printf("DEBUG: Finalizada la recepcion de scan, tiempo total: %f\n", (float)(((end.tv_sec - start.tv_sec)*1000000 +end.tv_usec) - start.tv_usec)/1000000);
     return 1;
 }
 
