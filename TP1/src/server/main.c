@@ -31,6 +31,12 @@ int getTelemetria(char *ipaddr);
 int getScan(int sockfd);
 int sendUpdate(int sockfd);
 
+/**
+ * @brief Servidor que simula base terrestre.
+ *
+ * Se realiza una etapa de autenticacion por parte del usuario en la base de datos del servidor. Si se acepta, Se continua y se acepta conexiones con los satelites. Se ofrece un prompt para ingresar comandos.
+ * **/
+
 int main(void)
 {
     int sockfd, sockfd2, clientaddrsize;
@@ -144,9 +150,6 @@ int main(void)
                     sleep(0.3);
                     switch (opcion)
                     {
-                        case 0:
-                            break;
-
                         case 1:
                             printf("DEBUG: firmware\n");
                             sendUpdate(sockfd2);
@@ -162,6 +165,9 @@ int main(void)
                             printf("DEBUG: obtener telemetria\n");
                             getTelemetria(inet_ntoa(cli_addr.sin_addr));
                             break;
+
+                        default:
+                            break;
                     }
                 }
             }
@@ -175,14 +181,15 @@ int main(void)
 
 }
 
+/**
+ * @brief Verifica del lado del server que los datos ingresados por el cliente correspondan a un usuario registrado
+ * @param user el nombre de usuario ingresado
+ * @param password el password ingresado
+ * @return int 0: no autenticado, 1:autenticado.
+**/
+
 int verificar(char *user, char *password)
 {
-    /**
-       @brief Verifica del lado del server que los datos ingresados por el cliente
-       correspondan a un usuario registrado
-       @param user el nombre de usuario ingresado
-       @param password el password ingresado
-    **/
     struct Login users[USER_NR] = {{"alumno", "fcefyn"}, {"admin", "admin"}};
     struct Login query;
 
@@ -197,6 +204,11 @@ int verificar(char *user, char *password)
     return 0;
 }
 
+/**
+ * @brief Obtiene la imagen (scan) del satelite por medio del socket TCP ya instanciado.
+ * @param sockfd2 file descriptor del socket TCP abierto para la recepcion de la imagen
+ * @return int 0: no se pudo abrir el archivo para escritura. int 1: se termino la recepcion exitosamente.
+ */
 int getScan (int sockfd2)
 {
     struct timeval start, end;
@@ -240,6 +252,11 @@ int getScan (int sockfd2)
     return 1;
 }
 
+/**
+ * @brief Abre un socket UDP para recibir la telemetria del satelite y la muestra por pantalla.
+ * @param ipaddr direccion ip del satelite conectado proveniente de la estructura almacenada de la conexion tcp
+ * @return int 1: recepcion exitosa (no asegura que la informacion sea valida). int 0: error en la conexion.
+ */
 int getTelemetria (char *ipaddr){
 
     int sockfd, sizeofdest;
@@ -252,7 +269,7 @@ int getTelemetria (char *ipaddr){
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0) {
         perror("ERROR en apertura de socket");
-        exit(1);
+        return 0;
     }
     memset(&dest_addr, 0, sizeof(dest_addr));
 
@@ -309,6 +326,11 @@ int getTelemetria (char *ipaddr){
     return 1;
 }
 
+/**
+ * @brief Envia un update de firmware a los satelites que se encuentran escuchando por medio de TCP
+ * @param sockfd File descriptor del socket abierto TCP.
+ * @return int 1: envio exitoso. int 0: hubo un error en la apertura del archivo para enviar.
+ */
 int sendUpdate(int sockfd){
     int firmwareFilefd;
     struct stat buf;

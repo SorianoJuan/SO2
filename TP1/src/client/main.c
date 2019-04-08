@@ -26,6 +26,11 @@ char ipaddrbuff [20] = "127.0.0.1";
 char * ipaddr = NULL;
 char firmware_version [20] = "1.0.0";
 
+/**
+ * @brief Funcion principal del satelite que corre en el cliente. Se intenta conectar cada 5 segundos a la base terrestre y espera comandos para realizar acciones.
+ *
+ * @return No debe retornar la funcion
+ */
 int main(void) {
     int sockfd;
     long byteRead = 0;
@@ -58,7 +63,6 @@ int main(void) {
     while (connect(sockfd, (struct sockaddr *) &dest_addr, sizeof(dest_addr)) < 0) {
         perror("ERROR reintentando conexion en 5 segundos");
         sleep(5);
-        continue;
     }
     printf("Conexion con base terrena exitosa!\n");
 
@@ -90,6 +94,11 @@ int main(void) {
     }
 }
 
+/**
+ * @brief Envia por UDP al servidor, al puerto 2019 la telemetria recolectada en el satelite.
+ *
+ * @details La telemetria consiste en el uptime del sistema operativo, la memoria ram libre, el id del satelite y la version del software.
+ */
 void sendTelemetria(void)
 {
     //Get telemetria
@@ -162,6 +171,11 @@ void sendTelemetria(void)
     close(sockfd);
 }
 
+/**
+ * @brief Envia una imagen del escaneo de la tierra por TCP utilizando la conexion abierta previamente.
+ * @param sockfd File descriptor del socket abierto.
+ * @return int 0: error al abrir el archivo. int 1: se envio exitosamente la imagen.
+ */
 int sendScan (int sockfd) {
     int imageFilefd;
     struct stat buf;
@@ -196,7 +210,11 @@ int sendScan (int sockfd) {
     return 1;
 }
 
-
+/**
+ * @brief Recibe el update del firmware y realiza un execve(), matando el proceso actual y levantando uno nuevo con el firmware actualizado.
+ * @param sockfd File descriptor del socket abierto en TCP.
+ * @return int 0: ha ocurrido un error en la apertura del archivo. int 1: no se pudo ejecutar el execve().
+ */
 int receiveUpdate (int sockfd)
 {
     int firmwareFilefd;
