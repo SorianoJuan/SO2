@@ -13,4 +13,4 @@ add_executable(main
 add_custom_target(TP2 COMMAND make -C ${TP2_SOURCE_DIR}
         CLION_EXE_DIR=${build})
 
-target_link_libraries (main netcdf)
+target_link_libraries (main netcdf fopenmp)

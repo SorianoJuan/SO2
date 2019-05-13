@@ -3,6 +3,7 @@
 #include <netcdf.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <omp.h>
 
 /* Handle errors by printing an error message and exiting with a
  * non-zero status. */
@@ -74,7 +75,10 @@ int main()
     ERR(retval);
 
     /* el desarrollo acá */
+    double start_time = omp_get_wtime();
     convolve(data_in, kernel, data_out);
+    double time = omp_get_wtime() - start_time;
+    printf("Convolve time: %f", time);
 
     free(data_in);
 /*    for (int i=0+NX/2; i<NX/2+100; i++) {
@@ -88,23 +92,26 @@ int main()
     write_to_bin(data_out);
     free(data_out);
 
-
-
-
     return 0;
 }
 
 void convolve(float *data_in, float kernel[][N_KERNEL], float *data_out)
 {
-    for (int fil_img=0; fil_img<(NX-N_KERNEL+1); fil_img++){ //Iterar sobre filas de la imagen
-        for (int col_img=0; col_img<(NY-N_KERNEL+1); col_img++){ //Iterar sobre columnas de la imagen
-            for (int fil_kernel=0; fil_kernel<N_KERNEL; fil_kernel++){ //Iterar sobre filas del kernel
-                for (int col_kernel=0; col_kernel<N_KERNEL; col_kernel++){ //Iterar sobre columnas del kernel
-                    data_out[fil_img*NX+col_img] += data_in[(fil_img+fil_kernel)*NX+(col_img+col_kernel)] * kernel[fil_kernel][col_kernel];
-                }//col_kernel
-            }//fil_kernel
-        }//col_img
-    }//fil_img
+    #pragma omp parallel for collapse (2)
+        for (int fil_img = 0; fil_img < (NX - N_KERNEL + 1); fil_img++) { //Iterar sobre filas de la imagen
+            for (int col_img = 0; col_img < (NY - N_KERNEL + 1); col_img++) { //Iterar sobre columnas de la imagen
+                for (int fil_kernel = 0; fil_kernel < N_KERNEL; fil_kernel++) { //Iterar sobre filas del kernel
+                    for (int col_kernel = 0; col_kernel < N_KERNEL; col_kernel++) { //Iterar sobre columnas del kernel
+                        /*if ((fil_img>=(NX-N_KERNEL-2)) && (col_img>NY-N_KERNEL-3)){
+                            printf("fil_img: %i, col_img: %i, fil_kernel: %i, col_kernel: %i \n", fil_img, col_img, fil_kernel, col_kernel);
+                        }*/
+                        data_out[fil_img * (NX - N_KERNEL + 1) + col_img] +=
+                                data_in[(fil_img + fil_kernel) * NX + (col_img + col_kernel)] *
+                                kernel[fil_kernel][col_kernel];
+                    }//col_kernel
+                }//fil_kernel
+            }//col_img
+        }//fil_img
 }
 
 void write_to_nc(float *data_out)
