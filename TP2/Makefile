@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Werror -Wall -pedantic -fopenmp -lnetcdf
+CFLAGS=-Werror -Wall -pedantic -fopenmp -lnetcdf -O3
 
 all: build/main
 

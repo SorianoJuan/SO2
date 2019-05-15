@@ -14,14 +14,12 @@
 #define FILE_NAME "../includes/OR_ABI-L2-CMIPF-M6C02_G16_s20191011800206_e20191011809514_c20191011809591.nc"
 #define FILE_OUT_NC "../includes/convolved_out.nc"
 #define FILE_OUT_BIN "../includes/convolved_out.bin"
+#define FILE_OUT_TIMES "../data/tiempos_omp_16.txt"
 
 /* Lectura de una matriz de 21696 x 21696 */
 #define NX 21696
 #define NY 21696
 #define N_KERNEL 3
-
-//float data_in[NX][NY];
-//float data_out[NX][NY];
 
 void convolve (float *data_in, float kernel[][N_KERNEL], float *data_out);
 void write_to_nc(float *data_out);
@@ -40,12 +38,6 @@ int main()
 
     int ncid, varid, retval;
 
-  /*  for (int i=0; i<NX; i++){
-        for (int j=0; j<NY; j++){
-            data_out[i+j] = (float) 0;
-        }
-    }*/
-
     size_t start[2] = {0};
     size_t count[2] = {0};
 
@@ -55,9 +47,7 @@ int main()
     start[0] = 0;
     start[1] = 0;
 
-    //float ** data_in;
-
-    //data_in = calloc(NX*NY, sizeof(float *));
+    printf("Reading NC file into memory\n");
 
     if ((retval = nc_open(FILE_NAME, NC_NOWRITE, &ncid)))
         ERR(retval);
@@ -75,22 +65,27 @@ int main()
     ERR(retval);
 
     /* el desarrollo acá */
+    printf("Convolving...\n");
     double start_time = omp_get_wtime();
     convolve(data_in, kernel, data_out);
     double time = omp_get_wtime() - start_time;
-    printf("Convolve time: %f", time);
+    printf("Convolve time: %f\n", time);
 
     free(data_in);
-/*    for (int i=0+NX/2; i<NX/2+100; i++) {
-        for (int j=0+NY/2; j<NX/2+100;j++){
-            printf("%f ", data_in[i*NX+j]);
-            //printf("%f ", data_out[i*NX+j]);
-        }
-        printf("\n");
-    }*/
+
     //write_to_nc(data_out);
-    write_to_bin(data_out);
+    printf("Writing file to binary output\n");
+    //write_to_bin(data_out);
     free(data_out);
+
+    //Impresion de tiempo en ejecucion
+    printf("Writing execution time to file\n");
+    FILE *tiemposFile;
+    tiemposFile = fopen(FILE_OUT_TIMES,"a");
+    fprintf(tiemposFile, "%f\n", time);
+    fclose(tiemposFile);
+
+    printf("Done! Freeing resources and exiting\n");
 
     return 0;
 }
@@ -123,10 +118,6 @@ void write_to_nc(float *data_out)
     size_t count[2] = {0};
     count[0] = NX;
     count[1] = NX;
-
-    /*if ((retval = nc_create(FILE_OUT, 0, &ncid))) {
-        ERR(retval);
-    }*/
 
     if ((retval = nc_open(FILE_OUT_NC, NC_WRITE | NC_SHARE, &ncid)))
         ERR(retval);
