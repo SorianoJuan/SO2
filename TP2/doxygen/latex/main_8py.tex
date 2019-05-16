@@ -1,0 +1,34 @@
+\section{/home/torce/\+S\+O2/\+T\+P2/src/main.py File Reference}
+\label{main_8py}\index{/home/torce/SO2/TP2/src/main.py@{/home/torce/SO2/TP2/src/main.py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ main}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ NX} = 21696
+\item 
+int \textbf{ NY} = 21696
+\item 
+int \textbf{ N\+K\+E\+R\+N\+EL} = 3
+\item 
+string \textbf{ filename} = \char`\"{}../includes/O\+R\+\_\+\+A\+BI-\/L2-\/C\+M\+I\+PF-\/M6\+C02\+\_\+\+G16\+\_\+s20191011800206\+\_\+e20191011809514\+\_\+c20191011809591.\+nc\char`\"{}
+\item 
+string \textbf{ convolve\+\_\+filename} = \char`\"{}../includes/convolved\+\_\+out.\+bin\char`\"{}
+\item 
+\textbf{ data\+\_\+in} = Dataset(filename, mode=\char`\"{}r\char`\"{})
+\item 
+\textbf{ matrix} = data\+\_\+in.\+variables[\textquotesingle{}C\+MI\textquotesingle{}][\+:]
+\item 
+\textbf{ border\+\_\+kernel}
+\item 
+\textbf{ convolved\+\_\+in\+\_\+c} = np.\+fromfile(convolve\+\_\+filename, count=(\textbf{ NX}-\/N\+K\+E\+R\+N\+EL+1)$\ast$(\textbf{ NY}-\/N\+K\+E\+R\+N\+EL+1), dtype=np.\+float32,sep=\char`\"{}\char`\"{}).reshape(\textbf{ NX}-\/N\+K\+E\+R\+N\+EL+1,\textbf{ NY}-\/N\+K\+E\+R\+N\+EL+1)
+\item 
+\textbf{ cmap}
+\item 
+\textbf{ vmin}
+\item 
+\textbf{ vmax}
+\end{DoxyCompactItemize}

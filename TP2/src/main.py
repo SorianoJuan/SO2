@@ -21,10 +21,8 @@ border_kernel = np.array ([
     ])
 matrix = matrix[::3,::3]
 
-#convoluted_img = convolve2d(matrix, border_kernel, mode='valid')
 convolved_in_c = np.fromfile(convolve_filename, count=(NX-NKERNEL+1)*(NY-NKERNEL+1), dtype=np.float32,sep="").reshape(NX-NKERNEL+1,NY-NKERNEL+1)
 plt.imshow(convolved_in_c, cmap='gray', vmin=0, vmax=512)
-import pdb; pdb.set_trace()
 plt.show()
 
 data_in.close()
