@@ -14,7 +14,7 @@
 #define FILE_NAME "../includes/OR_ABI-L2-CMIPF-M6C02_G16_s20191011800206_e20191011809514_c20191011809591.nc"
 #define FILE_OUT_NC "../includes/convolved_out.nc"
 #define FILE_OUT_BIN "../includes/convolved_out.bin"
-#define FILE_OUT_TIMES "../data/tiempos_omp_16.txt"
+#define FILE_OUT_TIMES "../data/tiempos_omp_32.txt"
 
 /* Lectura de una matriz de 21696 x 21696 */
 #define NX 21696
@@ -25,7 +25,12 @@ void convolve (float *data_in, float kernel[][N_KERNEL], float *data_out);
 void write_to_nc(float *data_out);
 void write_to_bin(float *data_out);
 
-
+/**
+ * @brief Funcion principal que aloca memoria para la imagen de entrada y la convolucionada de salida. Hace uso de la
+ * libreria netcdf para importar la imagen y luego llama a la función convolve para realizar la convolución.
+ *
+ * @return Siempre retorna 0 y sale del programa
+ */
 int main()
 {
     float *data_out = (float*)calloc((NX-N_KERNEL+1) * (NY-N_KERNEL+1), sizeof(float));
@@ -75,7 +80,7 @@ int main()
 
     //write_to_nc(data_out);
     printf("Writing file to binary output\n");
-    //write_to_bin(data_out);
+    write_to_bin(data_out);
     free(data_out);
 
     //Impresion de tiempo en ejecucion
@@ -90,6 +95,12 @@ int main()
     return 0;
 }
 
+/**
+ * @brief Realiza la convolucion de data_in * kernel y la almacena en data_out
+ * @param data_in Puntero a float que contiene la imagen de entrada
+ * @param kernel Arreglo de float con el kernel para la convolucion
+ * @param data_out Puntero a float que contiene la imagen de salida
+ */
 void convolve(float *data_in, float kernel[][N_KERNEL], float *data_out)
 {
     #pragma omp parallel for collapse (2)
@@ -108,7 +119,10 @@ void convolve(float *data_in, float kernel[][N_KERNEL], float *data_out)
             }//col_img
         }//fil_img
 }
-
+/**
+ * @brief Exporta la imagen de salida en el archivo FILE_OUT_NB definido como macro
+ * @param data_out Puntero a float que contiene la imagen de salida
+ */
 void write_to_nc(float *data_out)
 {
     int ncid, varid, retval;
@@ -136,6 +150,10 @@ void write_to_nc(float *data_out)
     }
 }
 
+/**
+ * @brief Guarda la imagen de salida como un archivo binario de floats
+ * @param data_out Puntero a float que contiene la imagen de salida
+ */
 void write_to_bin(float *data_out)
 {
     int fd;
