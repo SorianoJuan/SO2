@@ -47,7 +47,7 @@
             <ul class="nav nav-sidebar">
                 <li><a href="index.html">Principal</a></li>
                 <li><a href="sistema.html" target="">Sistema</a></li>
-                <li class="active"><a href="baash.html" target="">Goes</a></li>
+                <li class="active"><a href="goes.html" target="">Goes</a></li>
                 <li><a href="modulos.html" target="">Módulos</a></li>
                 <li><a href="cargarmodulo.html" target="">Cargar Módulo</a></li>
             </ul>
@@ -56,6 +56,20 @@
 
     </div>
 </div>
+
+<body>
+	<h1>Formulario GOES<h1>
+		<FORM METHOD=GET ACTION="../cgi-bin/goes.cgi">
+			AÑO:
+			<input name="ANIO" size=20 maxlength=100>
+			DIA:
+			<input name="DIA" size=20 maxlength=100>
+			<P>
+			<INPUT TYPE=submit value="Submit">
+			<INPUT TYPE=reset value="Reset">
+	       </FORM>
+</body>
+
 
 <footer>
     <p class="pull-right">Raspberry Pi SO2</p>
