@@ -21,25 +21,23 @@ int main(void)
 	printf("day: %s",dayPointer); 
 	
 	char command[300];
-	strcpy(command, "aws s3 --no-sign-request ls --recursive noaa-goes16/ABI-L2-CMIPF/");
+	strcpy(command, "/home/torce/.local/bin/aws s3 --no-sign-request ls --human-readable --recursive noaa-goes16/ABI-L2-CMIPF/");
 	strcat(command,yearPointer);
 	strcat(command,"/");
 	strcat(command,dayPointer);
 	strcat(command,"/");
-	strcat(command," | grep M3C13");
-	printf("command: %s", command);
-	system(command);
-
+	strcat(command," | grep M3C13_G16");
+	//printf("command: %s", command);
+	//system(command);
 	
-	/*
-	printf("Content-Type: text/plain\n\n");
+	//printf("Content-Type: text/plain\n\n");
+	FILE * process;
 	char * line = NULL;
 	char buffer[500];
 	size_t len = 0;
 	ssize_t read;
-	FILE * command;
-	command = popen("aws s3 ls s3://noaa-goes16/ABI-L2-CMIPF/2017/360/20 --recursive --no-sign-request --human-readable | grep OR_ABI-L2-CMIPF-M3C13_G16", "r");
-	while((read = getline(&line, &len, command)) != -1){	
+	process = popen(command,"r");
+	while((read = getline(&line, &len, process)) != -1){	
 		memset(buffer, '\0', 500);
 		line[read-1] = '\0';
 		strcat(buffer, "<tr>\n");
@@ -72,6 +70,6 @@ int main(void)
 
 		strcat(buffer, "</tr>\n");
 		printf("%s", buffer);
-	}*/
+	}
 	return 0;
 }
