@@ -28,48 +28,7 @@ int main(void)
 	strcat(command,"/");
 	strcat(command," | grep M3C13_G16");
 	//printf("command: %s", command);
-	//system(command);
-	
-	//printf("Content-Type: text/plain\n\n");
-	FILE * process;
-	char * line = NULL;
-	char buffer[500];
-	size_t len = 0;
-	ssize_t read;
-	process = popen(command,"r");
-	while((read = getline(&line, &len, process)) != -1){	
-		memset(buffer, '\0', 500);
-		line[read-1] = '\0';
-		strcat(buffer, "<tr>\n");
-		char * text = strtok(line," ");
-		strcat(buffer, "\t<td>");
-		strcat(buffer, text);
-		strcat(buffer, "</td>\n");
-																										
-		text = strtok(NULL, " ");
-		strcat(buffer, "\t<td>");				
-		strcat(buffer, text);
-		strcat(buffer, "</td>\n");
-																																	
-		text = strtok(NULL, " ");
-		strcat(buffer, "\t<td>");
-		strcat(buffer, text);
-		strcat(buffer, " ");
-		text = strtok(NULL, " ");
-		strcat(buffer, text);
-		strcat(buffer, "</td>\n");
-		text = strtok(NULL, " ");
-		text = strtok(text, "/");
-		text = strtok(NULL, "/");
-		text = strtok(NULL, "/");
-		text = strtok(NULL, "/");
-		text = strtok(NULL, "/");
-		strcat(buffer, "\t<td>");
-		strcat(buffer, text);
-		strcat(buffer, "</td>\n");
-
-		strcat(buffer, "</tr>\n");
-		printf("%s", buffer);
+	system(command);
 	}
 	return 0;
 }
