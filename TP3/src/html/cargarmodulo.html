@@ -56,14 +56,17 @@
 
     </div>
 </div>
-<FORM METHOD=GET ACTION="cgi-bin/test.cgi">
+<FORM METHOD=POST ACTION="../cgi-bin/upload.pl" enctype="multipart/form-data">
 	Nombre del modulo:
-	<input name="Modulo" size=20 maxlength=50>
-	<P>
+	<input type="file" name="module">
 	<INPUT TYPE=submit value="Submit">
-	<INPUT TYPE=reset value="Reset">
 </FORM>
 
+<FORM METHOD=POST ACTION="../cgi-bin/rmmod.pl">
+	Nombre del modulo a remover:
+	<input type="text" name="module">
+	<INPUT TYPE=submit value="Submit">
+</FORM>
 
 <footer>
     <p class="pull-right">Raspberry Pi SO2</p>
