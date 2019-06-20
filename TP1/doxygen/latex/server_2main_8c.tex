@@ -1,0 +1,205 @@
+\section{/home/torce/\+Facultad/\+S\+O2/so2/\+T\+P1/src/server/main.c File Reference}
+\label{server_2main_8c}\index{/home/torce/Facultad/SO2/so2/TP1/src/server/main.c@{/home/torce/Facultad/SO2/so2/TP1/src/server/main.c}}
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Login}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT}~2019
+\item 
+\#define \textbf{ U\+D\+P\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+P\+O\+RT}~2019
+\item 
+\#define \textbf{ S\+N\+A\+ME}~20
+\item 
+\#define \textbf{ U\+S\+E\+R\+\_\+\+NR}~2
+\item 
+\#define \textbf{ B\+U\+F\+F\+\_\+\+S\+I\+ZE}~1024
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~1500
+\item 
+\#define \textbf{ R\+E\+T\+R\+Y\+\_\+\+L\+I\+M\+IT}~3
+\item 
+\#define \textbf{ F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+F\+I\+LE}~\char`\"{}../updated\+\_\+client\char`\"{}
+\item 
+\#define \textbf{ I\+M\+A\+G\+E\+\_\+\+F\+I\+LE}~\char`\"{}../incoming\+\_\+2019.\+jpg\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ verificar} (char $\ast$user, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em Verifica del lado del server que los datos ingresados por el cliente correspondan a un usuario registrado. \end{DoxyCompactList}\item 
+int \textbf{ get\+Telemetria} (char $\ast$\textbf{ ipaddr})
+\begin{DoxyCompactList}\small\item\em Abre un socket U\+DP para recibir la telemetria del satelite y la muestra por pantalla. \end{DoxyCompactList}\item 
+int \textbf{ get\+Scan} (int sockfd2)
+\begin{DoxyCompactList}\small\item\em Obtiene la imagen (scan) del satelite por medio del socket T\+CP ya instanciado. \end{DoxyCompactList}\item 
+int \textbf{ send\+Update} (int sockfd)
+\begin{DoxyCompactList}\small\item\em Envia un update de firmware a los satelites que se encuentran escuchando por medio de T\+CP. \end{DoxyCompactList}\item 
+int \textbf{ main} (void)
+\begin{DoxyCompactList}\small\item\em Servidor que simula base terrestre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{server_2main_8c_a6c7cd32e1bac137f05e4a752b4ad10af}} 
+\index{main.c@{main.c}!BUFF\_SIZE@{BUFF\_SIZE}}
+\index{BUFF\_SIZE@{BUFF\_SIZE}!main.c@{main.c}}
+\subsubsection{BUFF\_SIZE}
+{\footnotesize\ttfamily \#define B\+U\+F\+F\+\_\+\+S\+I\+ZE~1024}
+
+\mbox{\label{server_2main_8c_a09dbbd73a84cf772b421c6024b65b1fd}} 
+\index{main.c@{main.c}!FILE\_BUFFER\_SIZE@{FILE\_BUFFER\_SIZE}}
+\index{FILE\_BUFFER\_SIZE@{FILE\_BUFFER\_SIZE}!main.c@{main.c}}
+\subsubsection{FILE\_BUFFER\_SIZE}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~1500}
+
+\mbox{\label{server_2main_8c_a6ef7baa1d4325116155fe508770ec911}} 
+\index{main.c@{main.c}!FIRMWARE\_FILE@{FIRMWARE\_FILE}}
+\index{FIRMWARE\_FILE@{FIRMWARE\_FILE}!main.c@{main.c}}
+\subsubsection{FIRMWARE\_FILE}
+{\footnotesize\ttfamily \#define F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+F\+I\+LE~\char`\"{}../updated\+\_\+client\char`\"{}}
+
+\mbox{\label{server_2main_8c_ade64ea695c038c15864c1e6fd5d69c03}} 
+\index{main.c@{main.c}!IMAGE\_FILE@{IMAGE\_FILE}}
+\index{IMAGE\_FILE@{IMAGE\_FILE}!main.c@{main.c}}
+\subsubsection{IMAGE\_FILE}
+{\footnotesize\ttfamily \#define I\+M\+A\+G\+E\+\_\+\+F\+I\+LE~\char`\"{}../incoming\+\_\+2019.\+jpg\char`\"{}}
+
+\mbox{\label{server_2main_8c_a4fba0963c20988d1f1a45afb1c636e44}} 
+\index{main.c@{main.c}!LISTEN\_PORT@{LISTEN\_PORT}}
+\index{LISTEN\_PORT@{LISTEN\_PORT}!main.c@{main.c}}
+\subsubsection{LISTEN\_PORT}
+{\footnotesize\ttfamily \#define L\+I\+S\+T\+E\+N\+\_\+\+P\+O\+RT~2019}
+
+\mbox{\label{server_2main_8c_ad4eba3b0ea03f397bae8792d0f0e4cd4}} 
+\index{main.c@{main.c}!RETRY\_LIMIT@{RETRY\_LIMIT}}
+\index{RETRY\_LIMIT@{RETRY\_LIMIT}!main.c@{main.c}}
+\subsubsection{RETRY\_LIMIT}
+{\footnotesize\ttfamily \#define R\+E\+T\+R\+Y\+\_\+\+L\+I\+M\+IT~3}
+
+\mbox{\label{server_2main_8c_adbe6c60fb689b6eb1c165dda1b4ccda1}} 
+\index{main.c@{main.c}!SNAME@{SNAME}}
+\index{SNAME@{SNAME}!main.c@{main.c}}
+\subsubsection{SNAME}
+{\footnotesize\ttfamily \#define S\+N\+A\+ME~20}
+
+\mbox{\label{server_2main_8c_a3875beebc35d95ef6312fc484bf5adac}} 
+\index{main.c@{main.c}!UDP\_CLIENT\_PORT@{UDP\_CLIENT\_PORT}}
+\index{UDP\_CLIENT\_PORT@{UDP\_CLIENT\_PORT}!main.c@{main.c}}
+\subsubsection{UDP\_CLIENT\_PORT}
+{\footnotesize\ttfamily \#define U\+D\+P\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+P\+O\+RT~2019}
+
+\mbox{\label{server_2main_8c_ad5b70b0fae15f71d75dfd3110e8ff522}} 
+\index{main.c@{main.c}!USER\_NR@{USER\_NR}}
+\index{USER\_NR@{USER\_NR}!main.c@{main.c}}
+\subsubsection{USER\_NR}
+{\footnotesize\ttfamily \#define U\+S\+E\+R\+\_\+\+NR~2}
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{server_2main_8c_ad0fd16b59ec0ac5a66429c8dad254b8e}} 
+\index{main.c@{main.c}!getScan@{getScan}}
+\index{getScan@{getScan}!main.c@{main.c}}
+\subsubsection{getScan()}
+{\footnotesize\ttfamily int get\+Scan (\begin{DoxyParamCaption}\item[{int}]{sockfd2 }\end{DoxyParamCaption})}
+
+
+
+Obtiene la imagen (scan) del satelite por medio del socket T\+CP ya instanciado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd2} & file descriptor del socket T\+CP abierto para la recepcion de la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0\+: no se pudo abrir el archivo para escritura. int 1\+: se termino la recepcion exitosamente. 
+\end{DoxyReturn}
+\mbox{\label{server_2main_8c_ad7764287b17ffb0a84baf8a23275edec}} 
+\index{main.c@{main.c}!getTelemetria@{getTelemetria}}
+\index{getTelemetria@{getTelemetria}!main.c@{main.c}}
+\subsubsection{getTelemetria()}
+{\footnotesize\ttfamily int get\+Telemetria (\begin{DoxyParamCaption}\item[{char $\ast$}]{ipaddr }\end{DoxyParamCaption})}
+
+
+
+Abre un socket U\+DP para recibir la telemetria del satelite y la muestra por pantalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipaddr} & direccion ip del satelite conectado proveniente de la estructura almacenada de la conexion tcp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1\+: recepcion exitosa (no asegura que la informacion sea valida). int 0\+: error en la conexion. 
+\end{DoxyReturn}
+\mbox{\label{server_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Servidor que simula base terrestre. 
+
+Se realiza una etapa de autenticacion por parte del usuario en la base de datos del servidor. Si se acepta, Se continua y se acepta conexiones con los satelites. Se ofrece un prompt para ingresar comandos. \mbox{\label{server_2main_8c_a399ed36a71efbd160709be4b09406574}} 
+\index{main.c@{main.c}!sendUpdate@{sendUpdate}}
+\index{sendUpdate@{sendUpdate}!main.c@{main.c}}
+\subsubsection{sendUpdate()}
+{\footnotesize\ttfamily int send\+Update (\begin{DoxyParamCaption}\item[{int}]{sockfd }\end{DoxyParamCaption})}
+
+
+
+Envia un update de firmware a los satelites que se encuentran escuchando por medio de T\+CP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd} & File descriptor del socket abierto T\+CP. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1\+: envio exitoso. int 0\+: hubo un error en la apertura del archivo para enviar. 
+\end{DoxyReturn}
+\mbox{\label{server_2main_8c_a8ebfa03aaa653d8fc17a3d498a22cb40}} 
+\index{main.c@{main.c}!verificar@{verificar}}
+\index{verificar@{verificar}!main.c@{main.c}}
+\subsubsection{verificar()}
+{\footnotesize\ttfamily int verificar (\begin{DoxyParamCaption}\item[{char $\ast$}]{user,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+Verifica del lado del server que los datos ingresados por el cliente correspondan a un usuario registrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & el nombre de usuario ingresado \\
+\hline
+{\em password} & el password ingresado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0\+: no autenticado, 1\+:autenticado. 
+\end{DoxyReturn}

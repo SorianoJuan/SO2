@@ -1,0 +1,179 @@
+\section{/home/torce/\+Facultad/\+S\+O2/so2/\+T\+P1/src/client/main.c File Reference}
+\label{client_2main_8c}\index{/home/torce/Facultad/SO2/so2/TP1/src/client/main.c@{/home/torce/Facultad/SO2/so2/TP1/src/client/main.c}}
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$linux/unistd.\+h$>$}\newline
+{\ttfamily \#include $<$linux/kernel.\+h$>$}\newline
+{\ttfamily \#include $<$sys/sysinfo.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ B\+U\+F\+F\+\_\+\+S\+I\+ZE}~1024
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~1500
+\item 
+\#define \textbf{ ID}~1
+\item 
+\#define \textbf{ F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+F\+I\+LE}~\char`\"{}incoming\+\_\+updated\+\_\+client\char`\"{}
+\item 
+\#define \textbf{ I\+M\+A\+G\+E\+\_\+\+F\+I\+LE}~\char`\"{}../2019.jpg\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ send\+Telemetria} (void)
+\begin{DoxyCompactList}\small\item\em Envia por U\+DP al servidor, al puerto 2019 la telemetria recolectada en el satelite. \end{DoxyCompactList}\item 
+int \textbf{ send\+Scan} (int sockfd)
+\begin{DoxyCompactList}\small\item\em Envia una imagen del escaneo de la tierra por T\+CP utilizando la conexion abierta previamente. \end{DoxyCompactList}\item 
+int \textbf{ receive\+Update} (int sockfd)
+\begin{DoxyCompactList}\small\item\em Recibe el update del firmware y realiza un execve(), matando el proceso actual y levantando uno nuevo con el firmware actualizado. \end{DoxyCompactList}\item 
+int \textbf{ main} (void)
+\begin{DoxyCompactList}\small\item\em Funcion principal del satelite que corre en el cliente. Se intenta conectar cada 5 segundos a la base terrestre y espera comandos para realizar acciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ portnr} = 2019
+\item 
+char \textbf{ ipaddrbuff} [20] = \char`\"{}192.\+168.\+1.\+141\char`\"{}
+\item 
+char $\ast$ \textbf{ ipaddr} = N\+U\+LL
+\item 
+char \textbf{ firmware\+\_\+version} [20] = \char`\"{}1.\+1.\+0\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{client_2main_8c_a6c7cd32e1bac137f05e4a752b4ad10af}} 
+\index{main.c@{main.c}!BUFF\_SIZE@{BUFF\_SIZE}}
+\index{BUFF\_SIZE@{BUFF\_SIZE}!main.c@{main.c}}
+\subsubsection{BUFF\_SIZE}
+{\footnotesize\ttfamily \#define B\+U\+F\+F\+\_\+\+S\+I\+ZE~1024}
+
+\mbox{\label{client_2main_8c_a09dbbd73a84cf772b421c6024b65b1fd}} 
+\index{main.c@{main.c}!FILE\_BUFFER\_SIZE@{FILE\_BUFFER\_SIZE}}
+\index{FILE\_BUFFER\_SIZE@{FILE\_BUFFER\_SIZE}!main.c@{main.c}}
+\subsubsection{FILE\_BUFFER\_SIZE}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~1500}
+
+\mbox{\label{client_2main_8c_a6ef7baa1d4325116155fe508770ec911}} 
+\index{main.c@{main.c}!FIRMWARE\_FILE@{FIRMWARE\_FILE}}
+\index{FIRMWARE\_FILE@{FIRMWARE\_FILE}!main.c@{main.c}}
+\subsubsection{FIRMWARE\_FILE}
+{\footnotesize\ttfamily \#define F\+I\+R\+M\+W\+A\+R\+E\+\_\+\+F\+I\+LE~\char`\"{}incoming\+\_\+updated\+\_\+client\char`\"{}}
+
+\mbox{\label{client_2main_8c_a77ceac8d6af195fe72f95f6afd87c45e}} 
+\index{main.c@{main.c}!ID@{ID}}
+\index{ID@{ID}!main.c@{main.c}}
+\subsubsection{ID}
+{\footnotesize\ttfamily \#define ID~1}
+
+\mbox{\label{client_2main_8c_ade64ea695c038c15864c1e6fd5d69c03}} 
+\index{main.c@{main.c}!IMAGE\_FILE@{IMAGE\_FILE}}
+\index{IMAGE\_FILE@{IMAGE\_FILE}!main.c@{main.c}}
+\subsubsection{IMAGE\_FILE}
+{\footnotesize\ttfamily \#define I\+M\+A\+G\+E\+\_\+\+F\+I\+LE~\char`\"{}../2019.jpg\char`\"{}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{client_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Funcion principal del satelite que corre en el cliente. Se intenta conectar cada 5 segundos a la base terrestre y espera comandos para realizar acciones. 
+
+\begin{DoxyReturn}{Returns}
+No debe retornar la funcion 
+\end{DoxyReturn}
+\mbox{\label{client_2main_8c_a503ea6ede263f06f33bcc00dc8262f5a}} 
+\index{main.c@{main.c}!receiveUpdate@{receiveUpdate}}
+\index{receiveUpdate@{receiveUpdate}!main.c@{main.c}}
+\subsubsection{receiveUpdate()}
+{\footnotesize\ttfamily int receive\+Update (\begin{DoxyParamCaption}\item[{int}]{sockfd }\end{DoxyParamCaption})}
+
+
+
+Recibe el update del firmware y realiza un execve(), matando el proceso actual y levantando uno nuevo con el firmware actualizado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd} & File descriptor del socket abierto en T\+CP. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0\+: ha ocurrido un error en la apertura del archivo. int 1\+: no se pudo ejecutar el execve(). 
+\end{DoxyReturn}
+\mbox{\label{client_2main_8c_aee43a5dbf2f80157778c8bf26a07b90f}} 
+\index{main.c@{main.c}!sendScan@{sendScan}}
+\index{sendScan@{sendScan}!main.c@{main.c}}
+\subsubsection{sendScan()}
+{\footnotesize\ttfamily int send\+Scan (\begin{DoxyParamCaption}\item[{int}]{sockfd }\end{DoxyParamCaption})}
+
+
+
+Envia una imagen del escaneo de la tierra por T\+CP utilizando la conexion abierta previamente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd} & File descriptor del socket abierto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0\+: error al abrir el archivo. int 1\+: se envio exitosamente la imagen. 
+\end{DoxyReturn}
+\mbox{\label{client_2main_8c_afb71bcd753e06f6a116706d762ab8f79}} 
+\index{main.c@{main.c}!sendTelemetria@{sendTelemetria}}
+\index{sendTelemetria@{sendTelemetria}!main.c@{main.c}}
+\subsubsection{sendTelemetria()}
+{\footnotesize\ttfamily void send\+Telemetria (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Envia por U\+DP al servidor, al puerto 2019 la telemetria recolectada en el satelite. 
+
+La telemetria consiste en el uptime del sistema operativo, la memoria ram libre, el id del satelite y la version del software. 
+
+\subsection{Variable Documentation}
+\mbox{\label{client_2main_8c_acc4ef5efef44f2ed8aff7cf818e27f47}} 
+\index{main.c@{main.c}!firmware\_version@{firmware\_version}}
+\index{firmware\_version@{firmware\_version}!main.c@{main.c}}
+\subsubsection{firmware\_version}
+{\footnotesize\ttfamily char firmware\+\_\+version[20] = \char`\"{}1.\+1.\+0\char`\"{}}
+
+\mbox{\label{client_2main_8c_ad540706412769097e113feb208f0b6bf}} 
+\index{main.c@{main.c}!ipaddr@{ipaddr}}
+\index{ipaddr@{ipaddr}!main.c@{main.c}}
+\subsubsection{ipaddr}
+{\footnotesize\ttfamily char$\ast$ ipaddr = N\+U\+LL}
+
+\mbox{\label{client_2main_8c_a8d57647647f5833d4b1fd30627072575}} 
+\index{main.c@{main.c}!ipaddrbuff@{ipaddrbuff}}
+\index{ipaddrbuff@{ipaddrbuff}!main.c@{main.c}}
+\subsubsection{ipaddrbuff}
+{\footnotesize\ttfamily char ipaddrbuff[20] = \char`\"{}192.\+168.\+1.\+141\char`\"{}}
+
+\mbox{\label{client_2main_8c_a10fff5773beb16729c478f6d20e5d986}} 
+\index{main.c@{main.c}!portnr@{portnr}}
+\index{portnr@{portnr}!main.c@{main.c}}
+\subsubsection{portnr}
+{\footnotesize\ttfamily uint16\+\_\+t portnr = 2019}
+
