@@ -22,4 +22,4 @@ goes.o: goes.c
 	$(CC) $(CFLAGS) -c goes.c -o goes.o
 
 clean:
-	rm *.o modulos systeminfo goes 
+	rm *.o *.cgi 

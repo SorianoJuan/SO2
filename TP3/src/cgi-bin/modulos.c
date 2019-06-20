@@ -6,22 +6,22 @@
 int main(void)
 {
 	printf("Content-Type: text/html\n\n");
-	char * line = NULL;
-	char buffer[500];
+	char * lineread = NULL;
+	char buffer[1000];
 	size_t len = 0;
-	ssize_t read;
-	FILE * command;
-	command = popen("lsmod | tail -n+2 | awk '{printf(\"%s %s\\n\", $1, $2)}'", "r");
+	ssize_t data;
+	FILE * exec;
+	exec = popen("lsmod | tail -n+2 | awk '{printf(\"%s %s\\n\", $1, $2)}'", "r");
 	printf("<table class='table'>\n");
 	printf("<tr>\n");
 	printf("<th> Modulo </th>");
 	printf("<th> Size </th>");
 	printf("</tr>\n");
-	while((read = getline(&line, &len, command)) != -1)
+	while((data = getline(&lineread, &len, exec)) != -1)
 	{memset(buffer, '\0', 500);
-		line[read-1] = '\0';
+		lineread[data-1] = '\0';
 		strcat(buffer, "<tr>\n");
-		char * text = strtok(line," ");
+		char * text = strtok(lineread," ");
 		strcat(buffer, "\t<td>");
 		strcat(buffer, text);
 		strcat(buffer, "</td>\n");

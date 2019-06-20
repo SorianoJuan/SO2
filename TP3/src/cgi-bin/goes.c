@@ -17,15 +17,13 @@ int main(void)
 	printf("year: %s",yearPointer);
 	printf("day: %s",dayPointer);
 
-	char command[300];
+	char command[256];
 	strcpy(command, "aws s3 --no-sign-request ls --human-readable --recursive noaa-goes16/ABI-L2-CMIPF/");
 	strcat(command,yearPointer);
 	strcat(command,"/");
 	strcat(command,dayPointer);
 	strcat(command,"/");
 	strcat(command," | grep M3C13_G16");
-	//printf("command: %s", command);
-	//system(command);
 
 	printf("Content-Type: text/html\n\n");
 	FILE * process;
@@ -54,12 +52,12 @@ int main(void)
   printf("<script src='https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js'></script>\n");
   printf("<script type='text/javascript'>\n");
   printf("$(document).ready(function() {\n");
-  printf("$('[data-toggle=offcanvas]').click(function(){\n"); 
+  printf("$('[data-toggle=offcanvas]').click(function(){\n");
   printf("$('.row-offcanvas').toggleClass('active');\n");
   printf("});\n");
   printf("});\n");
   printf("</script>\n");
-  
+
   printf("</head>\n");
   printf("<body>\n");
   printf("<nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>\n");
