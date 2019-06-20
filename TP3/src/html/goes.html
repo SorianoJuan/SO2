@@ -58,26 +58,15 @@
 </div>
 
 <body>
-	<h1>Formulario GOES<h1>
-		<FORM METHOD=GET ACTION="../cgi-bin/goes.cgi">
-			AÑO:
-			<input name="ANIO" size=20 maxlength=100>
-			DIA:
-			<input name="DIA" size=20 maxlength=100>
-			<P>
-			<INPUT TYPE=submit value="Submit">
-			<INPUT TYPE=reset value="Reset">
-	       </FORM>
+	<FORM METHOD=GET ACTION="../cgi-bin/goes.cgi">
+		AÑO:
+		<input name="ANIO" size=20 maxlength=100>
+		DIA:
+		<input name="DIA">
+		<INPUT TYPE=submit value="Submit">
+		<INPUT TYPE=reset value="Reset">
+	</FORM>
 </body>
-
-</div>
-	<div class="card-body text-info">
-		<div class="embed-responsive embed-responsive-16by9">
-			<iframe scrolling="yes" class "embed-responsive-item" src="cgi-bin/goes.cgi" width="700" height="200"></iframe>
-		</div>
-	</div>
-</div>
-
 
 <footer>
     <p class="pull-right">Raspberry Pi SO2</p>

@@ -8,9 +8,8 @@ int main(void)
 	char * input = strchr(getenv("QUERY_STRING"),'=')+1;
 	char input_aux [200];
 	strcpy(input_aux, input);
-	char day[100],*dayPointer;
-	char year[100],*yearPointer;
-	char * pch;
+	char *dayPointer;
+	char *yearPointer;
 	printf("string: %s\n",input);
 	yearPointer = strtok(input_aux,"&");
 	strtok(NULL, "=");
@@ -53,6 +52,14 @@ int main(void)
   printf("<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n");
   printf("<script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>\n");
   printf("<script src='https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js'></script>\n");
+  printf("<script type='text/javascript'>\n");
+  printf("$(document).ready(function() {\n");
+  printf("$('[data-toggle=offcanvas]').click(function(){\n"); 
+  printf("$('.row-offcanvas').toggleClass('active');\n");
+  printf("});\n");
+  printf("});\n");
+  printf("</script>\n");
+  
   printf("</head>\n");
   printf("<body>\n");
   printf("<nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>\n");
@@ -72,10 +79,10 @@ int main(void)
   printf("<div class='row row-offcanvas row-offcanvas-left'>\n");
   printf("<div class='col-sm-3 col-md-2 sidebar-offcanvas' id='sidebar' role='navigation'>\n");
   printf("<ul class='nav nav-sidebar'>\n");
-  printf("<li><a href='index.html'>Principal</a></li>\n");
-  printf("<li><a href='sistema.html' target=''>Sistema</a></li>\n");
-  printf("<li><a href='goes.html' target=''>Goes</a></li>\n");
-  printf("<li><a href='modulos.html' target=''>Módulos</a></li>\n");
+  printf("<li><a href='../index.html'>Principal</a></li>\n");
+  printf("<li><a href='../sistema.html' target=''>Sistema</a></li>\n");
+  printf("<li><a href='../goes.html' target=''>Goes</a></li>\n");
+  printf("<li><a href='../modulos.html' target=''>Módulos</a></li>\n");
   printf("<li class='active'><a href='cargarmodulo.html' target=''>Cargar Módulo</a></li>\n");
   printf("</ul>\n");
   printf("</div>\n");
@@ -83,7 +90,7 @@ int main(void)
   printf("</div>\n");
 
 
-  printf("<table>\n");
+  printf("<table class='table'>\n");
   printf("<tr>\n");
   printf("<th> DOI  </th>");
   printf("<th> Time </th>");
@@ -131,6 +138,15 @@ int main(void)
   printf("<footer>\n");
   printf("<p class='pull-right'>Raspberry Pi SO2</p>\n");
   printf("</footer>\n");
+  printf("<style>\n");
+  printf("@media screen and (max-width: 768px) {\n");
+  printf(".list-group{\n");
+  printf("display: inline-block;\n");
+  printf("}\n");
+  printf("}\n");
+  printf("</style>\n");
+
+
   printf("</body>\n");
   printf("</html>\n");
 

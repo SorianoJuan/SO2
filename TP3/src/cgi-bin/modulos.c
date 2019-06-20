@@ -12,7 +12,7 @@ int main(void)
 	ssize_t read;
 	FILE * command;
 	command = popen("lsmod | tail -n+2 | awk '{printf(\"%s %s\\n\", $1, $2)}'", "r");
-	printf("<table>\n");
+	printf("<table class='table'>\n");
 	printf("<tr>\n");
 	printf("<th> Modulo </th>");
 	printf("<th> Size </th>");

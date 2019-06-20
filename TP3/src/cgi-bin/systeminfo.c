@@ -15,10 +15,7 @@ int main(void){
         if (error != 0) {
 		printf("Error en system = %d\n", error);
 	}
-    	char telemetria [200];
 	long double a[4], b[4], loadavg;
-        //sprintf(telemetria, "%d%s%ld%s%s%s%lu", ID, "|", s_info.uptime, "|" , firmware_version, "|", s_info.totalram - s_info.freeram);
-	//printf("telemetria: %s\n",telemetria);
 	fp = fopen ("/proc/stat","r");
 	fscanf(fp,"%*s %Lf %Lf %Lf %Lf",&a[0],&a[1],&a[2],&a[3]);
 	fclose(fp);
