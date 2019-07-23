@@ -1,0 +1,170 @@
+\section{/home/torce/\+S\+O2/\+T\+P2/src/main.c File Reference}
+\label{main_8c}\index{/home/torce/SO2/TP2/src/main.c@{/home/torce/SO2/TP2/src/main.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$netcdf.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ E\+R\+R\+C\+O\+DE}~2
+\item 
+\#define \textbf{ E\+RR}(e)~\{printf(\char`\"{}Error\+: \%s\textbackslash{}n\char`\"{}, nc\+\_\+strerror(e)); exit(\textbf{ E\+R\+R\+C\+O\+DE});\}
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+N\+A\+ME}~\char`\"{}../includes/O\+R\+\_\+\+A\+BI-\/L2-\/C\+M\+I\+PF-\/M6\+C02\+\_\+\+G16\+\_\+s20191011800206\+\_\+e20191011809514\+\_\+c20191011809591.\+nc\char`\"{}
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+NC}~\char`\"{}../includes/convolved\+\_\+out.\+nc\char`\"{}
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+B\+IN}~\char`\"{}../includes/convolved\+\_\+out.\+bin\char`\"{}
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+T\+I\+M\+ES}~\char`\"{}../data/tiempos\+\_\+omp\+\_\+32.\+txt\char`\"{}
+\item 
+\#define \textbf{ NX}~21696
+\item 
+\#define \textbf{ NY}~21696
+\item 
+\#define \textbf{ N\+\_\+\+K\+E\+R\+N\+EL}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ convolve} (float $\ast$data\+\_\+in, float kernel[$\,$][\textbf{ N\+\_\+\+K\+E\+R\+N\+EL}], float $\ast$data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Realiza la convolucion de data\+\_\+in $\ast$ kernel y la almacena en data\+\_\+out. \end{DoxyCompactList}\item 
+void \textbf{ write\+\_\+to\+\_\+nc} (float $\ast$data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Exporta la imagen de salida en el archivo F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+NB definido como macro. \end{DoxyCompactList}\item 
+void \textbf{ write\+\_\+to\+\_\+bin} (float $\ast$data\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Guarda la imagen de salida como un archivo binario de floats. \end{DoxyCompactList}\item 
+int \textbf{ main} ()
+\begin{DoxyCompactList}\small\item\em Funcion principal que aloca memoria para la imagen de entrada y la convolucionada de salida. Hace uso de la libreria netcdf para importar la imagen y luego llama a la función convolve para realizar la convolución. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{main_8c_a588357de2986fdf4c1380190f7ae9f37}} 
+\index{main.c@{main.c}!ERR@{ERR}}
+\index{ERR@{ERR}!main.c@{main.c}}
+\subsubsection{ERR}
+{\footnotesize\ttfamily \#define E\+RR(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~\{printf(\char`\"{}Error\+: \%s\textbackslash{}n\char`\"{}, nc\+\_\+strerror(e)); exit(\textbf{ E\+R\+R\+C\+O\+DE});\}}
+
+\mbox{\label{main_8c_a59923948809cf280fff5a914cc1e3781}} 
+\index{main.c@{main.c}!ERRCODE@{ERRCODE}}
+\index{ERRCODE@{ERRCODE}!main.c@{main.c}}
+\subsubsection{ERRCODE}
+{\footnotesize\ttfamily \#define E\+R\+R\+C\+O\+DE~2}
+
+\mbox{\label{main_8c_ab117546549783a058d0321a287699579}} 
+\index{main.c@{main.c}!FILE\_NAME@{FILE\_NAME}}
+\index{FILE\_NAME@{FILE\_NAME}!main.c@{main.c}}
+\subsubsection{FILE\_NAME}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}../includes/O\+R\+\_\+\+A\+BI-\/L2-\/C\+M\+I\+PF-\/M6\+C02\+\_\+\+G16\+\_\+s20191011800206\+\_\+e20191011809514\+\_\+c20191011809591.\+nc\char`\"{}}
+
+\mbox{\label{main_8c_a4fdec11bedf862a1861da6d0216c0853}} 
+\index{main.c@{main.c}!FILE\_OUT\_BIN@{FILE\_OUT\_BIN}}
+\index{FILE\_OUT\_BIN@{FILE\_OUT\_BIN}!main.c@{main.c}}
+\subsubsection{FILE\_OUT\_BIN}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+B\+IN~\char`\"{}../includes/convolved\+\_\+out.\+bin\char`\"{}}
+
+\mbox{\label{main_8c_ac2f8017a27496885626ba13b101b020b}} 
+\index{main.c@{main.c}!FILE\_OUT\_NC@{FILE\_OUT\_NC}}
+\index{FILE\_OUT\_NC@{FILE\_OUT\_NC}!main.c@{main.c}}
+\subsubsection{FILE\_OUT\_NC}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+NC~\char`\"{}../includes/convolved\+\_\+out.\+nc\char`\"{}}
+
+\mbox{\label{main_8c_afa5c422f85ae3c5f141aafda017861b0}} 
+\index{main.c@{main.c}!FILE\_OUT\_TIMES@{FILE\_OUT\_TIMES}}
+\index{FILE\_OUT\_TIMES@{FILE\_OUT\_TIMES}!main.c@{main.c}}
+\subsubsection{FILE\_OUT\_TIMES}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+T\+I\+M\+ES~\char`\"{}../data/tiempos\+\_\+omp\+\_\+32.\+txt\char`\"{}}
+
+\mbox{\label{main_8c_a250de86d225826237eaff8637ee6c3ea}} 
+\index{main.c@{main.c}!N\_KERNEL@{N\_KERNEL}}
+\index{N\_KERNEL@{N\_KERNEL}!main.c@{main.c}}
+\subsubsection{N\_KERNEL}
+{\footnotesize\ttfamily \#define N\+\_\+\+K\+E\+R\+N\+EL~3}
+
+\mbox{\label{main_8c_a4a9d32ff035c82119003134767948ebf}} 
+\index{main.c@{main.c}!NX@{NX}}
+\index{NX@{NX}!main.c@{main.c}}
+\subsubsection{NX}
+{\footnotesize\ttfamily \#define NX~21696}
+
+\mbox{\label{main_8c_a652e87ecc9140879666ae9d6bf4ca893}} 
+\index{main.c@{main.c}!NY@{NY}}
+\index{NY@{NY}!main.c@{main.c}}
+\subsubsection{NY}
+{\footnotesize\ttfamily \#define NY~21696}
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{main_8c_af3ba38684e66acbd4190dbd55e6228da}} 
+\index{main.c@{main.c}!convolve@{convolve}}
+\index{convolve@{convolve}!main.c@{main.c}}
+\subsubsection{convolve()}
+{\footnotesize\ttfamily void convolve (\begin{DoxyParamCaption}\item[{float $\ast$}]{data\+\_\+in,  }\item[{float}]{kernel[$\,$][\+N\+\_\+\+K\+E\+R\+N\+E\+L],  }\item[{float $\ast$}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Realiza la convolucion de data\+\_\+in $\ast$ kernel y la almacena en data\+\_\+out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & Puntero a float que contiene la imagen de entrada \\
+\hline
+{\em kernel} & Arreglo de float con el kernel para la convolucion \\
+\hline
+{\em data\+\_\+out} & Puntero a float que contiene la imagen de salida \\
+\hline
+\end{DoxyParams}
+\mbox{\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion principal que aloca memoria para la imagen de entrada y la convolucionada de salida. Hace uso de la libreria netcdf para importar la imagen y luego llama a la función convolve para realizar la convolución. 
+
+\begin{DoxyReturn}{Returns}
+Siempre retorna 0 y sale del programa 
+\end{DoxyReturn}
+\mbox{\label{main_8c_a973ca89eb4aff25e00089eb1ebf64fd6}} 
+\index{main.c@{main.c}!write\_to\_bin@{write\_to\_bin}}
+\index{write\_to\_bin@{write\_to\_bin}!main.c@{main.c}}
+\subsubsection{write\_to\_bin()}
+{\footnotesize\ttfamily void write\+\_\+to\+\_\+bin (\begin{DoxyParamCaption}\item[{float $\ast$}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Guarda la imagen de salida como un archivo binario de floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & Puntero a float que contiene la imagen de salida \\
+\hline
+\end{DoxyParams}
+\mbox{\label{main_8c_a4f8e9b2da505c680d5f11eeaff42c56c}} 
+\index{main.c@{main.c}!write\_to\_nc@{write\_to\_nc}}
+\index{write\_to\_nc@{write\_to\_nc}!main.c@{main.c}}
+\subsubsection{write\_to\_nc()}
+{\footnotesize\ttfamily void write\+\_\+to\+\_\+nc (\begin{DoxyParamCaption}\item[{float $\ast$}]{data\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Exporta la imagen de salida en el archivo F\+I\+L\+E\+\_\+\+O\+U\+T\+\_\+\+NB definido como macro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+out} & Puntero a float que contiene la imagen de salida \\
+\hline
+\end{DoxyParams}

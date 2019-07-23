@@ -1,0 +1,4 @@
+src/module/*
+!src/module/helloworld.c
+!src/module/Makefile
+!src/module/helloworld.ko

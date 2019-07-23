@@ -15,4 +15,4 @@ add_executable(cliente
 add_custom_target(TP1 COMMAND make -C ${TP1_SOURCE_DIR}
         CLION_EXE_DIR=${build})
 
-target_link_libraries(cliente pthread)
+target_link_libraries(server pthread)

@@ -1,0 +1,10 @@
+CMake
+cmake-build-debug/*
+cmake-build-release/
+#idea
+.idea/*
+#build
+build/*
+#NC files
+*.nc
+*.bin
